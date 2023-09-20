@@ -748,9 +748,9 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2\PYGZhy{}win\PYGZhy{}unity1/ipadred\PYGZhy{}rain/imgno\PYGZus{}book1/imgnobk1
 not vai c3 main
 
-index: 41 
-theta4 at  6.915720740788269 
- a= 0.8065311753227272  b= 0.5911915622135859 
+index: 126 
+theta4 at  21.253190569251757 
+ a= \PYGZhy{}0.7398439101151913  b= 0.6727785584168573 
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -758,7 +758,7 @@ theta4 at  6.915720740788269
   plt.tight\PYGZus{}layout()
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{a1039fd02c681c4ff9ef9e8f5924fe96a3c86d8ac44dfd6bea70408a8109ace6}.png}
+\noindent\sphinxincludegraphics{{380538c2bed596f4020d82ccd101cfef6f01e0872a293a9bb01d5dd604d33bac}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -1269,9 +1269,9 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2\PYGZhy{}win\PYGZhy{}unity1/ipadred\PYGZhy{}rain/imgno\PYGZus{}book1/imgnobk1
 not vai c3 main
 
-index: 96 
-theta4 at  16.19290710038229 
- a= \PYGZhy{}0.884701133502145  b= \PYGZhy{}0.4661586686741112 
+index: 76 
+theta4 at  12.819384787802646 
+ a= 0.9681623029976589  b= 0.25032330106138606 
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1279,7 +1279,7 @@ theta4 at  16.19290710038229
   plt.tight\PYGZus{}layout()
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{e79285e14e3e797395f95f1a30e70ad39cc0a4dabb6b1eff9b7ff866c430d02a}.png}
+\noindent\sphinxincludegraphics{{f6f4c37f38e27a386044e1382450a07dbf1557e21959c9eed00eb4ac4fb90b24}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -1514,7 +1514,7 @@ For example, here’s some sample Matplotlib code:
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}contextlib.ExitStack at 0x1198af310\PYGZgt{}
+\PYGZlt{}contextlib.ExitStack at 0x10e4a4950\PYGZgt{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -1849,19 +1849,19 @@ change all to inline it would work but what is the point???!!!!
 from \sphinxurl{https://github.com/markjay4k/fourier-transform}
 as only use matplotlib inline
 
+\sphinxAtStartPar
+Going from Fourier Series to Fourier Transform
 
-\chapter{Going from Fourier Series to Fourier Transform}
-\label{\detokenize{ffm:going-from-fourier-series-to-fourier-transform}}
-
-\section{Last time we defined the Fourier Series as}
-\label{\detokenize{ffm:last-time-we-defined-the-fourier-series-as}}\begin{equation*}
+\sphinxAtStartPar
+Last time we defined the Fourier Series as
+\begin{equation*}
 \begin{split}
 f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx) + b_n \sin(nx)
 \end{split}
 \end{equation*}
+\sphinxAtStartPar
+Let’s look at the square wave centered at \(x=0\)
 
-\section{Let’s look at the square wave centered at \protect\(x=0\protect\)}
-\label{\detokenize{ffm:let-s-look-at-the-square-wave-centered-at-x-0}}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
@@ -1908,43 +1908,42 @@ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx) + b_n \sin(nx)
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+But we didn’t show how to calculate \(a_n\)
 
-\section{But we didn’t show how to calculate \protect\(a_n\protect\)}
-\label{\detokenize{ffm:but-we-didn-t-show-how-to-calculate-a-n}}
-
-\section{Let’s change our Fourier Series Equation}
-\label{\detokenize{ffm:let-s-change-our-fourier-series-equation}}\begin{equation*}
+\sphinxAtStartPar
+Let’s change our Fourier Series Equation
+\begin{equation*}
 \begin{split}
 f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(n \omega_0 x) + b_n \sin(n \omega_o x)
 \end{split}
 \end{equation*}
-
-\section{where}
-\label{\detokenize{ffm:where}}\begin{equation*}
+\sphinxAtStartPar
+where
+\begin{equation*}
 \begin{split}
 \omega_0 =\frac{2\pi}{T}
 \end{split}
 \end{equation*}
+\sphinxAtStartPar
+and \(T\) is the fundamental period (for the square wave above, \(T=2\pi\))
 
-\section{and \protect\(T\protect\) is the fundamental period (for the square wave above, \protect\(T=2\pi\protect\))}
-\label{\detokenize{ffm:and-t-is-the-fundamental-period-for-the-square-wave-above-t-2-pi}}
-
-\section{The equation for \protect\(a_n\protect\) is}
-\label{\detokenize{ffm:the-equation-for-a-n-is}}\begin{equation*}
-\begin{split}
+\sphinxAtStartPar
+The equation for \(a_n\) is
+\$\(
 a_n = \frac{2}{T}\int_{-T/2}^{T/2} f(x)\cos(n \omega_0 x)dx
-\end{split}
-\end{equation*}
+\)\$
 
-\section{For the square wave above, the limits are only \protect\(-T/4\protect\) to \protect\(T/4\protect\) because \protect\(f(x)=0\protect\) for the rest of the wavelength.}
-\label{\detokenize{ffm:for-the-square-wave-above-the-limits-are-only-t-4-to-t-4-because-f-x-0-for-the-rest-of-the-wavelength}}\begin{equation*}
+\sphinxAtStartPar
+For the square wave above, the limits are only \(-T/4\) to \(T/4\) because \(f(x)=0\) for the rest of the wavelength.
+\begin{equation*}
 \begin{split}
 a_n = \frac{2}{T} \int_{-T/4}^{T/4}\cos(n \omega_0 x)dx
 \end{split}
 \end{equation*}
-
-\section{Because \protect\(\cos(nx)\protect\) is even, we can reduce the limits to \protect\(0\protect\) to \protect\(T/4\protect\) and multiply by \protect\(2\protect\)}
-\label{\detokenize{ffm:because-cos-nx-is-even-we-can-reduce-the-limits-to-0-to-t-4-and-multiply-by-2}}\begin{equation*}
+\sphinxAtStartPar
+Because \(\cos(nx)\) is even, we can reduce the limits to \(0\) to \(T/4\) and multiply by \(2\)
+\begin{equation*}
 \begin{split}
 a_n = \frac{4}{T} \int_{0}^{T/4}\cos(n \omega_0 x)dx
 \end{split}
@@ -1987,9 +1986,9 @@ a_n =\frac{2}{n\pi}\sin \left(n \omega_0 \frac{\pi}{2} \right)
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+What if we make the squares farther apart by making \(T=4\pi\) ?
 
-\section{What if we make the squares farther apart by making \protect\(T=4\pi\protect\) ?}
-\label{\detokenize{ffm:what-if-we-make-the-squares-farther-apart-by-making-t-4-pi}}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
@@ -2020,12 +2019,10 @@ a_n =\frac{2}{n\pi}\sin \left(n \omega_0 \frac{\pi}{2} \right)
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
-
-\section{The new fundamental frequency becomes \protect\(\omega'_0 =\omega_0/2\protect\)}
-\label{\detokenize{ffm:the-new-fundamental-frequency-becomes-omega-0-omega-0-2}}
-
-\section{The \protect\(a_n\protect\) coefficients become}
-\label{\detokenize{ffm:the-a-n-coefficients-become}}\begin{equation*}
+\sphinxAtStartPar
+The new fundamental frequency becomes \(\omega'_0 =\omega_0/2\)
+The \(a_n\) coefficients become
+\begin{equation*}
 \begin{split}
 a_n = \frac{4}{n\omega'_0 T} \sin \left(n\omega'_0\frac{T}{8}\right)
 \end{split}
@@ -2034,9 +2031,9 @@ a_n = \frac{4}{n\omega'_0 T} \sin \left(n\omega'_0\frac{T}{8}\right)
 a_n = \frac{2}{n\pi} \sin \left(n \omega'_0 \frac{\pi}{2} \right)
 \end{split}
 \end{equation*}
+\sphinxAtStartPar
+Since the fundametal frequency is cut in half, the spacing between coefficients are closer, but bound by the same envelope
 
-\section{Since the fundametal frequency is cut in half, the spacing between coefficients are closer, but bound by the same envelope}
-\label{\detokenize{ffm:since-the-fundametal-frequency-is-cut-in-half-the-spacing-between-coefficients-are-closer-but-bound-by-the-same-envelope}}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
@@ -2068,9 +2065,9 @@ a_n = \frac{2}{n\pi} \sin \left(n \omega'_0 \frac{\pi}{2} \right)
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+If \(\omega_0' \rightarrow \omega_0/10\)
 
-\section{If \protect\(\omega_0' \rightarrow \omega_0/10\protect\)}
-\label{\detokenize{ffm:if-omega-0-rightarrow-omega-0-10}}
 \begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
 
 \begin{sphinxuseclass}{cell_input}
@@ -2103,13 +2100,12 @@ a_n = \frac{2}{n\pi} \sin \left(n \omega'_0 \frac{\pi}{2} \right)
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
-
-\section{The Fourier Series becomes the Fourier Transform when}
-\label{\detokenize{ffm:the-fourier-series-becomes-the-fourier-transform-when}}\begin{equation*}
-\begin{split}
+\sphinxAtStartPar
+The Fourier Series becomes the Fourier Transform when
+\$\(
 T \rightarrow \infty, \qquad \omega_0 \rightarrow 0
-\end{split}
-\end{equation*}
+\)\$
+
 \sphinxstepscope
 
 
@@ -2369,22 +2365,20 @@ Button(description=\PYGZsq{}update plot\PYGZsq{}, style=ButtonStyle())
 from \sphinxurl{https://github.com/markjay4k/fourier-transform}
 as only use matplotlib inline
 
-
-\chapter{NUMERICAL INTEGRATION}
-\label{\detokenize{fnn:numerical-integration}}
-
-\chapter{What is numerical Integration}
-\label{\detokenize{fnn:what-is-numerical-integration}}
-
-\section{Numerical Integration is a way to approximate the value of a definite integral}
-\label{\detokenize{fnn:b-numerical-b-integration-is-a-way-to-approximate-the-value-of-a-definite-integral}}
-
-\section{Unlike Analytic solutions which are exact, closed form solutions}
-\label{\detokenize{fnn:unlike-analytic-solutions-which-are-exact-closed-form-solutions}}
-
-\chapter{Numerical Integration}
-\label{\detokenize{fnn:id1}}
 \sphinxAtStartPar
+NUMERICAL INTEGRATION
+
+\sphinxAtStartPar
+What is numerical Integration
+
+\sphinxAtStartPar
+Numerical Integration is a way to approximate the value of a definite integral
+
+\sphinxAtStartPar
+Unlike Analytic solutions which are exact, closed form solutions
+
+\sphinxAtStartPar
+Numerical Integration
 There are many options for numerically computing definite integrals:
 \begin{itemize}
 \item {} 
@@ -2405,9 +2399,9 @@ etc.
 
 \end{itemize}
 
+\sphinxAtStartPar
+Let’s look at the Trapezoid Rule
 
-\section{Let’s look at the Trapezoid Rule}
-\label{\detokenize{fnn:let-s-look-at-the-trapezoid-rule}}
 \sphinxAtStartPar
 The Trapezoid rule is a way of approximating a definite integral by breaking it up into trapezoids.
 
@@ -2482,9 +2476,9 @@ Below is a visualization showing \(\sin(x)\) and a trapezoid approximation.
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+Area of a Trapezoid
 
-\section{Area of a Trapezoid}
-\label{\detokenize{fnn:area-of-a-trapezoid}}
 \sphinxAtStartPar
 The area of a trapezoid is the average height times the base
 
@@ -2497,9 +2491,9 @@ For the example shown, the area is
 Area = \overbrace{\frac{f(x_{k-1}) + f(x_k)}{2}}^{ave \, height} \,\, \overbrace{\Delta x}^{base}
 \end{split}
 \end{equation*}
+\sphinxAtStartPar
+trapezoid rule equation
 
-\section{trapezoid rule equation}
-\label{\detokenize{fnn:trapezoid-rule-equation}}
 \sphinxAtStartPar
 the equation for the trapezoid rule is
 \begin{equation*}
@@ -2560,9 +2554,9 @@ And we can write a function to compute this
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
 \end{sphinxuseclass}
+\sphinxAtStartPar
+Error vs. number of Trapezoids
 
-\section{Error vs. number of Trapezoids}
-\label{\detokenize{fnn:error-vs-number-of-trapezoids}}
 \sphinxAtStartPar
 As we increase the number of trapezoids, the approximation gets better (\(error \rightarrow 0\)).
 \$\(error = (actual - approximation)^2\)\$

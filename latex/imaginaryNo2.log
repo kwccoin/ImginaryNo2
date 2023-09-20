@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Homebrew) (preloaded format=xelatex 2023.6.22)  20 SEP 2023 19:49
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Homebrew) (preloaded format=xelatex 2023.6.22)  20 SEP 2023 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1843,15 +1843,15 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 9.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 9.
- [1
-
-])
+)
 \tf@toc=\write7
 \openout7 = `imaginaryNo2.toc'.
 
- [2] [1
+ [1
 
 ] [2
+
+] [1] [2
 
 ]
 Chapter 1.
@@ -2167,9 +2167,9 @@ File: 73154a7edd47501c5bd3b11c7a489e9a479eb9581405405bd4156bed337e8eb0.png Grap
 hic file (type bmp)
 <73154a7edd47501c5bd3b11c7a489e9a479eb9581405405bd4156bed337e8eb0.png>
  [21] [22]
-File: a1039fd02c681c4ff9ef9e8f5924fe96a3c86d8ac44dfd6bea70408a8109ace6.png Grap
+File: 380538c2bed596f4020d82ccd101cfef6f01e0872a293a9bb01d5dd604d33bac.png Grap
 hic file (type bmp)
-<a1039fd02c681c4ff9ef9e8f5924fe96a3c86d8ac44dfd6bea70408a8109ace6.png>
+<380538c2bed596f4020d82ccd101cfef6f01e0872a293a9bb01d5dd604d33bac.png>
  [23] [24] [25] [26
 
 ]
@@ -2235,9 +2235,9 @@ File: 73154a7edd47501c5bd3b11c7a489e9a479eb9581405405bd4156bed337e8eb0.png Grap
 hic file (type bmp)
 <73154a7edd47501c5bd3b11c7a489e9a479eb9581405405bd4156bed337e8eb0.png>
  [41] [42]
-File: e79285e14e3e797395f95f1a30e70ad39cc0a4dabb6b1eff9b7ff866c430d02a.png Grap
+File: f6f4c37f38e27a386044e1382450a07dbf1557e21959c9eed00eb4ac4fb90b24.png Grap
 hic file (type bmp)
-<e79285e14e3e797395f95f1a30e70ad39cc0a4dabb6b1eff9b7ff866c430d02a.png>
+<f6f4c37f38e27a386044e1382450a07dbf1557e21959c9eed00eb4ac4fb90b24.png>
 File: e50ae2e578ead2a3ba46033614add9ea65382842814bfae8462c3274a0527d33.png Grap
 hic file (type bmp)
 <e50ae2e578ead2a3ba46033614add9ea65382842814bfae8462c3274a0527d33.png>
@@ -2298,152 +2298,33 @@ hic file (type bmp)
 Chapter 12.
 [59
 
-] [60
+] [60] [61] [62
 
 ]
 Chapter 13.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.40152pt on input line 1863.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 1863.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1863.
-
-[61]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1912.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1912.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1929.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1929.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1932.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1932.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1939.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1939.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1939.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1946.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cos' on input line 1946.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1946.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1946.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1946.
-
-[62]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1991.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2024.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2024.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2024.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2027.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2027.
-
 [63]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2072.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2072.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 2072.
-
-[64] [65] [66
-
-]
-Chapter 14.
-[67]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 2215.
+(Font)              scaled to size 8.00085pt on input line 2211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 2215.
+(Font)              scaled to size 6.00064pt on input line 2211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 2215.
+(Font)              scaled to size 7.99915pt on input line 2211.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 2215.
+(Font)              scaled to size 5.99936pt on input line 2211.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 2215.
+(hyperref)                removing `math shift' on input line 2211.
 
-[68]
-Underfull \vbox (badness 10000) detected at line 2346
+[64]
+Underfull \vbox (badness 10000) detected at line 2342
  []
 
-[69] [70]
-Chapter 15.
-[71
+[65] [66]
+Chapter 14.
+[67
 
-] [72
-
-]
-Chapter 16.
-[73] [74
-
-]
-Chapter 17.
-[75] [76
-
-]
-Chapter 18.
-[77] [78] [79] [80
+] [68] [69] [70
 
 ] (./imaginaryNo2.ind)
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -2516,7 +2397,7 @@ The property list \__xpg_alias contains the pairs (without outer braces):
 >  {newzealand/target}  =>  {english}
 >  {newzealand/variant}  =>  {newzealand}
 >  {newzealand/options}  =>  {variant=newzealand}.
- [81
+ [71
 
 ] (./imaginaryNo2.aux
 LaTeX Info: Redefining \rmfamily on input line 17.
@@ -2524,15 +2405,15 @@ LaTeX Info: Redefining \sffamily on input line 17.
 LaTeX Info: Redefining \ttfamily on input line 17.
 )
 Package rerunfilecheck Info: File `imaginaryNo2.out' has not changed.
-(rerunfilecheck)             Checksum: 9032B4960F61419D7ACB652BB3559A0B;7002.
+(rerunfilecheck)             Checksum: CA383347F3BC8AE752C45B1698D8F123;2730.
  ) 
 Here is how much of TeX's memory you used:
- 43442 strings out of 476683
- 1021947 string characters out of 5795667
+ 43404 strings out of 476683
+ 1020312 string characters out of 5795667
  1956018 words of memory out of 5000000
- 62855 multiletter control sequences out of 15000+600000
- 521187 words of font info for 137 fonts, out of 8000000 for 9000
+ 62820 multiletter control sequences out of 15000+600000
+ 520061 words of font info for 130 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
  99i,23n,115p,1350b,2282s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on imaginaryNo2.pdf (85 pages).
+Output written on imaginaryNo2.pdf (75 pages).
