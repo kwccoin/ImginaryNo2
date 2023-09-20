@@ -180,12 +180,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fAe.html">testing jupyter-book failed using fAe examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ffm.html">testing jupyter-book ok using ffm examples</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="fFy.html">testing jupyter-book ok using fFy examples</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">testing jupyter-book ok using fnn examples</a></li>
-
-
-
 </ul>
 
     </div>
@@ -356,9 +352,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -374,28 +368,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">testing jupyter-book ok using fnn examples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-integration">NUMERICAL INTEGRATION</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-numerical-integration">What is numerical Integration</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-numerical-b-integration-is-a-way-to-approximate-the-value-of-a-definite-integral"><b>Numerical</b> Integration is a way to approximate the value of a definite integral</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unlike-analytic-solutions-which-are-exact-closed-form-solutions">Unlike Analytic solutions which are exact, closed form solutions</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Numerical Integration</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-look-at-the-trapezoid-rule">Let’s look at the Trapezoid Rule</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-of-a-trapezoid">Area of a Trapezoid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trapezoid-rule-equation">trapezoid rule equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-vs-number-of-trapezoids">Error vs. number of Trapezoids</a></li>
-</ul>
-</li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -409,30 +381,19 @@ document.write(`
 <h1>testing jupyter-book ok using fnn examples<a class="headerlink" href="#testing-jupyter-book-ok-using-fnn-examples" title="Permalink to this heading">#</a></h1>
 <p>from <a class="github reference external" href="https://github.com/markjay4k/fourier-transform">markjay4k/fourier-transform</a>
 as only use matplotlib inline</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="numerical-integration">
-<h1>NUMERICAL INTEGRATION<a class="headerlink" href="#numerical-integration" title="Permalink to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="what-is-numerical-integration">
-<h1>What is numerical Integration<a class="headerlink" href="#what-is-numerical-integration" title="Permalink to this heading">#</a></h1>
-<section id="b-numerical-b-integration-is-a-way-to-approximate-the-value-of-a-definite-integral">
-<h2><b>Numerical</b> Integration is a way to approximate the value of a definite integral<a class="headerlink" href="#b-numerical-b-integration-is-a-way-to-approximate-the-value-of-a-definite-integral" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="unlike-analytic-solutions-which-are-exact-closed-form-solutions">
-<h2>Unlike Analytic solutions which are exact, closed form solutions<a class="headerlink" href="#unlike-analytic-solutions-which-are-exact-closed-form-solutions" title="Permalink to this heading">#</a></h2>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Numerical Integration<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p>There are many options for numerically computing definite integrals:</p>
+<p>NUMERICAL INTEGRATION</p>
+<p>What is numerical Integration</p>
+<p><b>Numerical</b> Integration is a way to approximate the value of a definite integral</p>
+<p>Unlike Analytic solutions which are exact, closed form solutions</p>
+<p>Numerical Integration
+There are many options for numerically computing definite integrals:</p>
 <ul class="simple">
 <li><p>Trapezoid Rule</p></li>
 <li><p>Simpsons Rule</p></li>
 <li><p>Gaussian Quadrature</p></li>
 <li><p>etc.</p></li>
 </ul>
-<section id="let-s-look-at-the-trapezoid-rule">
-<h2>Let’s look at the Trapezoid Rule<a class="headerlink" href="#let-s-look-at-the-trapezoid-rule" title="Permalink to this heading">#</a></h2>
+<p>Let’s look at the Trapezoid Rule</p>
 <p>The Trapezoid rule is a way of approximating a definite integral by breaking it up into trapezoids.</p>
 <p>Let’s say we want to compute the integral</p>
 <div class="math notranslate nohighlight">
@@ -483,11 +444,9 @@ as only use matplotlib inline</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/34d060be9bd00f6fbd46c6ab1f1c7540f0b6bd31611ff474c2a63fe2684064b4.svg" src="_images/34d060be9bd00f6fbd46c6ab1f1c7540f0b6bd31611ff474c2a63fe2684064b4.svg" /></div>
+<img alt="_images/6aafd139f666b77b44eaea6ce7faf3de1cd11e0f3c6bf440e512d51363c10613.svg" src="_images/6aafd139f666b77b44eaea6ce7faf3de1cd11e0f3c6bf440e512d51363c10613.svg" /></div>
 </div>
-</section>
-<section id="area-of-a-trapezoid">
-<h2>Area of a Trapezoid<a class="headerlink" href="#area-of-a-trapezoid" title="Permalink to this heading">#</a></h2>
+<p>Area of a Trapezoid</p>
 <p>The area of a trapezoid is the average height times the base</p>
 <img src="trap2.png" width=400>
 <p>For the example shown, the area is</p>
@@ -495,9 +454,7 @@ as only use matplotlib inline</p>
 \[
 Area = \overbrace{\frac{f(x_{k-1}) + f(x_k)}{2}}^{ave \, height} \,\, \overbrace{\Delta x}^{base}
 \]</div>
-</section>
-<section id="trapezoid-rule-equation">
-<h2>trapezoid rule equation<a class="headerlink" href="#trapezoid-rule-equation" title="Permalink to this heading">#</a></h2>
+<p>trapezoid rule equation</p>
 <p>the equation for the trapezoid rule is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -543,9 +500,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </div>
 </div>
-</section>
-<section id="error-vs-number-of-trapezoids">
-<h2>Error vs. number of Trapezoids<a class="headerlink" href="#error-vs-number-of-trapezoids" title="Permalink to this heading">#</a></h2>
+<p>Error vs. number of Trapezoids</p>
 <p>As we increase the number of trapezoids, the approximation gets better (<span class="math notranslate nohighlight">\(error \rightarrow 0\)</span>).
 $<span class="math notranslate nohighlight">\(error = (actual - approximation)^2\)</span>$</p>
 <div class="cell docutils container">
@@ -571,9 +526,8 @@ $<span class="math notranslate nohighlight">\(error = (actual - approximation)^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ce0b86d98ff7761bbec26777d7885c197a0785d5abffac6e0dff9e9f0ec31778.svg" src="_images/ce0b86d98ff7761bbec26777d7885c197a0785d5abffac6e0dff9e9f0ec31778.svg" /></div>
+<img alt="_images/5c0373fbb9839fc255038a9a7fcdbd8466a26ec0c89ad9229d751390ec82e0f0.svg" src="_images/5c0373fbb9839fc255038a9a7fcdbd8466a26ec0c89ad9229d751390ec82e0f0.svg" /></div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -621,34 +575,6 @@ $<span class="math notranslate nohighlight">\(error = (actual - approximation)^2
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">testing jupyter-book ok using fnn examples</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-integration">NUMERICAL INTEGRATION</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-numerical-integration">What is numerical Integration</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-numerical-b-integration-is-a-way-to-approximate-the-value-of-a-definite-integral"><b>Numerical</b> Integration is a way to approximate the value of a definite integral</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unlike-analytic-solutions-which-are-exact-closed-form-solutions">Unlike Analytic solutions which are exact, closed form solutions</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Numerical Integration</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-look-at-the-trapezoid-rule">Let’s look at the Trapezoid Rule</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#area-of-a-trapezoid">Area of a Trapezoid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trapezoid-rule-equation">trapezoid rule equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-vs-number-of-trapezoids">Error vs. number of Trapezoids</a></li>
-</ul>
-</li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
