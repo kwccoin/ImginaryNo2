@@ -159,6 +159,22 @@ Check out the content pages here to see more.  Just do not not trust it is right
 \sphinxAtStartPar
 {\hyperref[\detokenize{markdown-notebooks::doc}]{\sphinxcrossref{Notebooks with MyST Markdown}}}
 
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{fAe::doc}]{\sphinxcrossref{testing jupyter\sphinxhyphen{}book failed using fAe examples}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{ffm::doc}]{\sphinxcrossref{testing jupyter\sphinxhyphen{}book ok using ffm examples}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{fFy::doc}]{\sphinxcrossref{testing jupyter\sphinxhyphen{}book ok using fFy examples}}}
+
+\item {} 
+\sphinxAtStartPar
+{\hyperref[\detokenize{fnn::doc}]{\sphinxcrossref{testing jupyter\sphinxhyphen{}book ok using fnn examples}}}
+
 \end{itemize}
 
 \sphinxstepscope
@@ -732,9 +748,9 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2\PYGZhy{}win\PYGZhy{}unity1/ipadred\PYGZhy{}rain/imgno\PYGZus{}book1/imgnobk1
 not vai c3 main
 
-index: 48 
-theta4 at  8.096453550191145 
- a= \PYGZhy{}0.2401029638486945  b= 0.9707474268578169 
+index: 41 
+theta4 at  6.915720740788269 
+ a= 0.8065311753227272  b= 0.5911915622135859 
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -742,7 +758,7 @@ theta4 at  8.096453550191145
   plt.tight\PYGZus{}layout()
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{f85e4a1900ebfb2a85313b6b768f6e1b4fd20eb0f09f8642680c780d88b06b61}.png}
+\noindent\sphinxincludegraphics{{a1039fd02c681c4ff9ef9e8f5924fe96a3c86d8ac44dfd6bea70408a8109ace6}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -1253,9 +1269,9 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2\PYGZhy{}win\PYGZhy{}unity1/ipadred\PYGZhy{}rain/imgno\PYGZus{}book1/imgnobk1
 not vai c3 main
 
-index: 42 
-theta4 at  7.084396856417252 
- a= 0.695837086003772  b= 0.7181996586895452 
+index: 96 
+theta4 at  16.19290710038229 
+ a= \PYGZhy{}0.884701133502145  b= \PYGZhy{}0.4661586686741112 
 \end{sphinxVerbatim}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1263,7 +1279,7 @@ theta4 at  7.084396856417252
   plt.tight\PYGZus{}layout()
 \end{sphinxVerbatim}
 
-\noindent\sphinxincludegraphics{{99399b4774bef06e45d84fff13c3e9b3c343fbf502169b0b905431a3f80dcc35}.png}
+\noindent\sphinxincludegraphics{{e79285e14e3e797395f95f1a30e70ad39cc0a4dabb6b1eff9b7ff866c430d02a}.png}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
 
@@ -1498,7 +1514,7 @@ For example, here’s some sample Matplotlib code:
 
 \begin{sphinxuseclass}{cell_output}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZlt{}contextlib.ExitStack at 0x117d76750\PYGZgt{}
+\PYGZlt{}contextlib.ExitStack at 0x1198af310\PYGZgt{}
 \end{sphinxVerbatim}
 
 \end{sphinxuseclass}\end{sphinxVerbatimOutput}
@@ -1621,6 +1637,973 @@ If you have a markdown file and you’d like to quickly add YAML metadata to it,
 \PYG{n}{jupyter}\PYG{o}{\PYGZhy{}}\PYG{n}{book} \PYG{n}{myst} \PYG{n}{init} \PYG{n}{path}\PYG{o}{/}\PYG{n}{to}\PYG{o}{/}\PYG{n}{markdownfile}\PYG{o}{.}\PYG{n}{md}
 \end{sphinxVerbatim}
 
+\sphinxstepscope
+
+
+\chapter{testing jupyter\sphinxhyphen{}book failed using fAe examples}
+\label{\detokenize{fAe:testing-jupyter-book-failed-using-fae-examples}}\label{\detokenize{fAe::doc}}
+\sphinxAtStartPar
+from \sphinxurl{https://github.com/markjay4k/fourier-transform}
+unless matplotlib notebook to inline
+
+\sphinxAtStartPar
+Not work immeidately
+
+\sphinxAtStartPar
+as jupyterlab assume using conda and use javascript for
+interaction … that is not in the past \sphinxurl{https://github.com/jupyterlab/jupyterlab/issues/3934}
+
+\sphinxAtStartPar
+as detailed discussed here: \sphinxurl{https://stackoverflow.com/questions/51922480/javascript-error-ipython-is-not-defined-in-jupyterlab/56416229\#56416229}
+
+\sphinxAtStartPar
+change all to inline it would work but what is the point???!!!!
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k}{def} \PYG{n+nf}{rect}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{B}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    create a rectangle function}
+\PYG{l+s+sd}{    returns a numpy array that is 1 if |x| \PYGZlt{} w and 0 if |x| \PYGZgt{} w}
+\PYG{l+s+sd}{    B is the rectangle width centered at 0}
+\PYG{l+s+sd}{    x is the number of points in the array}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    
+    \PYG{n}{B} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+    
+    \PYG{n}{high} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{low1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{o}{/}\PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{n}{B}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)}    
+    \PYG{n}{x1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{low1}\PYG{p}{,} \PYG{n}{high}\PYG{p}{)}
+    \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{low1}\PYG{p}{)}
+    
+    \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{rect}\PYG{p}{[}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+    \PYG{k}{return} \PYG{n}{rect}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k}{def} \PYG{n+nf}{rect}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{B}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    create a rectangle function}
+\PYG{l+s+sd}{    returns a numpy array that is 1 if |x| \PYGZlt{} w and 0 if |x| \PYGZgt{} w}
+\PYG{l+s+sd}{    B is the rectangle width centered at 0}
+\PYG{l+s+sd}{    x is the number of points in the array}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    
+    \PYG{n}{B} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+    
+    \PYG{n}{high} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{low1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{o}{/}\PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{n}{B}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)}    
+    \PYG{n}{x1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{low1}\PYG{p}{,} \PYG{n}{high}\PYG{p}{)}
+    \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{low1}\PYG{p}{)}
+    
+    \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{rect}\PYG{p}{[}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+    \PYG{k}{return} \PYG{n}{rect}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} \PYGZpc{}matplotlib notebook}
+\PYG{o}{\PYGZpc{}}\PYG{k}{matplotlib} inline
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{from} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{animation} \PYG{k+kn}{import} \PYG{n}{FuncAnimation}
+
+\PYG{c+c1}{\PYGZsh{} constants and x array}
+\PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}
+\PYG{n}{length} \PYG{o}{=} \PYG{l+m+mi}{2000}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{length}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} create figure and axes }
+\PYG{n}{fig}\PYG{p}{,} \PYG{p}{(}\PYG{n}{ax1}\PYG{p}{,} \PYG{n}{ax2}\PYG{p}{)} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{subplots}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{figsize}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{)}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} creating our line objects for the plots}
+\PYG{n}{sinc}\PYG{p}{,} \PYG{o}{=} \PYG{n}{ax1}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{box}\PYG{p}{,} \PYG{o}{=} \PYG{n}{ax2}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{animate}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    this function gets called by FuncAnimation}
+\PYG{l+s+sd}{    each time called, it will replot with a different width \PYGZdq{}B\PYGZdq{}}
+\PYG{l+s+sd}{    }
+\PYG{l+s+sd}{    B: rect width}
+\PYG{l+s+sd}{    }
+\PYG{l+s+sd}{    return:}
+\PYG{l+s+sd}{        sinc: ydata}
+\PYG{l+s+sd}{        box: ydata}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    
+    \PYG{c+c1}{\PYGZsh{} create our rect object}
+    \PYG{n}{f} \PYG{o}{=} \PYG{n}{rect}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{,} \PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{box}\PYG{o}{.}\PYG{n}{set\PYGZus{}ydata}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}
+    
+    \PYG{c+c1}{\PYGZsh{} create our sinc object}
+    \PYG{n}{F} \PYG{o}{=} \PYG{p}{(}\PYG{n}{B} \PYG{o}{/} \PYG{n}{length}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{B} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{B} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)}
+    \PYG{n}{sinc}\PYG{o}{.}\PYG{n}{set\PYGZus{}ydata}\PYG{p}{(}\PYG{n}{F}\PYG{p}{)}
+    
+    \PYG{c+c1}{\PYGZsh{} adjust the sinc plot height in a loop}
+    \PYG{n}{ax1}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylim}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{min}\PYG{p}{(}\PYG{n}{F}\PYG{p}{)}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{n}{F}\PYG{p}{)}\PYG{p}{)}
+    
+    \PYG{c+c1}{\PYGZsh{} format the ax1 yticks}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{setp}\PYG{p}{(}\PYG{n}{ax1}\PYG{p}{,} \PYG{n}{xticks}\PYG{o}{=}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{]}\PYG{p}{,} \PYG{n}{xticklabels}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}1/4}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{1/4}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{,}
+             \PYG{n}{yticks}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{n}{F}\PYG{p}{)}\PYG{p}{]}\PYG{p}{,} \PYG{n}{yticklabels}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{0}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B=}\PYG{l+s+si}{\PYGZob{}:.2f\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{p}{(}\PYG{n}{B} \PYG{o}{/} \PYG{n}{length}\PYG{p}{)}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+    
+    \PYG{c+c1}{\PYGZsh{} format the ax2 xticks to move with the box}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{setp}\PYG{p}{(}\PYG{n}{ax2}\PYG{p}{,} \PYG{n}{yticks}\PYG{o}{=}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} 
+             \PYG{n}{xticks}\PYG{o}{=}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{B} \PYG{o}{/} \PYG{n}{length}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{B} \PYG{o}{/} \PYG{n}{length}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{n}{xticklabels}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}B/2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{B/2}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+    
+\PYG{k}{def} \PYG{n+nf}{init}\PYG{p}{(}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    initialize the figure}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    
+    \PYG{n}{ax2}\PYG{o}{.}\PYG{n}{set\PYGZus{}ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{l+m+mf}{1.1}\PYG{p}{)}
+    \PYG{n}{ax1}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{)}
+    \PYG{n}{ax2}\PYG{o}{.}\PYG{n}{set\PYGZus{}xlim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{ax1}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{black}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{ax2}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{black}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{font.size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}\PYG{l+m+mi}{14}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+    
+    \PYG{k}{return} \PYG{n}{sinc}\PYG{p}{,} \PYG{n}{box}\PYG{p}{,}
+
+\PYG{c+c1}{\PYGZsh{} the FuncAnimation function iterates through our animate function using the steps array}
+\PYG{n}{step} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{steps} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{n}{step}\PYG{p}{)}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{*} \PYG{n}{step}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{ani} \PYG{o}{=} \PYG{n}{FuncAnimation}\PYG{p}{(}\PYG{n}{fig}\PYG{p}{,} \PYG{n}{animate}\PYG{p}{,} \PYG{n}{steps}\PYG{p}{,} \PYG{n}{init\PYGZus{}func}\PYG{o}{=}\PYG{n}{init}\PYG{p}{,} \PYG{n}{interval}\PYG{o}{=}\PYG{l+m+mi}{50}\PYG{p}{,} \PYG{n}{blit}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\noindent\sphinxincludegraphics{{8551e79d4152d27f811b54b6b9b754886f71f82a626ee9a05eaac41305a2cfbe}.png}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k}{def} \PYG{n+nf}{rect}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{B}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    create a rectangle function}
+\PYG{l+s+sd}{    returns a numpy array that is 1 if |x| \PYGZlt{} w and 0 if |x| \PYGZgt{} w}
+\PYG{l+s+sd}{    B is the rectangle width centered at 0}
+\PYG{l+s+sd}{    x is the number of points in the array}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    
+    \PYG{n}{B} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+    
+    \PYG{n}{high} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{low1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{o}{/}\PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{n}{B}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)}    
+    \PYG{n}{x1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{low1}\PYG{p}{,} \PYG{n}{high}\PYG{p}{)}
+    \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{low1}\PYG{p}{)}
+    
+    \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{rect}\PYG{p}{[}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+    \PYG{k}{return} \PYG{n}{rect}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\sphinxstepscope
+
+
+\chapter{testing jupyter\sphinxhyphen{}book ok using ffm examples}
+\label{\detokenize{ffm:testing-jupyter-book-ok-using-ffm-examples}}\label{\detokenize{ffm::doc}}
+\sphinxAtStartPar
+from \sphinxurl{https://github.com/markjay4k/fourier-transform}
+as only use matplotlib inline
+
+
+\chapter{Going from Fourier Series to Fourier Transform}
+\label{\detokenize{ffm:going-from-fourier-series-to-fourier-transform}}
+
+\section{Last time we defined the Fourier Series as}
+\label{\detokenize{ffm:last-time-we-defined-the-fourier-series-as}}\begin{equation*}
+\begin{split}
+f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx) + b_n \sin(nx)
+\end{split}
+\end{equation*}
+
+\section{Let’s look at the square wave centered at \protect\(x=0\protect\)}
+\label{\detokenize{ffm:let-s-look-at-the-square-wave-centered-at-x-0}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZpc{}}\PYG{k}{matplotlib} inline
+\PYG{o}{\PYGZpc{}}\PYG{k}{config} InlineBackend.figure\PYGZus{}format = \PYGZsq{}svg\PYGZsq{}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{scipy}\PYG{n+nn}{.}\PYG{n+nn}{signal} \PYG{k}{as} \PYG{n+nn}{signal}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gray}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{o}{+} \PYG{l+m+mf}{0.5} \PYG{o}{*} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{square}\PYG{p}{(}\PYG{n}{x} \PYG{o}{+} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mf}{1.5}\PYG{p}{,} 
+         \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}f(x)=}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{frac}\PYG{l+s+si}{\PYGZob{}1\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s1}{ + }\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{sum\PYGZus{}}\PYG{l+s+s1}{\PYGZob{}}\PYG{l+s+s1}{n=1,3,5}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{ldots\PYGZcb{}\PYGZca{}}\PYG{l+s+s1}{\PYGZob{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{infty\PYGZcb{}a\PYGZus{}n }\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{cos(nx)\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{,} \PYG{n}{fancybox}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{framealpha}\PYG{o}{=}\PYG{l+m+mf}{0.3}\PYG{p}{,} \PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{figure.figsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{font.size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{16}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Fourier Series of a Square Wave}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}x\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 640x480 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{But we didn’t show how to calculate \protect\(a_n\protect\)}
+\label{\detokenize{ffm:but-we-didn-t-show-how-to-calculate-a-n}}
+
+\section{Let’s change our Fourier Series Equation}
+\label{\detokenize{ffm:let-s-change-our-fourier-series-equation}}\begin{equation*}
+\begin{split}
+f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(n \omega_0 x) + b_n \sin(n \omega_o x)
+\end{split}
+\end{equation*}
+
+\section{where}
+\label{\detokenize{ffm:where}}\begin{equation*}
+\begin{split}
+\omega_0 =\frac{2\pi}{T}
+\end{split}
+\end{equation*}
+
+\section{and \protect\(T\protect\) is the fundamental period (for the square wave above, \protect\(T=2\pi\protect\))}
+\label{\detokenize{ffm:and-t-is-the-fundamental-period-for-the-square-wave-above-t-2-pi}}
+
+\section{The equation for \protect\(a_n\protect\) is}
+\label{\detokenize{ffm:the-equation-for-a-n-is}}\begin{equation*}
+\begin{split}
+a_n = \frac{2}{T}\int_{-T/2}^{T/2} f(x)\cos(n \omega_0 x)dx
+\end{split}
+\end{equation*}
+
+\section{For the square wave above, the limits are only \protect\(-T/4\protect\) to \protect\(T/4\protect\) because \protect\(f(x)=0\protect\) for the rest of the wavelength.}
+\label{\detokenize{ffm:for-the-square-wave-above-the-limits-are-only-t-4-to-t-4-because-f-x-0-for-the-rest-of-the-wavelength}}\begin{equation*}
+\begin{split}
+a_n = \frac{2}{T} \int_{-T/4}^{T/4}\cos(n \omega_0 x)dx
+\end{split}
+\end{equation*}
+
+\section{Because \protect\(\cos(nx)\protect\) is even, we can reduce the limits to \protect\(0\protect\) to \protect\(T/4\protect\) and multiply by \protect\(2\protect\)}
+\label{\detokenize{ffm:because-cos-nx-is-even-we-can-reduce-the-limits-to-0-to-t-4-and-multiply-by-2}}\begin{equation*}
+\begin{split}
+a_n = \frac{4}{T} \int_{0}^{T/4}\cos(n \omega_0 x)dx
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+a_n = \frac{4}{n \omega_0 T} \sin(n \omega_0 x)\bigg|^{T/4}_0  =\frac{4}{n \omega_0 T}\sin \left( n\omega_0 \frac{T}{4} \right)
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+a_n =\frac{2}{n\pi}\sin \left(n \omega_0 \frac{\pi}{2} \right)
+\end{split}
+\end{equation*}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gray}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{x}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{frac}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s1}{\PYGZob{}}\PYG{l+s+s1}{n}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZcb{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{sin }\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{left( n}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0 }\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{frac}\PYG{l+s+s1}{\PYGZob{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s1}{ }\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{right)\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{an} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{n}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{n} \PYG{o}{*} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{]}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{bo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}\PYG{p}{,} \PYG{n}{an}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{bo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{9}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+          \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}4}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} 
+           \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}5}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}6}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}7}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}8}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{,} \PYG{n}{fancybox}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{framealpha}\PYG{o}{=}\PYG{l+m+mf}{0.3}\PYG{p}{,} \PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 1100x400 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{What if we make the squares farther apart by making \protect\(T=4\pi\protect\) ?}
+\label{\detokenize{ffm:what-if-we-make-the-squares-farther-apart-by-making-t-4-pi}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gray}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{n}{f} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mf}{0.5} \PYG{o}{+} \PYG{l+m+mf}{0.5} \PYG{o}{*} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{square}\PYG{p}{(}\PYG{n}{x} \PYG{o}{+} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}\PYG{l+m+mf}{0.5} \PYG{o}{+} \PYG{l+m+mf}{0.5} \PYG{o}{*} \PYG{n}{signal}\PYG{o}{.}\PYG{n}{square}\PYG{p}{(}\PYG{n}{x}\PYG{o}{/}\PYG{l+m+mi}{2} \PYG{o}{+} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{f}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{]}\PYG{p}{,}
+          \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}4}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}4}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{pi\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{font.size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{16}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{figure.figsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{Pulse wave}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 1100x400 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{The new fundamental frequency becomes \protect\(\omega'_0 =\omega_0/2\protect\)}
+\label{\detokenize{ffm:the-new-fundamental-frequency-becomes-omega-0-omega-0-2}}
+
+\section{The \protect\(a_n\protect\) coefficients become}
+\label{\detokenize{ffm:the-a-n-coefficients-become}}\begin{equation*}
+\begin{split}
+a_n = \frac{4}{n\omega'_0 T} \sin \left(n\omega'_0\frac{T}{8}\right)
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+a_n = \frac{2}{n\pi} \sin \left(n \omega'_0 \frac{\pi}{2} \right)
+\end{split}
+\end{equation*}
+
+\section{Since the fundametal frequency is cut in half, the spacing between coefficients are closer, but bound by the same envelope}
+\label{\detokenize{ffm:since-the-fundametal-frequency-is-cut-in-half-the-spacing-between-coefficients-are-closer-but-bound-by-the-same-envelope}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gray}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{x}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{nprime} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{p}{)}
+\PYG{n}{an2} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{n}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{n} \PYG{o}{*} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n}{nprime}\PYG{p}{]}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{go}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{nprime}\PYG{p}{,} \PYG{n}{an2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{go}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdl{}}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{frac}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s2}{\PYGZob{}}\PYG{l+s+s2}{n}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{pi\PYGZcb{}}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{sin }\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{left( n}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{omega\PYGZus{}0}\PYG{l+s+s2}{\PYGZsq{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{frac}\PYG{l+s+s2}{\PYGZob{}}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{pi\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{right)\PYGZdl{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{9}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+          \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}4}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} 
+           \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}5}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}6}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}7}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}8}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{,} \PYG{n}{fancybox}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{framealpha}\PYG{o}{=}\PYG{l+m+mf}{0.3}\PYG{p}{,} \PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 1100x400 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{If \protect\(\omega_0' \rightarrow \omega_0/10\protect\)}
+\label{\detokenize{ffm:if-omega-0-rightarrow-omega-0-10}}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{gray}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{x}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x} \PYG{o}{*} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}\PYGZhy{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{n} \PYG{o}{=} \PYG{l+m+mf}{0.1}
+\PYG{n}{nprime} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}
+\PYG{n}{an2} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{p}{(}\PYG{n}{n}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{n} \PYG{o}{*} \PYG{n}{pi}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n}{nprime}\PYG{p}{]}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{go}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{nprime}\PYG{p}{,} \PYG{n}{an2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{go}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdl{}}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{frac}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s2}{\PYGZob{}}\PYG{l+s+s2}{n}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{pi\PYGZcb{}}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{sin }\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{left( n}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{omega\PYGZus{}0}\PYG{l+s+s2}{\PYGZsq{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{frac}\PYG{l+s+s2}{\PYGZob{}}\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{pi\PYGZcb{}}\PYG{l+s+si}{\PYGZob{}2\PYGZcb{}}\PYG{l+s+s2}{ }\PYG{l+s+s2}{\PYGZbs{}}\PYG{l+s+s2}{right)\PYGZdl{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{9}\PYG{p}{)}\PYG{p}{)}\PYG{p}{,}
+          \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}2}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}3}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}4}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} 
+           \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}5}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}6}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}7}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}8}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{omega\PYGZus{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{l+m+mf}{1.5}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{,} \PYG{n}{fancybox}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{framealpha}\PYG{o}{=}\PYG{l+m+mf}{0.3}\PYG{p}{,} \PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 1100x400 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{The Fourier Series becomes the Fourier Transform when}
+\label{\detokenize{ffm:the-fourier-series-becomes-the-fourier-transform-when}}\begin{equation*}
+\begin{split}
+T \rightarrow \infty, \qquad \omega_0 \rightarrow 0
+\end{split}
+\end{equation*}
+\sphinxstepscope
+
+
+\chapter{testing jupyter\sphinxhyphen{}book ok using fFy examples}
+\label{\detokenize{fFy:testing-jupyter-book-ok-using-ffy-examples}}\label{\detokenize{fFy::doc}}
+\sphinxAtStartPar
+from \sphinxurl{https://github.com/markjay4k/fourier-transform}
+as only use matplotlib inline
+
+\sphinxAtStartPar
+But there is no plot just wedge …
+
+
+\section{Fourier Transform}
+\label{\detokenize{fFy:fourier-transform}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+Fourier Transform is a generalized version of the Fourier Series
+
+\item {} 
+\sphinxAtStartPar
+It applies to both period and non periodic functions
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+For periodic functions, the spectrum is discrete
+
+\item {} 
+\sphinxAtStartPar
+For non\sphinxhyphen{}period functions, the spectrum is continuous
+
+\end{itemize}
+
+\end{enumerate}
+
+
+\subsection{Definitions}
+\label{\detokenize{fFy:definitions}}
+
+\subsubsection{Fourier Transform}
+\label{\detokenize{fFy:id1}}
+\sphinxAtStartPar
+Fourier Transform of \(f(x)\) is \(F(k)\)
+\$\(
+F(k) = \mathcal{FT}\{f(x)\}
+\)\$
+\begin{equation*}
+\begin{split}
+F(k) = \int_{-\infty}^{\infty}f(x) \exp(-ikx)dx
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+where \(k=\frac{2\pi}{x}\) is called the “wavenumber”
+
+
+\subsubsection{Inverse Fourier Transform}
+\label{\detokenize{fFy:inverse-fourier-transform}}
+\sphinxAtStartPar
+To go back to \(f(x)\), the formula is
+\begin{equation*}
+\begin{split}
+f(x) = \mathcal{FT}^{-1}\{F(k)\}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+f(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty}F(k) \exp(ikx)dx
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Since \(x\) and \(k\) are inversely proportional, the “size” of \(f(x)\) and \(F(k)\) are inversely proportional.
+What this means is,
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+a compact \(f(x)\) will have a broad spectrum.
+
+\item {} 
+\sphinxAtStartPar
+a broad \(f(x)\) will have a compact spectrum
+
+\end{itemize}
+
+
+\subsection{Rectangle function}
+\label{\detokenize{fFy:rectangle-function}}
+\sphinxAtStartPar
+The \(rext_B(x)\) function is a rectangle centered at \(x=0\) with \(\text{Height}=1\) and \(\text{Width}=B\). The Formula can be written as
+\begin{equation*}
+\begin{split}
+\text{rect}_B(x) =
+\begin{cases}
+0 & \text{if} \,\,\, |x| > B/2\\[2pt]
+1/2 & \text{if} \,\,\, |x| = B/2 \\[2pt]
+1 & \text{if} \,\,\, |x| < B/2
+\end{cases}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+The cell below is a simple function for creating \(\text{rect}_B(x)\)
+
+
+\subsection{Example Fourier Transform of \protect\(\text{rect}\protect\) function}
+\label{\detokenize{fFy:example-fourier-transform-of-text-rect-function}}
+\sphinxAtStartPar
+Using the FT definition and the \(\text{rect}_B(x)\) equation, the FT is
+\begin{equation*}
+\begin{split}
+F(k) = \int_{-B/2}^{B/2} \exp(-ikx)dx
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+= -\frac{1}{ik} \exp(-ikx) \, \Big|_{-B/2}^{\,B/2}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+= -\frac{1}{ik} \left[ \exp(-ikB/2) - \exp(ikB/2)\right]
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Using the complex definition of sine from Euler’s formula
+\begin{equation*}
+\begin{split}
+\sin(x) = \frac{e^{ix} - e^{-ix}}{2i}
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Our equation for \(F(k)\) can be re\sphinxhyphen{}written as
+\begin{equation*}
+\begin{split}
+F(k) = \frac{2}{k}\frac{\exp(ikB/2) - \exp(-ikB/2)}{2i}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+= \frac{2}{k} \sin(kB/2)
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+= B \frac{\sin(kB/2)}{kB/2}
+\end{split}
+\end{equation*}\begin{equation*}
+\begin{split}
+F(k) = B \text{sinc}(kB/2)
+\end{split}
+\end{equation*}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k}{def} \PYG{n+nf}{rect}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{B}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    create a rectangle function}
+\PYG{l+s+sd}{    returns a numpy array that is 1 if |x| \PYGZlt{} w and 0 if |x| \PYGZgt{} w}
+\PYG{l+s+sd}{    w is the rectangle width centered at 0}
+\PYG{l+s+sd}{    x is the number of points in the array}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    
+    \PYG{n}{B} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+    
+    \PYG{n}{high} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n}{B}\PYG{p}{)}
+    \PYG{n}{low1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{o}{/}\PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{n}{B}\PYG{o}{/}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)}    
+    \PYG{n}{x1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{low1}\PYG{p}{,} \PYG{n}{high}\PYG{p}{)}
+    \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{low1}\PYG{p}{)}
+    
+    \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rect}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{rect} \PYG{o}{=} \PYG{n}{rect}\PYG{p}{[}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+
+    \PYG{k}{return} \PYG{n}{rect}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZpc{}}\PYG{k}{matplotlib} inline
+\PYG{o}{\PYGZpc{}}\PYG{k}{config} InlineBackend.figure\PYGZus{}format = \PYGZsq{}svg\PYGZsq{}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{from} \PYG{n+nn}{IPython} \PYG{k+kn}{import} \PYG{n}{display} \PYG{k}{as} \PYG{n}{disp}
+
+\PYG{k+kn}{import} \PYG{n+nn}{ipywidgets} \PYG{k}{as} \PYG{n+nn}{widgets}
+\PYG{k+kn}{from} \PYG{n+nn}{IPython}\PYG{n+nn}{.}\PYG{n+nn}{display} \PYG{k+kn}{import} \PYG{n}{display}
+\PYG{n}{slide} \PYG{o}{=} \PYG{n}{widgets}\PYG{o}{.}\PYG{n}{IntSlider}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{display}\PYG{p}{(}\PYG{n}{slide}\PYG{p}{)}
+
+\PYG{k+kn}{from} \PYG{n+nn}{IPython}\PYG{n+nn}{.}\PYG{n+nn}{display} \PYG{k+kn}{import} \PYG{n}{display}
+\PYG{n}{button} \PYG{o}{=} \PYG{n}{widgets}\PYG{o}{.}\PYG{n}{Button}\PYG{p}{(}\PYG{n}{description}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{update plot}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{display}\PYG{p}{(}\PYG{n}{button}\PYG{p}{)}
+
+\PYG{n}{pi} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}
+\PYG{n}{length} \PYG{o}{=} \PYG{l+m+mi}{2000}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{length}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{on\PYGZus{}button\PYGZus{}clicked}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    excecutes function when button is clicked}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{n}{B} \PYG{o}{=} \PYG{n}{slide}\PYG{o}{.}\PYG{n}{value} \PYG{o}{*} \PYG{l+m+mi}{10}
+    \PYG{k}{if} \PYG{n}{B} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n}{B} \PYG{o}{=} \PYG{l+m+mi}{10}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{font.size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{14}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{figure.figsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mf}{1.9}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{B}\PYG{o}{/}\PYG{n}{length}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{B}\PYG{o}{/}\PYG{n}{length}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}B/2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}B/2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{rect}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{,} \PYG{n}{B}\PYG{p}{)}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}f(x)=rect\PYGZus{}B(x)\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{black}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{leg} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{,} \PYG{n}{fancybox}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{leg}\PYG{o}{.}\PYG{n}{get\PYGZus{}frame}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{set\PYGZus{}linewidth}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}x\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.2}\PYG{p}{,} \PYG{l+m+mf}{1.2}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+    
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{o}{*}\PYG{n}{pi}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZhy{}B/2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}B/2\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+
+    \PYG{n}{k} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{length}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{p}{(}\PYG{n}{B} \PYG{o}{/} \PYG{n}{length}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{k} \PYG{o}{*} \PYG{n}{B} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{B} \PYG{o}{*} \PYG{n}{k} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}F(k)=B sinc(kB/2)\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{black}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{leg} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{fontsize}\PYG{o}{=}\PYG{l+m+mi}{14}\PYG{p}{,} \PYG{n}{fancybox}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{leg}\PYG{o}{.}\PYG{n}{get\PYGZus{}frame}\PYG{p}{(}\PYG{p}{)}\PYG{o}{.}\PYG{n}{set\PYGZus{}linewidth}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}k\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlim}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{.25}\PYG{p}{,} \PYG{l+m+mf}{.25}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+    \PYG{n}{disp}\PYG{o}{.}\PYG{n}{clear\PYGZus{}output}\PYG{p}{(}\PYG{n}{wait}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+ 
+\PYG{n}{button}\PYG{o}{.}\PYG{n}{on\PYGZus{}click}\PYG{p}{(}\PYG{n}{on\PYGZus{}button\PYGZus{}clicked}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+IntSlider(value=0)
+\end{sphinxVerbatim}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+Button(description=\PYGZsq{}update plot\PYGZsq{}, style=ButtonStyle())
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+\sphinxstepscope
+
+
+\chapter{testing jupyter\sphinxhyphen{}book ok using fnn examples}
+\label{\detokenize{fnn:testing-jupyter-book-ok-using-fnn-examples}}\label{\detokenize{fnn::doc}}
+\sphinxAtStartPar
+from \sphinxurl{https://github.com/markjay4k/fourier-transform}
+as only use matplotlib inline
+
+
+\chapter{NUMERICAL INTEGRATION}
+\label{\detokenize{fnn:numerical-integration}}
+
+\chapter{What is numerical Integration}
+\label{\detokenize{fnn:what-is-numerical-integration}}
+
+\section{Numerical Integration is a way to approximate the value of a definite integral}
+\label{\detokenize{fnn:b-numerical-b-integration-is-a-way-to-approximate-the-value-of-a-definite-integral}}
+
+\section{Unlike Analytic solutions which are exact, closed form solutions}
+\label{\detokenize{fnn:unlike-analytic-solutions-which-are-exact-closed-form-solutions}}
+
+\chapter{Numerical Integration}
+\label{\detokenize{fnn:id1}}
+\sphinxAtStartPar
+There are many options for numerically computing definite integrals:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Trapezoid Rule
+
+\item {} 
+\sphinxAtStartPar
+Simpsons Rule
+
+\item {} 
+\sphinxAtStartPar
+Gaussian Quadrature
+
+\item {} 
+\sphinxAtStartPar
+etc.
+
+\end{itemize}
+
+
+\section{Let’s look at the Trapezoid Rule}
+\label{\detokenize{fnn:let-s-look-at-the-trapezoid-rule}}
+\sphinxAtStartPar
+The Trapezoid rule is a way of approximating a definite integral by breaking it up into trapezoids.
+
+\sphinxAtStartPar
+Let’s say we want to compute the integral
+\begin{equation*}
+\begin{split} \int_0^{\pi} \sin(x)dx \end{split}
+\end{equation*}
+\sphinxAtStartPar
+We can easily compute it analytically
+\begin{equation*}
+\begin{split} \int_0^{\pi} \sin(x)dx = -\cos(x) \big|_0^{\pi} \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} =-(\cos(\pi) - \cos(0)) \end{split}
+\end{equation*}\begin{equation*}
+\begin{split} = -(-1 - 1)\end{split}
+\end{equation*}\begin{equation*}
+\begin{split} 2 \end{split}
+\end{equation*}
+\sphinxAtStartPar
+But let’s try computing using the trapezoid rule.
+
+\sphinxAtStartPar
+Below is a visualization showing \(\sin(x)\) and a trapezoid approximation.
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}\PYG{n+nn}{.}\PYG{n+nn}{pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{o}{\PYGZpc{}}\PYG{k}{config} InlineBackend.figure\PYGZus{}format = \PYGZsq{}svg\PYGZsq{}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{figure.figsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{13}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{font.size}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{19}\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{trap\PYGZus{}plot}\PYG{p}{(}\PYG{n}{n\PYGZus{}points}\PYG{p}{)}\PYG{p}{:}
+    \PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{)}          \PYG{c+c1}{\PYGZsh{} continuous}
+    \PYG{n}{x\PYGZus{}i} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{n\PYGZus{}points}\PYG{p}{)}    \PYG{c+c1}{\PYGZsh{} discrete}
+
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZbs{}}\PYG{l+s+s1}{sin(x)\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{)}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZhy{}o}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}Trap\PYGZdl{} (}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s1}{)}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{n\PYGZus{}points}\PYG{p}{)}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{fill}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{)}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mf}{0.15}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{vlines}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{)}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{C1}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{linestyle}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{:}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xticks}\PYG{p}{(}\PYG{n}{x\PYGZus{}i}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}x\PYGZus{}}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s1}{\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n\PYGZus{}points}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{yticks}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}0\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZdl{}1\PYGZdl{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{best}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylim}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{1.05}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{trap\PYGZus{}plot}\PYG{p}{(}\PYG{l+m+mi}{9}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 1300x800 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{Area of a Trapezoid}
+\label{\detokenize{fnn:area-of-a-trapezoid}}
+\sphinxAtStartPar
+The area of a trapezoid is the average height times the base
+
+
+
+\sphinxAtStartPar
+For the example shown, the area is
+\begin{equation*}
+\begin{split}
+Area = \overbrace{\frac{f(x_{k-1}) + f(x_k)}{2}}^{ave \, height} \,\, \overbrace{\Delta x}^{base}
+\end{split}
+\end{equation*}
+
+\section{trapezoid rule equation}
+\label{\detokenize{fnn:trapezoid-rule-equation}}
+\sphinxAtStartPar
+the equation for the trapezoid rule is
+\begin{equation*}
+\begin{split}
+\int_a^b f(x)dx \approx \frac{f(x_0) + f(x_1)}{2}\Delta x + \frac{f(x_1) + f(x_2)}{2}\Delta x \cdots \frac{f(x_{N-1}) + f(x_N)}{2}\Delta x
+\end{split}
+\end{equation*}
+\sphinxAtStartPar
+Now we can write this as a summation
+\$\(
+\approx \sum_{k=1}^N \frac{f(x_{k-1}) + f(x_k)}{2} \Delta x
+\)\$
+
+\sphinxAtStartPar
+And we can write a function to compute this
+\begin{equation*}
+\begin{split}
+\approx \sum_{k=1}^N \frac{f(x_{k-1}) + f(x_k)}{2} \Delta x
+\end{split}
+\end{equation*}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{trap}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}\PYG{p}{:}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{    computes the integral of f using trapezoid rule}
+\PYG{l+s+sd}{    \PYGZdq{}\PYGZdq{}\PYGZdq{}}
+    \PYG{n}{area} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{n}{N} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+    \PYG{n}{dx} \PYG{o}{=} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    
+    \PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{area} \PYG{o}{+}\PYG{o}{=} \PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{[}\PYG{n}{k} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{)} \PYG{o}{+} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{)}\PYG{p}{)} \PYG{o}{*} \PYG{n}{dx} \PYG{o}{/} \PYG{l+m+mi}{2}
+        
+    \PYG{k}{return} \PYG{n}{area}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{)}
+\PYG{n}{trap}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+1.9954413183201944
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
+
+\section{Error vs. number of Trapezoids}
+\label{\detokenize{fnn:error-vs-number-of-trapezoids}}
+\sphinxAtStartPar
+As we increase the number of trapezoids, the approximation gets better (\(error \rightarrow 0\)).
+\$\(error = (actual - approximation)^2\)\$
+
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{rcParams}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{figure.figsize}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{plot\PYGZus{}error}\PYG{p}{(}\PYG{n}{n\PYGZus{}points}\PYG{p}{)}\PYG{p}{:}
+    \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{n\PYGZus{}points}\PYG{p}{)}\PYG{p}{:}
+        \PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi}\PYG{p}{,} \PYG{n}{n}\PYG{p}{)}
+        \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{p}{(}\PYG{n}{trap}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*}\PYG{o}{*} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{bo}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+        \PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{black}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{lw}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{\PYGZsh{} of trapezoids}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{error}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+
+\end{sphinxuseclass}
+\begin{sphinxuseclass}{cell}\begin{sphinxVerbatimInput}
+
+\begin{sphinxuseclass}{cell_input}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{plot\PYGZus{}error}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimInput}
+\begin{sphinxVerbatimOutput}
+
+\begin{sphinxuseclass}{cell_output}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZlt{}Figure size 1100x600 with 1 Axes\PYGZgt{}
+\end{sphinxVerbatim}
+
+\end{sphinxuseclass}\end{sphinxVerbatimOutput}
+
+\end{sphinxuseclass}
 \begin{sphinxthebibliography}{HdHPK14}
 \bibitem[HdHPK14]{markdown:id3}
 \sphinxAtStartPar
