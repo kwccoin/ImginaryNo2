@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>testAnimated-Sinc-and-FT-example &#8212; Imaginery Number Book 2</title>
+    <title>testing jupyter-book failed using fAe examples &#8212; Imaginery Number Book 2</title>
   
   
   
@@ -62,10 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'testAnimated-Sinc-and-FT-example';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fAe';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="testing jupyter-book ok using fnn examples" href="fnn.html" />
+    <link rel="next" title="testing jupyter-book ok using fFy examples" href="fFy.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -177,10 +178,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fAe.html">testing jupyter-book failed using fAe examples</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">testing jupyter-book failed using fAe examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fFy.html">testing jupyter-book ok using fFy examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fnn.html">testing jupyter-book ok using fnn examples</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">testAnimated-Sinc-and-FT-example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testAnimated-Sinc-and-FT-example.html">testAnimated-Sinc-and-FT-example</a></li>
 </ul>
 
     </div>
@@ -252,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FtestAnimated-Sinc-and-FT-example.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FfAe.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/testAnimated-Sinc-and-FT-example.ipynb" target="_blank"
+      <li><a href="_sources/fAe.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,7 +363,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>testAnimated-Sinc-and-FT-example</h1>
+    <h1>testing jupyter-book failed using fAe examples</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,8 +377,45 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="testanimated-sinc-and-ft-example">
-<h1>testAnimated-Sinc-and-FT-example<a class="headerlink" href="#testanimated-sinc-and-ft-example" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="testing-jupyter-book-failed-using-fae-examples">
+<h1>testing jupyter-book failed using fAe examples<a class="headerlink" href="#testing-jupyter-book-failed-using-fae-examples" title="Permalink to this heading">#</a></h1>
+<p>from <a class="github reference external" href="https://github.com/markjay4k/fourier-transform">markjay4k/fourier-transform</a>
+unless matplotlib notebook to inline</p>
+<p>Not work immeidately</p>
+<p>as jupyterlab assume using conda and use javascript for
+interaction … that is not in the past <a class="github reference external" href="https://github.com/jupyterlab/jupyterlab/issues/3934">jupyterlab/jupyterlab#3934</a></p>
+<p>as detailed discussed here: <a class="reference external" href="https://stackoverflow.com/questions/51922480/javascript-error-ipython-is-not-defined-in-jupyterlab/56416229#56416229">https://stackoverflow.com/questions/51922480/javascript-error-ipython-is-not-defined-in-jupyterlab/56416229#56416229</a></p>
+<p>change all to inline it would work but what is the point???!!!!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    create a rectangle function</span>
+<span class="sd">    returns a numpy array that is 1 if |x| &lt; w and 0 if |x| &gt; w</span>
+<span class="sd">    B is the rectangle width centered at 0</span>
+<span class="sd">    x is the number of points in the array</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="n">high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">low1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">B</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>    
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">low1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+    <span class="n">rect</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">low1</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span>
+        <span class="n">rect</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span>
+        <span class="n">rect</span> <span class="o">=</span> <span class="n">rect</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">rect</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -411,6 +449,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> notebook
+<span class="c1"># %matplotlib inline</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
 
@@ -1454,7 +1493,37 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='fbb3bf4d-c466-4bfb-b3c8-6a94012eca97'></div></div></div>
+</script><div class="output text_html"><div id='33d887d7-63e8-4d5c-b148-fc9d85d49ce0'></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">rect</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    create a rectangle function</span>
+<span class="sd">    returns a numpy array that is 1 if |x| &lt; w and 0 if |x| &gt; w</span>
+<span class="sd">    B is the rectangle width centered at 0</span>
+<span class="sd">    x is the number of points in the array</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    
+    <span class="n">high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">B</span><span class="p">)</span>
+    <span class="n">low1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">B</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>    
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">low1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+    <span class="n">rect</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">low1</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span>
+        <span class="n">rect</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rect</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rect</span><span class="p">):</span>
+        <span class="n">rect</span> <span class="o">=</span> <span class="n">rect</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">rect</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
@@ -1489,13 +1558,22 @@ if (IPython.notebook.kernel !== null) {
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="fnn.html"
+       href="markdown-notebooks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">testing jupyter-book ok using fnn examples</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="fFy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">testing jupyter-book ok using fFy examples</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

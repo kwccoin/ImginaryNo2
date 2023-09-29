@@ -570,12 +570,12 @@ Or even worst as in my most dislike Fan Yin (or no feeling Indian)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;printed on </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-09-24 20:56:31.279834
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>printed on 2023-09-29 13:36:15.708362
 </pre></div>
 </div>
 </div>
@@ -946,6 +946,9 @@ The other trick now is because it comes from rotation,
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="c1">#import /var/mobile/Containers/Data/Application/2C38E445-B03B-4F08-B850-A9AFC5759E32/Library/Application\ Support/com.rationalmatter.junoapp/python-home/lib</span>
+<span class="c1">#import &quot;/var/mobile/Containers/Data/&quot;</span>
+
 <span class="kn">import</span> <span class="nn">lib.main.a1_i_mul_plot</span>
 </pre></div>
 </div>
@@ -999,16 +1002,16 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk1
 not vai c3 main
 
-index: 104 
-theta4 at  17.54231602541415 
- a= 0.2605158178034665  b= -0.9654695793623904 
+index: 103 
+theta4 at  17.373639909785165 
+ a= 0.09473802266906829  b= -0.9955022386015789 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk1/lib/main/c3_i_anim_circle_rotate_plot.py:238: UserWarning: The figure layout has changed to tight
   plt.tight_layout()
 </pre></div>
 </div>
-<img alt="_images/25761dbc95f7b2ce2a81feeec4e44f3c5faa897931a39121cb39287cde6905d7.png" src="_images/25761dbc95f7b2ce2a81feeec4e44f3c5faa897931a39121cb39287cde6905d7.png" />
+<img alt="_images/71957bf3c6545ec938ee40e7b03b5d29778dc1dfdb7d29ef7d712dbfce7833a2.png" src="_images/71957bf3c6545ec938ee40e7b03b5d29778dc1dfdb7d29ef7d712dbfce7833a2.png" />
 </div>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>and if you change ø you can see 
@@ -1130,40 +1133,58 @@ not via e5 main
 <img alt="_images/e50ae2e578ead2a3ba46033614add9ea65382842814bfae8462c3274a0527d33.png" src="_images/e50ae2e578ead2a3ba46033614add9ea65382842814bfae8462c3274a0527d33.png" />
 </div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>A taste of part 2
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">lib.main.e5_i_anim_hyperplot</span>
 
-- if quantum mechanic is about the rotation, one observe is that i does not change during rotation
-- the reason is that its magnitude is defined for a + bi -&gt; (a + bi)(a-bi) or a^2 + b^2
-
-What if we invent another imaginery number call split complex number where
-
-j^2 = +1! 
-
-Well you say it is pointless as j is just 1.  But once we accept you can have 2 dimension ... why not?
-
-The issue is that what this imaginery number rotate.  The magnitude should be constant and hence
-
-A = (a + bj)(a-bj) = a^2 - b^2. Note the -ve sign there.
-
-It is a hyperbola not a circle it will be draw when it rotate.
-
-Use?
-
-Well, it turns out our spacetime are related like this
-
-(ct)^2 - x^2 - y^2 - z^2 or if concentrate on only time and say x dimension movement it would be
-
-a^2 - b^2 format
-
-all those talk about time dilution and length contraction ... all because of this split complex number
+<span class="nb">print</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">e5_i_anim_hyperplot</span><span class="o">.</span><span class="n">lorentz_t_t00</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lib</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">e5_i_anim_hyperplot</span><span class="o">.</span><span class="n">lorentz_t_f00</span><span class="p">())</span>
+<span class="n">lib</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">e5_i_anim_hyperplot</span><span class="o">.</span><span class="n">hyperplot_and_tell</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Not only we live in imaginery number as a quantum being 
-We also live in split imaginery number as a relativity being
-
-I am not sure I want to got the third imaginery number well ... 
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 6.928203230275509]
+[-4.618802153517006, 9.237604307034012]
 </pre></div>
 </div>
+<img alt="_images/e50ae2e578ead2a3ba46033614add9ea65382842814bfae8462c3274a0527d33.png" src="_images/e50ae2e578ead2a3ba46033614add9ea65382842814bfae8462c3274a0527d33.png" />
+</div>
+</div>
+<section id="a-taste-of-part-2">
+<h3>A taste of part 2<a class="headerlink" href="#a-taste-of-part-2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>if quantum mechanic is about the rotation, one observe is that <span class="math notranslate nohighlight">\(i\)</span> does not change during rotation</p></li>
+<li><p>the reason is that its magnitude is defined for <span class="math notranslate nohighlight">\(|a + bi| = (a + bi)(a-bi)\)</span> or <span class="math notranslate nohighlight">\(a^{2} + b^{2}\)</span></p></li>
+</ul>
+<section id="what-if-we-invent-another-imaginery-number-call-split-complex-number-where">
+<h4>What if we invent another imaginery number call split complex number where<a class="headerlink" href="#what-if-we-invent-another-imaginery-number-call-split-complex-number-where" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(j^{2} = +1!\)</span></p></li>
+</ul>
+</section>
+<section id="well-you-may-say-it-is-pointless-as-j-is-just-1">
+<h4>Well,  you may say it is pointless, as j is just 1.<a class="headerlink" href="#well-you-may-say-it-is-pointless-as-j-is-just-1" title="Permalink to this heading">#</a></h4>
+<p>But that is not true even in ordinary mathematics we talked as j can be <span class="math notranslate nohighlight">\(+/-1\)</span> and not the same as <span class="math notranslate nohighlight">\(1\)</span>.  That is you cannot exchange <span class="math notranslate nohighlight">\(1\)</span> with <span class="math notranslate nohighlight">\(j\)</span> as you miss <span class="math notranslate nohighlight">\(-1\)</span>.  It is another dimension from ordinary real number   even though in this case it looks more like a real number.  And on the real number as well<span class="xref myst"><sup id="fn1-back">1</sup></span>.</p>
+<p>The more important property as we can infer from its being an imaginery number, there is <strong>rotation</strong> involve.  But what is this imaginery number rotate? The magnitude should be constant and hence</p>
+<p>  <span class="math notranslate nohighlight">\( |A|^2 = (a + bj)(a - bj) = a^2 - b^2 \)</span>.</p>
+<p>Note the -ve sign here.  Hence it will <mark>rotate</mark> like a hyperbola and not a circle<span class="xref myst"><sup id="fn2-back">2</sup></span>.</p>
+</section>
+<section id="any-use">
+<h4>Any Use?<a class="headerlink" href="#any-use" title="Permalink to this heading">#</a></h4>
+<p>Well, it turns out our spacetime are related like this</p>
+<p>  <span class="math notranslate nohighlight">\((ct)^2 - x^2 - y^2 - z^2\)</span> or</p>
+<p>if concentrate on only time and say <span class="math notranslate nohighlight">\(x\)</span> dimension movement it would be</p>
+<p>  <span class="math notranslate nohighlight">\((ct)^2 - x^2\)</span>   or you can see</p>
+<p>  it is in the <span class="math notranslate nohighlight">\(a^2 - b^2\)</span> format, just like split imaginary number.</p>
+<p>all those talk about time dilution and length contraction … all because of this split complex number.</p>
+<hr class="docutils" />
+<p><mark>In our real world, not only we live in imaginery number as a quantum being , We also live in split imaginery number as a relativity being<span class="xref myst"><sup id="fn3-back">3</sup></span>.</mark></p>
+<hr class="docutils" />
+<p><ins><strong>Footnote</strong></ins></p>
+<p><span class="xref myst"><sup id="fn1">1</sufp></span> To be honest it can have infinitely number of solution it can be even once we accept you can have 2 dimension … why not?</p>
+<p><span class="xref myst"><sup id="fn2">2</sufp></span> Actually later we find out in the space like area, actually the length contraction did draw a cicrle and can e said to use just normal imaginery number.</p>
+<p><span class="xref myst"><sup id="fn3">3</sufp></span> I am not sure I want to involve the third kind of imaginery number well …</p>
 <p>Part 2 (to be developed)</p>
 <p>—&gt; Draft to be tidy up with demo</p>
 <p>– what if our world use this split complex number as above using j^2 = 1 (instead of i^2 = -1)</p>
@@ -1214,6 +1235,8 @@ We live briefly in these 2 imaginery number (and more) world.
 What you see is NOT real or at least NOT JUST REAL!
 </pre></div>
 </div>
+</section>
+</section>
 </section>
 <span id="document-MacTwgssAx-App"></span><section class="tex2jax_ignore mathjax_ignore" id="appendix-may-be-needed-for-reference">
 <h2>Appendix - may be needed for reference<a class="headerlink" href="#appendix-may-be-needed-for-reference" title="Permalink to this heading">#</a></h2>
@@ -1335,16 +1358,16 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk1
 not vai c3 main
 
-index: 77 
-theta4 at  12.988060903431629 
- a= 0.9123984032200582  b= 0.40930325408123513 
+index: 117 
+theta4 at  19.735105528590918 
+ a= 0.6328640567269155  b= 0.7742629306011954 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk1/lib/main/c3_i_anim_circle_rotate_plot.py:238: UserWarning: The figure layout has changed to tight
   plt.tight_layout()
 </pre></div>
 </div>
-<img alt="_images/a6b4c0b2cacdc2401ba6a386dd4d54affe8d57f1e378e2fc319fa2e01000dd8a.png" src="_images/a6b4c0b2cacdc2401ba6a386dd4d54affe8d57f1e378e2fc319fa2e01000dd8a.png" />
+<img alt="_images/9035bd4bf1bb3380d765141b53f396fb550adce895f07dbdd1d3975fde161500.png" src="_images/9035bd4bf1bb3380d765141b53f396fb550adce895f07dbdd1d3975fde161500.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1509,7 +1532,7 @@ For example, here’s some sample Matplotlib code:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x112745bd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;contextlib.ExitStack at 0x11c702e10&gt;
 </pre></div>
 </div>
 </div>
@@ -2707,7 +2730,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='0a74829d-90dd-4a81-856f-15657c6a0409'></div></div></div>
+</script><div class="output text_html"><div id='33d887d7-63e8-4d5c-b148-fc9d85d49ce0'></div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2927,7 +2950,7 @@ F(k) = B \text{sinc}(kB/2)
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "304a36ac19354d0696838e1075157b98"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "a82a68eee4774538b8ebf30989f3edf1"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "90d7fc69458d48fda916d284ba1af9f0"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "d57b1a64fbfa4e80a45324c5e52c0904"}</script></div>
 </div>
 </section>
 </section>
@@ -2999,7 +3022,7 @@ There are many options for numerically computing definite integrals:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/154fce611740d5a332393e0895033036b4d88ab08d82728ee78b5af1e84fce3c.svg" src="_images/154fce611740d5a332393e0895033036b4d88ab08d82728ee78b5af1e84fce3c.svg" /></div>
+<img alt="_images/25d5f94564e513b7d6f8a45ba3f7f6201296e670635819b17c984594ce284aa7.svg" src="_images/25d5f94564e513b7d6f8a45ba3f7f6201296e670635819b17c984594ce284aa7.svg" /></div>
 </div>
 <p>Area of a Trapezoid</p>
 <p>The area of a trapezoid is the average height times the base</p>
@@ -3081,7 +3104,7 @@ $<span class="math notranslate nohighlight">\(error = (actual - approximation)^2
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/b7e2b7724bd3969cd1004f0de8c2db463339428663d2ccd9f9cc2da7a11e47cc.svg" src="_images/b7e2b7724bd3969cd1004f0de8c2db463339428663d2ccd9f9cc2da7a11e47cc.svg" /></div>
+<img alt="_images/0cdb6a1a1ddbf07f8dedadda5c1a3c0c036b2f57e7c369c5c88f892d22450787.svg" src="_images/0cdb6a1a1ddbf07f8dedadda5c1a3c0c036b2f57e7c369c5c88f892d22450787.svg" /></div>
 </div>
 </section>
 <span id="document-testAnimated-Sinc-and-FT-example"></span><section class="tex2jax_ignore mathjax_ignore" id="testanimated-sinc-and-ft-example">
@@ -4162,7 +4185,7 @@ if (IPython.notebook.kernel !== null) {
         mpl.mpl_figure_comm
     );
 }
-</script><div class="output text_html"><div id='fbb3bf4d-c466-4bfb-b3c8-6a94012eca97'></div></div></div>
+</script><div class="output text_html"><div id='e9f6fbcc-6516-4b1b-b459-f8e82fe527ac'></div></div></div>
 </div>
 </section>
 </div>
