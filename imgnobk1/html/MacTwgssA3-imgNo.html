@@ -62,9 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'MacTwgssA3-imgNo';</script>
+    <link rel="canonical" href="https://kwccoin.github.io/imginaryno2/imgnobk1/html/MacTwgssA3-imgNo.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="4. Imagine another imaginery number and split it out" href="MacTwgssA4-splitImgNo.html" />
@@ -381,7 +380,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="how-to-imaginery-something-not-possible-to-exist">
+  <section id="how-to-imaginery-something-not-possible-to-exist">
 <h1>3. How to imaginery something not possible to exist<a class="headerlink" href="#how-to-imaginery-something-not-possible-to-exist" title="Permalink to this heading">#</a></h1>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>actually the imaginery number is unusual, but not that unusual. 
 
@@ -396,14 +395,10 @@ You need it, even though, well, it does not exist.
 </pre></div>
 </div>
 <p>We can easily compute it analytically</p>
-<div class="math notranslate nohighlight">
-\[ \int_0^{\pi} \sin(x)dx = -\cos(x) \big|_0^{\pi} \]</div>
-<div class="math notranslate nohighlight">
-\[ =-(\cos(\pi) - \cos(0)) \]</div>
-<div class="math notranslate nohighlight">
-\[ = -(-1 - 1)\]</div>
-<div class="math notranslate nohighlight">
-\[ 2 \]</div>
+<p>$$ \int_0^{\pi} \sin(x)dx = -\cos(x) \big|_0^{\pi} $$</p>
+<p>$$ =-(\cos(\pi) - \cos(0)) $$</p>
+<p>$$ = -(-1 - 1)$$</p>
+<p>$$ 2 $$</p>
 <p>But let’s try computing using the trapezoid rule.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>It seems others can do this but not me 
 
@@ -411,50 +406,44 @@ You need it, even though, well, it does not exist.
 Fourier Transform of $f(x)$ is $F(k)$
 </pre></div>
 </div>
-<div class="math notranslate nohighlight">
-\[
-F(k) = \mathcal{FT}\{f(x)\}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
+F(k) = \mathcal{FT}{f(x)}
+$$</p>
+<p>$$
 F(k) = \int_{-\infty}^{\infty}f(x) \exp(-ikx)dx
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(k=\frac{2\pi}{x}\)</span> is called the “wavenumber”</p>
+$$</p>
+<p>where $k=\frac{2\pi}{x}$ is called the “wavenumber”</p>
 <p>The major turning point is in the climbing of grease pole of being a maths professor!</p>
-<p>In the video I provided (see <a class="reference external" href="https://www.youtube.com/watch?v=cUzklzVXJwo">https://www.youtube.com/watch?v=cUzklzVXJwo</a>), one of the challenge at that time is the equation of</p>
-<div class="math notranslate nohighlight">
-\[ 
-x^{3} = 15x + 4 
-\]</div>
-<p>Now this equation can be solved unlike <span class="math notranslate nohighlight">\(x^{2} = -1\)</span> which we can say there is no solution.</p>
+<p>In the video I provided (see https://www.youtube.com/watch?v=cUzklzVXJwo), one of the challenge at that time is the equation of</p>
+<p>$$
+x^{3} = 15x + 4
+$$</p>
+<p>Now this equation can be solved unlike $x^{2} = -1$ which we can say there is no solution.</p>
 <p>Simple! 4 is an answer!!! But then we have a problem, the general equation leads to this:</p>
-<div class="math notranslate nohighlight">
-\[
-        \sqrt[3]{2 + \sqrt{-121}} + \sqrt[3]{2 - \sqrt{-121}}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-    or {2+(-121)^(1/2)}^(1/3) + {2-(-121)^(1/2)}^(1/3) 
-\]</div>
+<p>$$
+\sqrt[3]{2 + \sqrt{-121}} + \sqrt[3]{2 - \sqrt{-121}}
+$$</p>
+<p>$$
+or {2+(-121)^(1/2)}^(1/3) + {2-(-121)^(1/2)}^(1/3)
+$$</p>
 <p>in fact this complex expression is just 4,</p>
-<p>as it turns out it that if you treat <span class="math notranslate nohighlight">\(\sqrt[3]{2 + \sqrt{-121}}\)</span>  as <span class="math notranslate nohighlight">\(a + bi\)</span>
-and <span class="math notranslate nohighlight">\(\sqrt[3]{2 - \sqrt{-121}}\)</span> as <span class="math notranslate nohighlight">\(a - bi\)</span> then one can find out that</p>
-<p><span class="math notranslate nohighlight">\({2+(-121)^(1/2)}^(1/3) = 2+i\)</span> and
-<span class="math notranslate nohighlight">\({2-(-121)^(1/2)}^(1/3) = 2-i\)</span> and together it is just 4</p>
+<p>as it turns out it that if you treat $\sqrt[3]{2 + \sqrt{-121}}$  as $a + bi$
+and $\sqrt[3]{2 - \sqrt{-121}}$ as $a - bi$ then one can find out that</p>
+<p>${2+(-121)^(1/2)}^(1/3) = 2+i$ and
+${2-(-121)^(1/2)}^(1/3) = 2-i$ and together it is just 4</p>
 <p>in fact once we know 4 is a factor you can easily found out all the REAL root of this equation:</p>
 <p>i.e. 4,
-<span class="math notranslate nohighlight">\(-2-\sqrt{3}\)</span> and
-<span class="math notranslate nohighlight">\(-2+\sqrt{3}\)</span></p>
+$-2-\sqrt{3}$ and
+$-2+\sqrt{3}$</p>
 <p>and the equation would be</p>
-<div class="math notranslate nohighlight">
-\[
-        (x-4)(x-(-2-\sqrt{3}))(x-(-2+\sqrt{3}))
-\]</div>
+<p>$$
+(x-4)(x-(-2-\sqrt{3}))(x-(-2+\sqrt{3}))
+$$</p>
 <p>It is only the intermediate step use imaginery number!</p>
 <p>(Just like later quantum mechanics, the intermediate step use imaginary number,
 but one can only observe real number … a major debate leading to Coppehegan Interpretation,
 or just shut up and calculate!)</p>
-<p>If imaginary numner i.e <span class="math notranslate nohighlight">\(i^2 = -1\)</span>,  it does not exist it seems.</p>
+<p>If imaginary numner i.e $i^2 = -1$,  it does not exist it seems.</p>
 <p>But could it be like the i above and the 0 in babylon above,
 we can treat it as existed but not ultimately.</p>
 <p>In fact this concept also apply to the trial of Galialo!<br />
@@ -526,13 +515,12 @@ Let us SEE THE MAGIC
 </pre></div>
 </div>
 <p>Note</p>
-<div class="math notranslate nohighlight">
-\[
-        1 * i             = i         (i^1)
-        1 * i * i         = -1        (i^2)
-        1 * i * i * i     = -i        (i^3)
-        1 * i * i * i * i = 1         (i^5)
-\]</div>
+<p>$$
+1 * i             = i         (i^1)
+1 * i * i         = -1        (i^2)
+1 * i * i * i     = -i        (i^3)
+1 * i * i * i * i = 1         (i^5)
+$$</p>
 <p>In fact one can see that every 4 operation of i comes back to 1</p>
 <p>What is that operation</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ROTATION! to be exact rotation of 90 degree or pi/2 radian
@@ -569,7 +557,7 @@ Once we accept another sky dimension we can no longer bounded by the sea
 </div>
 <p>For those of us never accept another dimesion and never become a big bird, well, one can still have a way to think beyond one’s dimension by some trick.</p>
 <p>Let us define left turn as the change from 1 to 0 and left turn more from 0 to -1 and left turn one more time from -1 to 0 and left turn for the 4th time from 0 to 1.  From a 2d world it is obvious.  But even for a 1d being, one can still note the difference (1,0), (0,-1), (-1,0) and (0,1) are different somehow.  One can call it rotate 90 degree to the left.  One can call it just a change in number in different ways.  Still one can apprecaite it in this way.</p>
-<p>Further, one can even define imaginary number dimension in the following way, mapping the radius 1 imaginery circle onto the real line, which the Red 1d real guy insisted.  How?  Simple, we define change to the left angle <span class="math notranslate nohighlight">\(\theta\)</span> as <span class="math notranslate nohighlight">\((1 - \theta) radian\)</span> from 1 to -1 and when reach -1, the left turn continue but by turning <span class="math notranslate nohighlight">\((-1 + \theta) radian\)</span>.  Using that it still benefit from many of the multiplication of imaginery number as it effectively project the imaginery number turning into a movement of the real line.</p>
+<p>Further, one can even define imaginary number dimension in the following way, mapping the radius 1 imaginery circle onto the real line, which the Red 1d real guy insisted.  How?  Simple, we define change to the left angle $\theta$ as $(1 - \theta) radian$ from 1 to -1 and when reach -1, the left turn continue but by turning $(-1 + \theta) radian$.  Using that it still benefit from many of the multiplication of imaginery number as it effectively project the imaginery number turning into a movement of the real line.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Once we open up i as another dimension     
 In fact it has to be 90 degree from real number dimension, 
 
@@ -638,16 +626,16 @@ not via e5 main
 /Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk1
 not vai c3 main
 
-index: 14 
-theta4 at  2.3614656188057506 
- a= -0.7108241913270748  b= 0.7033697242732376 
+index: 51 
+theta4 at  8.602481897078091 
+ a= -0.6805406530668906  b= 0.7327103244279353 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk1/lib/main/c3_i_anim_circle_rotate_plot.py:238: UserWarning: The figure layout has changed to tight
   plt.tight_layout()
 </pre></div>
 </div>
-<img alt="_images/235bec163bd6d6c5ef99340744d8d40dcc38229a0eb0e6cd8932aa5e25e59f1e.png" src="_images/235bec163bd6d6c5ef99340744d8d40dcc38229a0eb0e6cd8932aa5e25e59f1e.png" />
+<img alt="_images/2b25d3e748170f3db45c459ec1e76453f3b5e87c1fe39860f0feae8977dd569c.png" src="_images/2b25d3e748170f3db45c459ec1e76453f3b5e87c1fe39860f0feae8977dd569c.png" />
 </div>
 </div>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>and if you change ø you can see 
@@ -662,25 +650,25 @@ It can be added, subtracted, multiplicaion and divide.  (This is different from 
 one can seperate any complex number into another 2 dimension (not like x and y),
 but its multiplcaiton character and its rotation character.</p>
 <p>Looking at real number
-<span class="math notranslate nohighlight">\(c = 2 * 3\)</span>
-c will be double of <span class="math notranslate nohighlight">\(3\)</span>,
-or if we <span class="math notranslate nohighlight">\(* c\)</span> it will be <span class="math notranslate nohighlight">\(6 *\)</span>
-hence we know <span class="math notranslate nohighlight">\(* z\)</span> would have one dimension of multiplication of its magnitude, so …</p>
-<p><span class="math notranslate nohighlight">\(z = magitudeof z * (z / magitude of z) \)</span>
-or <span class="math notranslate nohighlight">\(|Z| * Z/|Z| \)</span></p>
+$c = 2 * 3$
+c will be double of $3$,
+or if we $* c$ it will be $6 <em>$
+hence we know $</em> z$ would have one dimension of multiplication of its magnitude, so …</p>
+<p>$z = magitudeof z * (z / magitude of z) $
+or $|Z| * Z/|Z| $</p>
 <p>i.e. we know that
-<span class="math notranslate nohighlight">\(*z\)</span> will mean using <span class="math notranslate nohighlight">\(|Z|\)</span>to multiply and <span class="math notranslate nohighlight">\(Z/|Z|\)</span> to rotate</p>
-<p>In fact we call this the polar form i.e. <span class="math notranslate nohighlight">\(z = |Z| * f(\theta) or A** f(\theta)\)</span></p>
+$*z$ will mean using $|Z|$to multiply and $Z/|Z|$ to rotate</p>
+<p>In fact we call this the polar form i.e. $z = |Z| * f(\theta) or A** f(\theta)$</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>--&gt; and in the diagram we can even represent it as
 </pre></div>
 </div>
-<p><span class="math notranslate nohighlight">\(z = A*(cos\theta+isin\theta)\)</span></p>
-<p>BTW to calculate <span class="math notranslate nohighlight">\(A\)</span> one easy way because complex number is 90 degree rotation,
+<p>$z = A*(cos\theta+isin\theta)$</p>
+<p>BTW to calculate $A$ one easy way because complex number is 90 degree rotation,
 it follows Euclidian Geometry or</p>
-<p><span class="math notranslate nohighlight">\(  z = a + bi\)</span> then</p>
-<p><span class="math notranslate nohighlight">\( |z|= \sqrt{a^2 + b^2}\)</span></p>
-<p><span class="math notranslate nohighlight">\(    = (a + bi)(a - bi) \)</span></p>
-<p>where <span class="math notranslate nohighlight">\(a-bi\)</span> is the conjugate of <span class="math notranslate nohighlight">\(z\)</span></p>
+<p>$  z = a + bi$ then</p>
+<p>$ |z|= \sqrt{a^2 + b^2}$</p>
+<p>$    = (a + bi)(a - bi) $</p>
+<p>where $a-bi$ is the conjugate of $z$</p>
 <p>we will find this useful when the rotation is not Euclidian …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -698,28 +686,28 @@ it follows Euclidian Geometry or</p>
 </div>
 </div>
 </div>
-<p><span class="math notranslate nohighlight">\(z = A*(cos\theta+isin\theta)\)</span></p>
+<p>$z = A*(cos\theta+isin\theta)$</p>
 <p>This does not help us very much as a forumla goes</p>
 <p>If we rotate z1 and the z2</p>
-<p><span class="math notranslate nohighlight">\(   z1*z2\)</span> invoving cos and sin and is very painful</p>
+<p>$   z1*z2$ invoving cos and sin and is very painful</p>
 <hr class="docutils" />
 <p>However, euler has studied and found out that</p>
-<p><span class="math notranslate nohighlight">\(e^i\theta = cos\theta + isin\theta\)</span>  &lt;– the euler equation</p>
-<p>substitue it one can get the rotation part is actually <span class="math notranslate nohighlight">\(e^i\theta\)</span></p>
-<p>or <span class="math notranslate nohighlight">\(z = Ae^i\theta\)</span></p>
-<p>For example <span class="math notranslate nohighlight">\(z1*z2 = A1*A2(e^i\theta1)(e^i\theta2) = A1*A2*e^i(\theta1+\theta2) \)</span></p>
-<p>&lt;– NO <span class="math notranslate nohighlight">\(cosine\)</span> and <span class="math notranslate nohighlight">\(sine\)</span> but multiplication, addition and power
-(another thankful one is <span class="math notranslate nohighlight">\((cos\theta + isin\theta)^n = (cosn\theta + isinn\theta)\)</span> Moivre and Euler</p>
+<p>$e^i\theta = cos\theta + isin\theta$  &lt;– the euler equation</p>
+<p>substitue it one can get the rotation part is actually $e^i\theta$</p>
+<p>or $z = Ae^i\theta$</p>
+<p>For example $z1<em>z2 = A1</em>A2(e^i\theta1)(e^i\theta2) = A1<em>A2</em>e^i(\theta1+\theta2) $</p>
+<p>&lt;– NO $cosine$ and $sine$ but multiplication, addition and power
+(another thankful one is $(cos\theta + isin\theta)^n = (cosn\theta + isinn\theta)$ Moivre and Euler</p>
 <p>This will help the next 100+ years of enginering, and maths and …
 as rotation is everywhere and now additing of rotation is really just addition!</p>
-<p>As beauty if one substitue <span class="math notranslate nohighlight">\(\pi\)</span> into that euler equation,
+<p>As beauty if one substitue $\pi$ into that euler equation,
 we have what many call the most beautiful mathmathical equation :</p>
-<p><span class="math notranslate nohighlight">\(   e^{i\pi} = -1\)</span></p>
+<p>$   e^{i\pi} = -1$</p>
 <p>and may we note:</p>
-<p><span class="math notranslate nohighlight">\(   -1\)</span> is arthmetic unusal thing</p>
-<p><span class="math notranslate nohighlight">\(   pi\)</span> is geometry  unusal thing</p>
-<p><span class="math notranslate nohighlight">\(   i\)</span>  is algebera  unusal thing</p>
-<p><span class="math notranslate nohighlight">\(   e\)</span>  is calculus  unusal thing</p>
+<p>$   -1$ is arthmetic unusal thing</p>
+<p>$   pi$ is geometry  unusal thing</p>
+<p>$   i$  is algebera  unusal thing</p>
+<p>$   e$  is calculus  unusal thing</p>
 <p>They are from total different field of human endeavour …
 and somehow these unusal all join up into this</p>
 <p>EULER IDENTITY</p>
@@ -727,7 +715,7 @@ and somehow these unusal all join up into this</p>
 and hence if one observe how i rotate, one can generate wave as seen above.</p>
 <p>And if one note that the change of this i is related back to itself,
 a guy actually create a quantum mechanic out of this imaginary number</p>
-<p>change of wave over <span class="math notranslate nohighlight">\(time = i * [...]\)</span> * wave itself &lt;– basic Schrödinger equation</p>
+<p>change of wave over $time = i * […]$ * wave itself &lt;– basic Schrödinger equation</p>
 <p>—- Part 1 finshed with some quantum mechanics puzzle</p>
 <p>we can only observe real number
 The rotation is there but we still see the real number
@@ -738,11 +726,11 @@ And what happen to the The Schrödinger Cat then</p>
 <p>Discrete and minimum energy, … any other discrete</p>
 <p>Uncertainty principles …</p>
 <p>BTW, real world offer more rotation …</p>
-<p>not only we have rotate <span class="math notranslate nohighlight">\(360\)</span> as <span class="math notranslate nohighlight">\(i\)</span>,
-but we also rotate <span class="math notranslate nohighlight">\(720\)</span> degree to go back to itself
+<p>not only we have rotate $360$ as $i$,
+but we also rotate $720$ degree to go back to itself
 … and like the song “love always around us” in 4 wedding, it is all around us!
 may be in the future we talk about electron!</p>
-<p>Also, you may note it is <span class="math notranslate nohighlight">\(i\)</span>, but actually someone has expanded into 4 dimension
+<p>Also, you may note it is $i$, but actually someone has expanded into 4 dimension
 and it is use in every computer game
 when you rotate a character you fit the transformation into this 4 dimension rotation
 …</p>
@@ -821,7 +809,7 @@ By Dennis Ng
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
