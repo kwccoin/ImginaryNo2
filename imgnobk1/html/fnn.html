@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fnn';</script>
     <link rel="canonical" href="https://kwccoin.github.io/imginaryno2/imgnobk1/html/fnn.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -380,9 +382,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="testing-jupyter-book-ok-using-fnn-examples">
+  <section class="tex2jax_ignore mathjax_ignore" id="testing-jupyter-book-ok-using-fnn-examples">
 <h1>testing jupyter-book ok using fnn examples<a class="headerlink" href="#testing-jupyter-book-ok-using-fnn-examples" title="Permalink to this heading">#</a></h1>
-<p>from https://github.com/markjay4k/fourier-transform
+<p>from <a class="github reference external" href="https://github.com/markjay4k/fourier-transform">markjay4k/fourier-transform</a>
 as only use matplotlib inline</p>
 <p>NUMERICAL INTEGRATION</p>
 <p>What is numerical Integration</p>
@@ -399,14 +401,19 @@ There are many options for numerically computing definite integrals:</p>
 <p>Let’s look at the Trapezoid Rule</p>
 <p>The Trapezoid rule is a way of approximating a definite integral by breaking it up into trapezoids.</p>
 <p>Let’s say we want to compute the integral</p>
-<p>$$ \int_0^{\pi} \sin(x)dx $$</p>
+<div class="math notranslate nohighlight">
+\[ \int_0^{\pi} \sin(x)dx \]</div>
 <p>We can easily compute it analytically</p>
-<p>$$ \int_0^{\pi} \sin(x)dx = -\cos(x) \big|_0^{\pi} $$</p>
-<p>$$ =-(\cos(\pi) - \cos(0)) $$</p>
-<p>$$ = -(-1 - 1)$$</p>
-<p>$$ 2 $$</p>
+<div class="math notranslate nohighlight">
+\[ \int_0^{\pi} \sin(x)dx = -\cos(x) \big|_0^{\pi} \]</div>
+<div class="math notranslate nohighlight">
+\[ =-(\cos(\pi) - \cos(0)) \]</div>
+<div class="math notranslate nohighlight">
+\[ = -(-1 - 1)\]</div>
+<div class="math notranslate nohighlight">
+\[ 2 \]</div>
 <p>But let’s try computing using the trapezoid rule.</p>
-<p>Below is a visualization showing $\sin(x)$ and a trapezoid approximation.</p>
+<p>Below is a visualization showing <span class="math notranslate nohighlight">\(\sin(x)\)</span> and a trapezoid approximation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -442,28 +449,31 @@ There are many options for numerically computing definite integrals:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2b8ce8e35af1a1e255d5503921da65ff93b51806b901da4e88669b4bd9261253.svg" src="_images/2b8ce8e35af1a1e255d5503921da65ff93b51806b901da4e88669b4bd9261253.svg" /></div>
+<img alt="_images/bfd3ec691b1feb73d94a6a158d05b2d48297e95deb08a5527b407c69cf633779.svg" src="_images/bfd3ec691b1feb73d94a6a158d05b2d48297e95deb08a5527b407c69cf633779.svg" /></div>
 </div>
 <p>Area of a Trapezoid</p>
 <p>The area of a trapezoid is the average height times the base</p>
 <img src="trap2.png" width=400>
 <p>For the example shown, the area is</p>
-<p>$$
-Area = \overbrace{\frac{f(x_{k-1}) + f(x_k)}{2}}^{ave , height} ,, \overbrace{\Delta x}^{base}
-$$</p>
+<div class="math notranslate nohighlight">
+\[
+Area = \overbrace{\frac{f(x_{k-1}) + f(x_k)}{2}}^{ave \, height} \,\, \overbrace{\Delta x}^{base}
+\]</div>
 <p>trapezoid rule equation</p>
 <p>the equation for the trapezoid rule is</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \int_a^b f(x)dx \approx \frac{f(x_0) + f(x_1)}{2}\Delta x + \frac{f(x_1) + f(x_2)}{2}\Delta x \cdots \frac{f(x_{N-1}) + f(x_N)}{2}\Delta x
-$$</p>
+\]</div>
 <p>Now we can write this as a summation
-$$
+$<span class="math notranslate nohighlight">\(
 \approx \sum_{k=1}^N \frac{f(x_{k-1}) + f(x_k)}{2} \Delta x
-$$</p>
+\)</span>$</p>
 <p>And we can write a function to compute this</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \approx \sum_{k=1}^N \frac{f(x_{k-1}) + f(x_k)}{2} \Delta x
-$$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trap</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
@@ -496,8 +506,8 @@ $$</p>
 </div>
 </div>
 <p>Error vs. number of Trapezoids</p>
-<p>As we increase the number of trapezoids, the approximation gets better ($error \rightarrow 0$).
-$$error = (actual - approximation)^2$$</p>
+<p>As we increase the number of trapezoids, the approximation gets better (<span class="math notranslate nohighlight">\(error \rightarrow 0\)</span>).
+$<span class="math notranslate nohighlight">\(error = (actual - approximation)^2\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
@@ -521,7 +531,7 @@ $$error = (actual - approximation)^2$$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1015d2c7b9611c95de4bd8e9e807ac7069897c5aa8b45267daa275651ff17f9d.svg" src="_images/1015d2c7b9611c95de4bd8e9e807ac7069897c5aa8b45267daa275651ff17f9d.svg" /></div>
+<img alt="_images/def6ccfdc67d69111edfc2cf63cdfcda7b848eb91b10dcb786686029c4d76d21.svg" src="_images/def6ccfdc67d69111edfc2cf63cdfcda7b848eb91b10dcb786686029c4d76d21.svg" /></div>
 </div>
 </section>
 
