@@ -1,0 +1,1940 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; Less Book 2</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lib/Interact-mat1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../introLess.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/Less.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/Less.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introLess.html">
+                    0. Less 2?
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../MacB2-Less.html">1. Less is More Thinking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../MacB3-Money.html">The future have never been decided yet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Juno-test-2.html">Juno-test-2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://kwccoin.github.io/imginaryno2/imgnobk2/html/MacB2-Less.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://kwccoin.github.io/imginaryno2/imgnobk2/html/MacB2-Less.html/issues/new?title=Issue%20on%20page%20%2Flib/Interact-mat1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lib/Interact-mat1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># interactive matplotlib c1</span>
+<span class="c1">## source</span>
+<span class="c1">### https://subscription.packtpub.com/book/data/9781783988846/1/ch01lvl1sec14/from-front-to-backend</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1"># not much used under matplotlib</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;inter1b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># not much used under matplotlib</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from pylab import *</span>
+<span class="o">%</span><span class="k">matplotlib</span> notebook
+<span class="kn">from</span> <span class="nn">matplotlib.pylab</span> <span class="kn">import</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/javascript">/* Put everything inside the global mpl namespace */
+/* global mpl */
+window.mpl = {};
+
+mpl.get_websocket_type = function () {
+    if (typeof WebSocket !== 'undefined') {
+        return WebSocket;
+    } else if (typeof MozWebSocket !== 'undefined') {
+        return MozWebSocket;
+    } else {
+        alert(
+            'Your browser does not have WebSocket support. ' +
+                'Please try Chrome, Safari or Firefox ≥ 6. ' +
+                'Firefox 4 and 5 are also supported but you ' +
+                'have to enable WebSockets in about:config.'
+        );
+    }
+};
+
+mpl.figure = function (figure_id, websocket, ondownload, parent_element) {
+    this.id = figure_id;
+
+    this.ws = websocket;
+
+    this.supports_binary = this.ws.binaryType !== undefined;
+
+    if (!this.supports_binary) {
+        var warnings = document.getElementById('mpl-warnings');
+        if (warnings) {
+            warnings.style.display = 'block';
+            warnings.textContent =
+                'This browser does not support binary websocket messages. ' +
+                'Performance may be slow.';
+        }
+    }
+
+    this.imageObj = new Image();
+
+    this.context = undefined;
+    this.message = undefined;
+    this.canvas = undefined;
+    this.rubberband_canvas = undefined;
+    this.rubberband_context = undefined;
+    this.format_dropdown = undefined;
+
+    this.image_mode = 'full';
+
+    this.root = document.createElement('div');
+    this.root.setAttribute('style', 'display: inline-block');
+    this._root_extra_style(this.root);
+
+    parent_element.appendChild(this.root);
+
+    this._init_header(this);
+    this._init_canvas(this);
+    this._init_toolbar(this);
+
+    var fig = this;
+
+    this.waiting = false;
+
+    this.ws.onopen = function () {
+        fig.send_message('supports_binary', { value: fig.supports_binary });
+        fig.send_message('send_image_mode', {});
+        if (fig.ratio !== 1) {
+            fig.send_message('set_device_pixel_ratio', {
+                device_pixel_ratio: fig.ratio,
+            });
+        }
+        fig.send_message('refresh', {});
+    };
+
+    this.imageObj.onload = function () {
+        if (fig.image_mode === 'full') {
+            // Full images could contain transparency (where diff images
+            // almost always do), so we need to clear the canvas so that
+            // there is no ghosting.
+            fig.context.clearRect(0, 0, fig.canvas.width, fig.canvas.height);
+        }
+        fig.context.drawImage(fig.imageObj, 0, 0);
+    };
+
+    this.imageObj.onunload = function () {
+        fig.ws.close();
+    };
+
+    this.ws.onmessage = this._make_on_message_function(this);
+
+    this.ondownload = ondownload;
+};
+
+mpl.figure.prototype._init_header = function () {
+    var titlebar = document.createElement('div');
+    titlebar.classList =
+        'ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix';
+    var titletext = document.createElement('div');
+    titletext.classList = 'ui-dialog-title';
+    titletext.setAttribute(
+        'style',
+        'width: 100%; text-align: center; padding: 3px;'
+    );
+    titlebar.appendChild(titletext);
+    this.root.appendChild(titlebar);
+    this.header = titletext;
+};
+
+mpl.figure.prototype._canvas_extra_style = function (_canvas_div) {};
+
+mpl.figure.prototype._root_extra_style = function (_canvas_div) {};
+
+mpl.figure.prototype._init_canvas = function () {
+    var fig = this;
+
+    var canvas_div = (this.canvas_div = document.createElement('div'));
+    canvas_div.setAttribute(
+        'style',
+        'border: 1px solid #ddd;' +
+            'box-sizing: content-box;' +
+            'clear: both;' +
+            'min-height: 1px;' +
+            'min-width: 1px;' +
+            'outline: 0;' +
+            'overflow: hidden;' +
+            'position: relative;' +
+            'resize: both;'
+    );
+
+    function on_keyboard_event_closure(name) {
+        return function (event) {
+            return fig.key_event(event, name);
+        };
+    }
+
+    canvas_div.addEventListener(
+        'keydown',
+        on_keyboard_event_closure('key_press')
+    );
+    canvas_div.addEventListener(
+        'keyup',
+        on_keyboard_event_closure('key_release')
+    );
+
+    this._canvas_extra_style(canvas_div);
+    this.root.appendChild(canvas_div);
+
+    var canvas = (this.canvas = document.createElement('canvas'));
+    canvas.classList.add('mpl-canvas');
+    canvas.setAttribute('style', 'box-sizing: content-box;');
+
+    this.context = canvas.getContext('2d');
+
+    var backingStore =
+        this.context.backingStorePixelRatio ||
+        this.context.webkitBackingStorePixelRatio ||
+        this.context.mozBackingStorePixelRatio ||
+        this.context.msBackingStorePixelRatio ||
+        this.context.oBackingStorePixelRatio ||
+        this.context.backingStorePixelRatio ||
+        1;
+
+    this.ratio = (window.devicePixelRatio || 1) / backingStore;
+
+    var rubberband_canvas = (this.rubberband_canvas = document.createElement(
+        'canvas'
+    ));
+    rubberband_canvas.setAttribute(
+        'style',
+        'box-sizing: content-box; position: absolute; left: 0; top: 0; z-index: 1;'
+    );
+
+    // Apply a ponyfill if ResizeObserver is not implemented by browser.
+    if (this.ResizeObserver === undefined) {
+        if (window.ResizeObserver !== undefined) {
+            this.ResizeObserver = window.ResizeObserver;
+        } else {
+            var obs = _JSXTOOLS_RESIZE_OBSERVER({});
+            this.ResizeObserver = obs.ResizeObserver;
+        }
+    }
+
+    this.resizeObserverInstance = new this.ResizeObserver(function (entries) {
+        var nentries = entries.length;
+        for (var i = 0; i < nentries; i++) {
+            var entry = entries[i];
+            var width, height;
+            if (entry.contentBoxSize) {
+                if (entry.contentBoxSize instanceof Array) {
+                    // Chrome 84 implements new version of spec.
+                    width = entry.contentBoxSize[0].inlineSize;
+                    height = entry.contentBoxSize[0].blockSize;
+                } else {
+                    // Firefox implements old version of spec.
+                    width = entry.contentBoxSize.inlineSize;
+                    height = entry.contentBoxSize.blockSize;
+                }
+            } else {
+                // Chrome <84 implements even older version of spec.
+                width = entry.contentRect.width;
+                height = entry.contentRect.height;
+            }
+
+            // Keep the size of the canvas and rubber band canvas in sync with
+            // the canvas container.
+            if (entry.devicePixelContentBoxSize) {
+                // Chrome 84 implements new version of spec.
+                canvas.setAttribute(
+                    'width',
+                    entry.devicePixelContentBoxSize[0].inlineSize
+                );
+                canvas.setAttribute(
+                    'height',
+                    entry.devicePixelContentBoxSize[0].blockSize
+                );
+            } else {
+                canvas.setAttribute('width', width * fig.ratio);
+                canvas.setAttribute('height', height * fig.ratio);
+            }
+            canvas.setAttribute(
+                'style',
+                'width: ' + width + 'px; height: ' + height + 'px;'
+            );
+
+            rubberband_canvas.setAttribute('width', width);
+            rubberband_canvas.setAttribute('height', height);
+
+            // And update the size in Python. We ignore the initial 0/0 size
+            // that occurs as the element is placed into the DOM, which should
+            // otherwise not happen due to the minimum size styling.
+            if (fig.ws.readyState == 1 && width != 0 && height != 0) {
+                fig.request_resize(width, height);
+            }
+        }
+    });
+    this.resizeObserverInstance.observe(canvas_div);
+
+    function on_mouse_event_closure(name) {
+        return function (event) {
+            return fig.mouse_event(event, name);
+        };
+    }
+
+    rubberband_canvas.addEventListener(
+        'mousedown',
+        on_mouse_event_closure('button_press')
+    );
+    rubberband_canvas.addEventListener(
+        'mouseup',
+        on_mouse_event_closure('button_release')
+    );
+    rubberband_canvas.addEventListener(
+        'dblclick',
+        on_mouse_event_closure('dblclick')
+    );
+    // Throttle sequential mouse events to 1 every 20ms.
+    rubberband_canvas.addEventListener(
+        'mousemove',
+        on_mouse_event_closure('motion_notify')
+    );
+
+    rubberband_canvas.addEventListener(
+        'mouseenter',
+        on_mouse_event_closure('figure_enter')
+    );
+    rubberband_canvas.addEventListener(
+        'mouseleave',
+        on_mouse_event_closure('figure_leave')
+    );
+
+    canvas_div.addEventListener('wheel', function (event) {
+        if (event.deltaY < 0) {
+            event.step = 1;
+        } else {
+            event.step = -1;
+        }
+        on_mouse_event_closure('scroll')(event);
+    });
+
+    canvas_div.appendChild(canvas);
+    canvas_div.appendChild(rubberband_canvas);
+
+    this.rubberband_context = rubberband_canvas.getContext('2d');
+    this.rubberband_context.strokeStyle = '#000000';
+
+    this._resize_canvas = function (width, height, forward) {
+        if (forward) {
+            canvas_div.style.width = width + 'px';
+            canvas_div.style.height = height + 'px';
+        }
+    };
+
+    // Disable right mouse context menu.
+    this.rubberband_canvas.addEventListener('contextmenu', function (_e) {
+        event.preventDefault();
+        return false;
+    });
+
+    function set_focus() {
+        canvas.focus();
+        canvas_div.focus();
+    }
+
+    window.setTimeout(set_focus, 100);
+};
+
+mpl.figure.prototype._init_toolbar = function () {
+    var fig = this;
+
+    var toolbar = document.createElement('div');
+    toolbar.classList = 'mpl-toolbar';
+    this.root.appendChild(toolbar);
+
+    function on_click_closure(name) {
+        return function (_event) {
+            return fig.toolbar_button_onclick(name);
+        };
+    }
+
+    function on_mouseover_closure(tooltip) {
+        return function (event) {
+            if (!event.currentTarget.disabled) {
+                return fig.toolbar_button_onmouseover(tooltip);
+            }
+        };
+    }
+
+    fig.buttons = {};
+    var buttonGroup = document.createElement('div');
+    buttonGroup.classList = 'mpl-button-group';
+    for (var toolbar_ind in mpl.toolbar_items) {
+        var name = mpl.toolbar_items[toolbar_ind][0];
+        var tooltip = mpl.toolbar_items[toolbar_ind][1];
+        var image = mpl.toolbar_items[toolbar_ind][2];
+        var method_name = mpl.toolbar_items[toolbar_ind][3];
+
+        if (!name) {
+            /* Instead of a spacer, we start a new button group. */
+            if (buttonGroup.hasChildNodes()) {
+                toolbar.appendChild(buttonGroup);
+            }
+            buttonGroup = document.createElement('div');
+            buttonGroup.classList = 'mpl-button-group';
+            continue;
+        }
+
+        var button = (fig.buttons[name] = document.createElement('button'));
+        button.classList = 'mpl-widget';
+        button.setAttribute('role', 'button');
+        button.setAttribute('aria-disabled', 'false');
+        button.addEventListener('click', on_click_closure(method_name));
+        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
+
+        var icon_img = document.createElement('img');
+        icon_img.src = '_images/' + image + '.png';
+        icon_img.srcset = '_images/' + image + '_large.png 2x';
+        icon_img.alt = tooltip;
+        button.appendChild(icon_img);
+
+        buttonGroup.appendChild(button);
+    }
+
+    if (buttonGroup.hasChildNodes()) {
+        toolbar.appendChild(buttonGroup);
+    }
+
+    var fmt_picker = document.createElement('select');
+    fmt_picker.classList = 'mpl-widget';
+    toolbar.appendChild(fmt_picker);
+    this.format_dropdown = fmt_picker;
+
+    for (var ind in mpl.extensions) {
+        var fmt = mpl.extensions[ind];
+        var option = document.createElement('option');
+        option.selected = fmt === mpl.default_extension;
+        option.innerHTML = fmt;
+        fmt_picker.appendChild(option);
+    }
+
+    var status_bar = document.createElement('span');
+    status_bar.classList = 'mpl-message';
+    toolbar.appendChild(status_bar);
+    this.message = status_bar;
+};
+
+mpl.figure.prototype.request_resize = function (x_pixels, y_pixels) {
+    // Request matplotlib to resize the figure. Matplotlib will then trigger a resize in the client,
+    // which will in turn request a refresh of the image.
+    this.send_message('resize', { width: x_pixels, height: y_pixels });
+};
+
+mpl.figure.prototype.send_message = function (type, properties) {
+    properties['type'] = type;
+    properties['figure_id'] = this.id;
+    this.ws.send(JSON.stringify(properties));
+};
+
+mpl.figure.prototype.send_draw_message = function () {
+    if (!this.waiting) {
+        this.waiting = true;
+        this.ws.send(JSON.stringify({ type: 'draw', figure_id: this.id }));
+    }
+};
+
+mpl.figure.prototype.handle_save = function (fig, _msg) {
+    var format_dropdown = fig.format_dropdown;
+    var format = format_dropdown.options[format_dropdown.selectedIndex].value;
+    fig.ondownload(fig, format);
+};
+
+mpl.figure.prototype.handle_resize = function (fig, msg) {
+    var size = msg['size'];
+    if (size[0] !== fig.canvas.width || size[1] !== fig.canvas.height) {
+        fig._resize_canvas(size[0], size[1], msg['forward']);
+        fig.send_message('refresh', {});
+    }
+};
+
+mpl.figure.prototype.handle_rubberband = function (fig, msg) {
+    var x0 = msg['x0'] / fig.ratio;
+    var y0 = (fig.canvas.height - msg['y0']) / fig.ratio;
+    var x1 = msg['x1'] / fig.ratio;
+    var y1 = (fig.canvas.height - msg['y1']) / fig.ratio;
+    x0 = Math.floor(x0) + 0.5;
+    y0 = Math.floor(y0) + 0.5;
+    x1 = Math.floor(x1) + 0.5;
+    y1 = Math.floor(y1) + 0.5;
+    var min_x = Math.min(x0, x1);
+    var min_y = Math.min(y0, y1);
+    var width = Math.abs(x1 - x0);
+    var height = Math.abs(y1 - y0);
+
+    fig.rubberband_context.clearRect(
+        0,
+        0,
+        fig.canvas.width / fig.ratio,
+        fig.canvas.height / fig.ratio
+    );
+
+    fig.rubberband_context.strokeRect(min_x, min_y, width, height);
+};
+
+mpl.figure.prototype.handle_figure_label = function (fig, msg) {
+    // Updates the figure title.
+    fig.header.textContent = msg['label'];
+};
+
+mpl.figure.prototype.handle_cursor = function (fig, msg) {
+    fig.rubberband_canvas.style.cursor = msg['cursor'];
+};
+
+mpl.figure.prototype.handle_message = function (fig, msg) {
+    fig.message.textContent = msg['message'];
+};
+
+mpl.figure.prototype.handle_draw = function (fig, _msg) {
+    // Request the server to send over a new figure.
+    fig.send_draw_message();
+};
+
+mpl.figure.prototype.handle_image_mode = function (fig, msg) {
+    fig.image_mode = msg['mode'];
+};
+
+mpl.figure.prototype.handle_history_buttons = function (fig, msg) {
+    for (var key in msg) {
+        if (!(key in fig.buttons)) {
+            continue;
+        }
+        fig.buttons[key].disabled = !msg[key];
+        fig.buttons[key].setAttribute('aria-disabled', !msg[key]);
+    }
+};
+
+mpl.figure.prototype.handle_navigate_mode = function (fig, msg) {
+    if (msg['mode'] === 'PAN') {
+        fig.buttons['Pan'].classList.add('active');
+        fig.buttons['Zoom'].classList.remove('active');
+    } else if (msg['mode'] === 'ZOOM') {
+        fig.buttons['Pan'].classList.remove('active');
+        fig.buttons['Zoom'].classList.add('active');
+    } else {
+        fig.buttons['Pan'].classList.remove('active');
+        fig.buttons['Zoom'].classList.remove('active');
+    }
+};
+
+mpl.figure.prototype.updated_canvas_event = function () {
+    // Called whenever the canvas gets updated.
+    this.send_message('ack', {});
+};
+
+// A function to construct a web socket function for onmessage handling.
+// Called in the figure constructor.
+mpl.figure.prototype._make_on_message_function = function (fig) {
+    return function socket_on_message(evt) {
+        if (evt.data instanceof Blob) {
+            var img = evt.data;
+            if (img.type !== 'image/png') {
+                /* FIXME: We get "Resource interpreted as Image but
+                 * transferred with MIME type text/plain:" errors on
+                 * Chrome.  But how to set the MIME type?  It doesn't seem
+                 * to be part of the websocket stream */
+                img.type = 'image/png';
+            }
+
+            /* Free the memory for the previous frames */
+            if (fig.imageObj.src) {
+                (window.URL || window.webkitURL).revokeObjectURL(
+                    fig.imageObj.src
+                );
+            }
+
+            fig.imageObj.src = (window.URL || window.webkitURL).createObjectURL(
+                img
+            );
+            fig.updated_canvas_event();
+            fig.waiting = false;
+            return;
+        } else if (
+            typeof evt.data === 'string' &&
+            evt.data.slice(0, 21) === 'data:image/png;base64'
+        ) {
+            fig.imageObj.src = evt.data;
+            fig.updated_canvas_event();
+            fig.waiting = false;
+            return;
+        }
+
+        var msg = JSON.parse(evt.data);
+        var msg_type = msg['type'];
+
+        // Call the  "handle_{type}" callback, which takes
+        // the figure and JSON message as its only arguments.
+        try {
+            var callback = fig['handle_' + msg_type];
+        } catch (e) {
+            console.log(
+                "No handler for the '" + msg_type + "' message type: ",
+                msg
+            );
+            return;
+        }
+
+        if (callback) {
+            try {
+                // console.log("Handling '" + msg_type + "' message: ", msg);
+                callback(fig, msg);
+            } catch (e) {
+                console.log(
+                    "Exception inside the 'handler_" + msg_type + "' callback:",
+                    e,
+                    e.stack,
+                    msg
+                );
+            }
+        }
+    };
+};
+
+// from https://stackoverflow.com/questions/1114465/getting-mouse-location-in-canvas
+mpl.findpos = function (e) {
+    //this section is from http://www.quirksmode.org/js/events_properties.html
+    var targ;
+    if (!e) {
+        e = window.event;
+    }
+    if (e.target) {
+        targ = e.target;
+    } else if (e.srcElement) {
+        targ = e.srcElement;
+    }
+    if (targ.nodeType === 3) {
+        // defeat Safari bug
+        targ = targ.parentNode;
+    }
+
+    // pageX,Y are the mouse positions relative to the document
+    var boundingRect = targ.getBoundingClientRect();
+    var x = e.pageX - (boundingRect.left + document.body.scrollLeft);
+    var y = e.pageY - (boundingRect.top + document.body.scrollTop);
+
+    return { x: x, y: y };
+};
+
+/*
+ * return a copy of an object with only non-object keys
+ * we need this to avoid circular references
+ * https://stackoverflow.com/a/24161582/3208463
+ */
+function simpleKeys(original) {
+    return Object.keys(original).reduce(function (obj, key) {
+        if (typeof original[key] !== 'object') {
+            obj[key] = original[key];
+        }
+        return obj;
+    }, {});
+}
+
+mpl.figure.prototype.mouse_event = function (event, name) {
+    var canvas_pos = mpl.findpos(event);
+
+    if (name === 'button_press') {
+        this.canvas.focus();
+        this.canvas_div.focus();
+    }
+
+    var x = canvas_pos.x * this.ratio;
+    var y = canvas_pos.y * this.ratio;
+
+    this.send_message(name, {
+        x: x,
+        y: y,
+        button: event.button,
+        step: event.step,
+        guiEvent: simpleKeys(event),
+    });
+
+    /* This prevents the web browser from automatically changing to
+     * the text insertion cursor when the button is pressed.  We want
+     * to control all of the cursor setting manually through the
+     * 'cursor' event from matplotlib */
+    event.preventDefault();
+    return false;
+};
+
+mpl.figure.prototype._key_event_extra = function (_event, _name) {
+    // Handle any extra behaviour associated with a key event
+};
+
+mpl.figure.prototype.key_event = function (event, name) {
+    // Prevent repeat events
+    if (name === 'key_press') {
+        if (event.key === this._key) {
+            return;
+        } else {
+            this._key = event.key;
+        }
+    }
+    if (name === 'key_release') {
+        this._key = null;
+    }
+
+    var value = '';
+    if (event.ctrlKey && event.key !== 'Control') {
+        value += 'ctrl+';
+    }
+    else if (event.altKey && event.key !== 'Alt') {
+        value += 'alt+';
+    }
+    else if (event.shiftKey && event.key !== 'Shift') {
+        value += 'shift+';
+    }
+
+    value += 'k' + event.key;
+
+    this._key_event_extra(event, name);
+
+    this.send_message(name, { key: value, guiEvent: simpleKeys(event) });
+    return false;
+};
+
+mpl.figure.prototype.toolbar_button_onclick = function (name) {
+    if (name === 'download') {
+        this.handle_save(this, null);
+    } else {
+        this.send_message('toolbar_button', { name: name });
+    }
+};
+
+mpl.figure.prototype.toolbar_button_onmouseover = function (tooltip) {
+    this.message.textContent = tooltip;
+};
+
+///////////////// REMAINING CONTENT GENERATED BY embed_js.py /////////////////
+// prettier-ignore
+var _JSXTOOLS_RESIZE_OBSERVER=function(A){var t,i=new WeakMap,n=new WeakMap,a=new WeakMap,r=new WeakMap,o=new Set;function s(e){if(!(this instanceof s))throw new TypeError("Constructor requires 'new' operator");i.set(this,e)}function h(){throw new TypeError("Function is not a constructor")}function c(e,t,i,n){e=0 in arguments?Number(arguments[0]):0,t=1 in arguments?Number(arguments[1]):0,i=2 in arguments?Number(arguments[2]):0,n=3 in arguments?Number(arguments[3]):0,this.right=(this.x=this.left=e)+(this.width=i),this.bottom=(this.y=this.top=t)+(this.height=n),Object.freeze(this)}function d(){t=requestAnimationFrame(d);var s=new WeakMap,p=new Set;o.forEach((function(t){r.get(t).forEach((function(i){var r=t instanceof window.SVGElement,o=a.get(t),d=r?0:parseFloat(o.paddingTop),f=r?0:parseFloat(o.paddingRight),l=r?0:parseFloat(o.paddingBottom),u=r?0:parseFloat(o.paddingLeft),g=r?0:parseFloat(o.borderTopWidth),m=r?0:parseFloat(o.borderRightWidth),w=r?0:parseFloat(o.borderBottomWidth),b=u+f,F=d+l,v=(r?0:parseFloat(o.borderLeftWidth))+m,W=g+w,y=r?0:t.offsetHeight-W-t.clientHeight,E=r?0:t.offsetWidth-v-t.clientWidth,R=b+v,z=F+W,M=r?t.width:parseFloat(o.width)-R-E,O=r?t.height:parseFloat(o.height)-z-y;if(n.has(t)){var k=n.get(t);if(k[0]===M&&k[1]===O)return}n.set(t,[M,O]);var S=Object.create(h.prototype);S.target=t,S.contentRect=new c(u,d,M,O),s.has(i)||(s.set(i,[]),p.add(i)),s.get(i).push(S)}))})),p.forEach((function(e){i.get(e).call(e,s.get(e),e)}))}return s.prototype.observe=function(i){if(i instanceof window.Element){r.has(i)||(r.set(i,new Set),o.add(i),a.set(i,window.getComputedStyle(i)));var n=r.get(i);n.has(this)||n.add(this),cancelAnimationFrame(t),t=requestAnimationFrame(d)}},s.prototype.unobserve=function(i){if(i instanceof window.Element&&r.has(i)){var n=r.get(i);n.has(this)&&(n.delete(this),n.size||(r.delete(i),o.delete(i))),n.size||r.delete(i),o.size||cancelAnimationFrame(t)}},A.DOMRectReadOnly=c,A.ResizeObserver=s,A.ResizeObserverEntry=h,A}; // eslint-disable-line
+mpl.toolbar_items = [["Home", "Reset original view", "fa fa-home icon-home", "home"], ["Back", "Back to previous view", "fa fa-arrow-left icon-arrow-left", "back"], ["Forward", "Forward to next view", "fa fa-arrow-right icon-arrow-right", "forward"], ["", "", "", ""], ["Pan", "Left button pans, Right button zooms\nx/y fixes axis, CTRL fixes aspect", "fa fa-arrows icon-move", "pan"], ["Zoom", "Zoom to rectangle\nx/y fixes axis", "fa fa-square-o icon-check-empty", "zoom"], ["", "", "", ""], ["Download", "Download plot", "fa fa-floppy-o icon-save", "download"]];
+
+mpl.extensions = ["eps", "jpeg", "pgf", "pdf", "png", "ps", "raw", "svg", "tif"];
+
+mpl.default_extension = "png";/* global mpl */
+
+var comm_websocket_adapter = function (comm) {
+    // Create a "websocket"-like object which calls the given IPython comm
+    // object with the appropriate methods. Currently this is a non binary
+    // socket, so there is still some room for performance tuning.
+    var ws = {};
+
+    ws.binaryType = comm.kernel.ws.binaryType;
+    ws.readyState = comm.kernel.ws.readyState;
+    function updateReadyState(_event) {
+        if (comm.kernel.ws) {
+            ws.readyState = comm.kernel.ws.readyState;
+        } else {
+            ws.readyState = 3; // Closed state.
+        }
+    }
+    comm.kernel.ws.addEventListener('open', updateReadyState);
+    comm.kernel.ws.addEventListener('close', updateReadyState);
+    comm.kernel.ws.addEventListener('error', updateReadyState);
+
+    ws.close = function () {
+        comm.close();
+    };
+    ws.send = function (m) {
+        //console.log('sending', m);
+        comm.send(m);
+    };
+    // Register the callback with on_msg.
+    comm.on_msg(function (msg) {
+        //console.log('receiving', msg['content']['data'], msg);
+        var data = msg['content']['data'];
+        if (data['blob'] !== undefined) {
+            data = {
+                data: new Blob(msg['buffers'], { type: data['blob'] }),
+            };
+        }
+        // Pass the mpl event to the overridden (by mpl) onmessage function.
+        ws.onmessage(data);
+    });
+    return ws;
+};
+
+mpl.mpl_figure_comm = function (comm, msg) {
+    // This is the function which gets called when the mpl process
+    // starts-up an IPython Comm through the "matplotlib" channel.
+
+    var id = msg.content.data.id;
+    // Get hold of the div created by the display call when the Comm
+    // socket was opened in Python.
+    var element = document.getElementById(id);
+    var ws_proxy = comm_websocket_adapter(comm);
+
+    function ondownload(figure, _format) {
+        window.open(figure.canvas.toDataURL());
+    }
+
+    var fig = new mpl.figure(id, ws_proxy, ondownload, element);
+
+    // Call onopen now - mpl needs it, as it is assuming we've passed it a real
+    // web socket which is closed, not our websocket->open comm proxy.
+    ws_proxy.onopen();
+
+    fig.parent_element = element;
+    fig.cell_info = mpl.find_output_cell("<div id='" + id + "'></div>");
+    if (!fig.cell_info) {
+        console.error('Failed to find cell for figure', id, fig);
+        return;
+    }
+    fig.cell_info[0].output_area.element.on(
+        'cleared',
+        { fig: fig },
+        fig._remove_fig_handler
+    );
+};
+
+mpl.figure.prototype.handle_close = function (fig, msg) {
+    var width = fig.canvas.width / fig.ratio;
+    fig.cell_info[0].output_area.element.off(
+        'cleared',
+        fig._remove_fig_handler
+    );
+    fig.resizeObserverInstance.unobserve(fig.canvas_div);
+
+    // Update the output cell to use the data from the current canvas.
+    fig.push_to_output();
+    var dataURL = fig.canvas.toDataURL();
+    // Re-enable the keyboard manager in IPython - without this line, in FF,
+    // the notebook keyboard shortcuts fail.
+    IPython.keyboard_manager.enable();
+    fig.parent_element.innerHTML =
+        '<img src="' + dataURL + '" width="' + width + '">';
+    fig.close_ws(fig, msg);
+};
+
+mpl.figure.prototype.close_ws = function (fig, msg) {
+    fig.send_message('closing', msg);
+    // fig.ws.close()
+};
+
+mpl.figure.prototype.push_to_output = function (_remove_interactive) {
+    // Turn the data on the canvas into data in the output cell.
+    var width = this.canvas.width / this.ratio;
+    var dataURL = this.canvas.toDataURL();
+    this.cell_info[1]['text/html'] =
+        '<img src="' + dataURL + '" width="' + width + '">';
+};
+
+mpl.figure.prototype.updated_canvas_event = function () {
+    // Tell IPython that the notebook contents must change.
+    IPython.notebook.set_dirty(true);
+    this.send_message('ack', {});
+    var fig = this;
+    // Wait a second, then push the new image to the DOM so
+    // that it is saved nicely (might be nice to debounce this).
+    setTimeout(function () {
+        fig.push_to_output();
+    }, 1000);
+};
+
+mpl.figure.prototype._init_toolbar = function () {
+    var fig = this;
+
+    var toolbar = document.createElement('div');
+    toolbar.classList = 'btn-toolbar';
+    this.root.appendChild(toolbar);
+
+    function on_click_closure(name) {
+        return function (_event) {
+            return fig.toolbar_button_onclick(name);
+        };
+    }
+
+    function on_mouseover_closure(tooltip) {
+        return function (event) {
+            if (!event.currentTarget.disabled) {
+                return fig.toolbar_button_onmouseover(tooltip);
+            }
+        };
+    }
+
+    fig.buttons = {};
+    var buttonGroup = document.createElement('div');
+    buttonGroup.classList = 'btn-group';
+    var button;
+    for (var toolbar_ind in mpl.toolbar_items) {
+        var name = mpl.toolbar_items[toolbar_ind][0];
+        var tooltip = mpl.toolbar_items[toolbar_ind][1];
+        var image = mpl.toolbar_items[toolbar_ind][2];
+        var method_name = mpl.toolbar_items[toolbar_ind][3];
+
+        if (!name) {
+            /* Instead of a spacer, we start a new button group. */
+            if (buttonGroup.hasChildNodes()) {
+                toolbar.appendChild(buttonGroup);
+            }
+            buttonGroup = document.createElement('div');
+            buttonGroup.classList = 'btn-group';
+            continue;
+        }
+
+        button = fig.buttons[name] = document.createElement('button');
+        button.classList = 'btn btn-default';
+        button.href = '#';
+        button.title = name;
+        button.innerHTML = '<i class="fa ' + image + ' fa-lg"></i>';
+        button.addEventListener('click', on_click_closure(method_name));
+        button.addEventListener('mouseover', on_mouseover_closure(tooltip));
+        buttonGroup.appendChild(button);
+    }
+
+    if (buttonGroup.hasChildNodes()) {
+        toolbar.appendChild(buttonGroup);
+    }
+
+    // Add the status bar.
+    var status_bar = document.createElement('span');
+    status_bar.classList = 'mpl-message pull-right';
+    toolbar.appendChild(status_bar);
+    this.message = status_bar;
+
+    // Add the close button to the window.
+    var buttongrp = document.createElement('div');
+    buttongrp.classList = 'btn-group inline pull-right';
+    button = document.createElement('button');
+    button.classList = 'btn btn-mini btn-primary';
+    button.href = '#';
+    button.title = 'Stop Interaction';
+    button.innerHTML = '<i class="fa fa-power-off icon-remove icon-large"></i>';
+    button.addEventListener('click', function (_evt) {
+        fig.handle_close(fig, {});
+    });
+    button.addEventListener(
+        'mouseover',
+        on_mouseover_closure('Stop Interaction')
+    );
+    buttongrp.appendChild(button);
+    var titlebar = this.root.querySelector('.ui-dialog-titlebar');
+    titlebar.insertBefore(buttongrp, titlebar.firstChild);
+};
+
+mpl.figure.prototype._remove_fig_handler = function (event) {
+    var fig = event.data.fig;
+    if (event.target !== this) {
+        // Ignore bubbled events from children.
+        return;
+    }
+    fig.close_ws(fig, {});
+};
+
+mpl.figure.prototype._root_extra_style = function (el) {
+    el.style.boxSizing = 'content-box'; // override notebook setting of border-box.
+};
+
+mpl.figure.prototype._canvas_extra_style = function (el) {
+    // this is important to make the div 'focusable
+    el.setAttribute('tabindex', 0);
+    // reach out to IPython and tell the keyboard manager to turn it's self
+    // off when our div gets focus
+
+    // location in version 3
+    if (IPython.notebook.keyboard_manager) {
+        IPython.notebook.keyboard_manager.register_events(el);
+    } else {
+        // location in version 2
+        IPython.keyboard_manager.register_events(el);
+    }
+};
+
+mpl.figure.prototype._key_event_extra = function (event, _name) {
+    // Check for shift+enter
+    if (event.shiftKey && event.which === 13) {
+        this.canvas_div.blur();
+        // select the cell after this one
+        var index = IPython.notebook.find_cell_index(this.cell_info[0]);
+        IPython.notebook.select(index + 1);
+    }
+};
+
+mpl.figure.prototype.handle_save = function (fig, _msg) {
+    fig.ondownload(fig, null);
+};
+
+mpl.find_output_cell = function (html_output) {
+    // Return the cell and output element which can be found *uniquely* in the notebook.
+    // Note - this is a bit hacky, but it is done because the "notebook_saving.Notebook"
+    // IPython event is triggered only after the cells have been serialised, which for
+    // our purposes (turning an active figure into a static one), is too late.
+    var cells = IPython.notebook.get_cells();
+    var ncells = cells.length;
+    for (var i = 0; i < ncells; i++) {
+        var cell = cells[i];
+        if (cell.cell_type === 'code') {
+            for (var j = 0; j < cell.output_area.outputs.length; j++) {
+                var data = cell.output_area.outputs[j];
+                if (data.data) {
+                    // IPython >= 3 moved mimebundle to data attribute of output
+                    data = data.data;
+                }
+                if (data['text/html'] === html_output) {
+                    return [cell, data, j];
+                }
+            }
+        }
+    }
+};
+
+// Register the function which deals with the matplotlib target/channel.
+// The kernel may be null if the page has been refreshed.
+if (IPython.notebook.kernel !== null) {
+    IPython.notebook.kernel.comm_manager.register_target(
+        'matplotlib',
+        mpl.mpl_figure_comm
+    );
+}
+</script><div class="output text_html"><img src="data:image/png;base64,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BAgQIECAAAEC6QUEwOmbAAACBAgQIECAAAECBAjkEBAA56hnpSRAgAABAgQIECBAgEB6AQFw+iYAgAABAgQIECBAgAABAjkEBMA56lkpCRAgQIAAAQIECBAgkF5AAJy+CQAgQIAAAQIECBAgQIBADgEBcI56VkoCBAgQIECAAAECBAikFxAAp28CAAgQIECAAAECBAgQIJBDQACco56VkgABAgQIECBAgAABAukFBMDpmwAAAgQIECBAgAABAgQI5BAQAOeoZ6UkQIAAAQIECBAgQIBAegEBcPomAIAAAQIECBAgQIAAAQI5BATAOepZKQkQIECAAAECBAgQIJBeQACcvgkAIECAAAECBAgQIECAQA4BAXCOelZKAgQIECBAgAABAgQIpBcQAKdvAgAIECBAgAABAgQIECCQQ0AAnKOelZIAAQIECBAgQIAAAQLpBQTA6ZsAAAIECBAgQIAAAQIECOQQEADnqGelJECAAAECBAgQIECAQHoBAXD6JgCAAAECBAgQIECAAAECOQQEwDnqWSkJECBAgAABAgQIECCQXkAAnL4JACBAgAABAgQIECBAgEAOAQFwjnpWSgIECBAgQIAAAQIECKQXEACnbwIACBAgQIAAAQIECBAgkENAAJyjnpWSAAECBAgQIECAAAEC6QUEwOmbAAACBAgQIECAAAECBAjkEBAA56hnpSRAgAABAgQIECBAgEB6AQFw+iYAgAABAgQIECBAgAABAjkEBMA56lkpCRAgQIAAAQIECBAgkF5AAJy+CQAgQIAAAQIECBAgQIBADoF/AWx0uH/N4mZ8AAAAAElFTkSuQmCC" width="480"></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="c1"># matplotlib.use(&quot;Agg&quot;)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">matplotlib_fname</span><span class="p">()</span>
+<span class="c1"># u&#39;/home/ben/.config/matplotlib/matplotlibrc&#39;</span>
+<span class="c1"># &#39;/var/mobile/Containers/Data/Application/2C38E445-B03B-4F08-B850-A9AFC5759E32/Library/Application Support/com.rationalmatter.junoapp/python-home/lib/python3.10/site-packages/matplotlib/mpl-data/matplotlibrc&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/var/mobile/Containers/Data/Application/2C38E445-B03B-4F08-B850-A9AFC5759E32/Library/Application Support/com.rationalmatter.junoapp/python-home/lib/python3.10/site-packages/matplotlib/mpl-data/matplotlibrc&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 2x1 grid of subplots</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://stackoverflow.com/questions/34375345/how-does-pythons-matplotlib-pyplot-quiver-exactly-work</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span>
+<span class="n">u</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.quiver.Quiver at 0x1152af220&gt;
+</pre></div>
+</div>
+<img alt="../_images/d27af578a9d7e41742cc0ab97e36af90bfd31f2b15c6b6f6f5bea624a88a9536.png" src="../_images/d27af578a9d7e41742cc0ab97e36af90bfd31f2b15c6b6f6f5bea624a88a9536.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">========================================================</span>
+<span class="sd">Demonstration of advanced quiver and quiverkey functions</span>
+<span class="sd">========================================================</span>
+
+<span class="sd">Known problem: the plot autoscaling does not take into account</span>
+<span class="sd">the arrows, so those on the boundaries are often out of the picture.</span>
+<span class="sd">This is *not* an easy problem to solve in a perfectly general way.</span>
+<span class="sd">The workaround is to manually expand the axes.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">ma</span>
+
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">.2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">.2</span><span class="p">))</span>
+<span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Arrows scale with plot width, not view&#39;</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;width&#39;</span><span class="p">)</span>
+<span class="n">qk</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiverkey</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$2 \frac</span><span class="si">{m}{s}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">labelpos</span><span class="o">=</span><span class="s1">&#39;E&#39;</span><span class="p">,</span>
+                   <span class="n">coordinates</span><span class="o">=</span><span class="s1">&#39;figure&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;pivot=&#39;mid&#39;; every third arrow; units=&#39;inches&#39;&quot;</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">[::</span><span class="mi">3</span><span class="p">,</span> <span class="p">::</span><span class="mi">3</span><span class="p">],</span> <span class="n">Y</span><span class="p">[::</span><span class="mi">3</span><span class="p">,</span> <span class="p">::</span><span class="mi">3</span><span class="p">],</span> <span class="n">U</span><span class="p">[::</span><span class="mi">3</span><span class="p">,</span> <span class="p">::</span><span class="mi">3</span><span class="p">],</span> <span class="n">V</span><span class="p">[::</span><span class="mi">3</span><span class="p">,</span> <span class="p">::</span><span class="mi">3</span><span class="p">],</span>
+               <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;inches&#39;</span><span class="p">)</span>
+<span class="n">qk</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiverkey</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$1 \frac</span><span class="si">{m}{s}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">labelpos</span><span class="o">=</span><span class="s1">&#39;E&#39;</span><span class="p">,</span>
+                   <span class="n">coordinates</span><span class="o">=</span><span class="s1">&#39;figure&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[::</span><span class="mi">3</span><span class="p">,</span> <span class="p">::</span><span class="mi">3</span><span class="p">],</span> <span class="n">Y</span><span class="p">[::</span><span class="mi">3</span><span class="p">,</span> <span class="p">::</span><span class="mi">3</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;pivot=&#39;tip&#39;; scales with x view&quot;</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.022</span><span class="p">,</span>
+               <span class="n">scale</span><span class="o">=</span><span class="mi">1</span> <span class="o">/</span> <span class="mf">0.15</span><span class="p">)</span>
+<span class="n">qk</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">quiverkey</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$1 \frac</span><span class="si">{m}{s}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="n">labelpos</span><span class="o">=</span><span class="s1">&#39;E&#39;</span><span class="p">,</span>
+                   <span class="n">coordinates</span><span class="o">=</span><span class="s1">&#39;figure&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/22b67c32ed7acfa09392499b97245f82993a9861e6b8d2df705ae9291a1e62d8.png" src="../_images/22b67c32ed7acfa09392499b97245f82993a9861e6b8d2df705ae9291a1e62d8.png" />
+<img alt="../_images/fb4a53a1af5801d6a827e7eb425e8b469d170aa9b5bee4b93f171cc2d6400ee3.png" src="../_images/fb4a53a1af5801d6a827e7eb425e8b469d170aa9b5bee4b93f171cc2d6400ee3.png" />
+<img alt="../_images/290d146e89da552da7471614c0f739817ec27ee5204127eec05bdbec02cdcc34.png" src="../_images/290d146e89da552da7471614c0f739817ec27ee5204127eec05bdbec02cdcc34.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 2x1 grid of subplots</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 480x360 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="../_images/3568fa853ac03fe95d6b396740dad7649b512d548a1bea675b51e534a6c65f5c.png" src="../_images/3568fa853ac03fe95d6b396740dad7649b512d548a1bea675b51e534a6c65f5c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 2x1 grid of subplots</span>
+
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">netcdf_file</span>
+
+
+<span class="n">ncf</span> <span class="o">=</span> <span class="n">netcdf_file</span><span class="p">(</span><span class="s1">&#39;data/KTLX_20100510_22Z.nc&#39;</span><span class="p">)</span> <span class="c1"># note data/</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Reflectivity&#39;</span><span class="p">]</span>
+<span class="n">lats</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+<span class="n">lons</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#cmap = plt.get_cmap(&#39;gist_ncar&#39;) # no longer supported </span>
+<span class="c1">#cmap.set_under(&#39;lightgrey&#39;)</span>
+
+
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;gist_ncar&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+               <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="n">lons</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+               <span class="n">vmin</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_ncar&#39;</span><span class="p">)</span>
+<span class="n">cb</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+
+<span class="n">cb</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Reflectivity (dBZ)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/979dd9f5b8c7434a2e2f1e0ec228ceda310510090a9328f4f9eeb8ea8f5b31b2.png" src="../_images/979dd9f5b8c7434a2e2f1e0ec228ceda310510090a9328f4f9eeb8ea8f5b31b2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Path at terminal when executing this file&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># before selecting juno current direcotry</span>
+<span class="c1"># /private/var/mobile/Containers/Data/Application/2C38E445-B03B-4F08-B850-A9AFC5759E32/Library/Caches</span>
+<span class="c1"># afterwards</span>
+
+
+<span class="c1">#os.chdir(&quot;/private/var/mobile/Containers/Shared/AppGroup/A224EFAB-AEB3-4B3B-A2A9-EE4282ED0D4A/File Provider Storage/Repositories/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk2&quot;)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PATH&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">#none work</span>
+<span class="sd">dir_path = os.path.dirname(os.path.realpath(__file__))</span>
+<span class="sd">print(dir_path)</span>
+
+<span class="sd">print(&quot;This file path, relative to os.getcwd()&quot;)</span>
+<span class="sd">print(__file__ + &quot;\n&quot;)</span>
+
+<span class="sd">print(&quot;This file full path (following symlinks)&quot;)</span>
+<span class="sd">full_path = os.path.realpath(__file__)</span>
+<span class="sd">print(full_path + &quot;\n&quot;)</span>
+
+<span class="sd">print(&quot;This file directory and name&quot;)</span>
+<span class="sd">path, filename = os.path.split(full_path)</span>
+<span class="sd">print(path + &#39; --&gt; &#39; + filename + &quot;\n&quot;)</span>
+
+<span class="sd">print(&quot;This file directory only&quot;)</span>
+<span class="sd">print(os.path.dirname(full_path))</span>
+<span class="sd">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Path at terminal when executing this file
+/private/var/mobile/Containers/Shared/AppGroup/A224EFAB-AEB3-4B3B-A2A9-EE4282ED0D4A/File Provider Storage/Repositories/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk2
+
+/private/var/mobile/Containers/Shared/AppGroup/A224EFAB-AEB3-4B3B-A2A9-EE4282ED0D4A/File Provider Storage/Repositories/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk2
+
+/usr/bin:/bin:/usr/sbin:/sbin
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n#none work\ndir_path = os.path.dirname(os.path.realpath(__file__))\nprint(dir_path)\n\nprint(&quot;This file path, relative to os.getcwd()&quot;)\nprint(__file__ + &quot;\n&quot;)\n\nprint(&quot;This file full path (following symlinks)&quot;)\nfull_path = os.path.realpath(__file__)\nprint(full_path + &quot;\n&quot;)\n\nprint(&quot;This file directory and name&quot;)\npath, filename = os.path.split(full_path)\nprint(path + \&#39; --&gt; \&#39; + filename + &quot;\n&quot;)\n\nprint(&quot;This file directory only&quot;)\nprint(os.path.dirname(full_path))\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">builtins</span>
+
+<span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">builtins</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">UpperCaser</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">UpperCaser</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Wrapper around a file that converts output to uppercase.&#39;&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_f</span> <span class="o">=</span> <span class="n">f</span>
+
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">count</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">count</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">__builtin__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;builtins&#39; (built-in)&gt;
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">2</span><span class="n">cf01bdc54a0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="nb">print</span><span class="p">(</span><span class="n">__builtin__</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> 
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="nb">print</span><span class="p">(</span><span class="vm">__dict__</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;__dict__&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">netcdf_file</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Polygon</span>
+<span class="kn">from</span> <span class="nn">tutorial</span> <span class="kn">import</span> <span class="n">polygon_loader</span>
+
+<span class="n">ncf</span> <span class="o">=</span> <span class="n">netcdf_file</span><span class="p">(</span><span class="s1">&#39;KTLX_20100510_22Z.nc&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Reflectivity&#39;</span><span class="p">]</span>
+<span class="n">lats</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+<span class="n">lons</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1">#cmap = plt.get_cmap(&#39;gist_ncar&#39;) # no longer supported </span>
+<span class="c1">#cmap.set_under(&#39;lightgrey&#39;)</span>
+
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;gist_ncar&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+               <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="n">lons</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+               <span class="n">vmin</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_ncar&#39;</span><span class="p">)</span>
+<span class="n">cb</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+
+<span class="n">polygons</span> <span class="o">=</span> <span class="n">polygon_loader</span><span class="p">(</span><span class="s1">&#39;polygons.shp&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">polygons</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">poly</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.45</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">cb</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s2">&quot;Reflectivity (dBZ)&quot;</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Longitude&quot;</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latitude&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">2173</span><span class="n">db49cb0d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">netcdf_file</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Polygon</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">tutorial</span> <span class="kn">import</span> <span class="n">polygon_loader</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ncf</span> <span class="o">=</span> <span class="n">netcdf_file</span><span class="p">(</span><span class="s1">&#39;KTLX_20100510_22Z.nc&#39;</span><span class="p">)</span>
+
+<span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">mobile</span><span class="o">/</span><span class="n">Containers</span><span class="o">/</span><span class="n">Shared</span><span class="o">/</span><span class="n">AppGroup</span><span class="o">/</span><span class="n">A224EFAB</span><span class="o">-</span><span class="n">AEB3</span><span class="o">-</span><span class="mi">4</span><span class="n">B3B</span><span class="o">-</span><span class="n">A2A9</span><span class="o">-</span><span class="n">EE4282ED0D4A</span><span class="o">/</span><span class="n">File</span> <span class="n">Provider</span> <span class="n">Storage</span><span class="o">/</span><span class="n">Repositories</span><span class="o">/</span><span class="n">gpd2</span><span class="o">-</span><span class="n">win</span><span class="o">-</span><span class="n">unity1</span><span class="o">/</span><span class="n">ipadred</span><span class="o">-</span><span class="n">rain</span><span class="o">/</span><span class="n">imgno_book1</span><span class="o">/</span><span class="n">imgnobk2</span><span class="o">/</span><span class="n">tutorial</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">mpl_toolkits.basemap</span> <span class="kn">import</span> <span class="n">shapefile</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">groupby</span><span class="p">,</span> <span class="n">izip</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;mpl_toolkits.basemap&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">netcdf_file</span>
+
+
+<span class="n">ncf</span> <span class="o">=</span> <span class="n">netcdf_file</span><span class="p">(</span><span class="s1">&#39;data/KTLX_20100510_22Z.nc&#39;</span><span class="p">)</span> <span class="c1"># note data/</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;Reflectivity&#39;</span><span class="p">]</span>
+<span class="n">lats</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+<span class="n">lons</span> <span class="o">=</span> <span class="n">ncf</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#cmap = plt.get_cmap(&#39;gist_ncar&#39;) # no longer supported </span>
+<span class="c1">#cmap.set_under(&#39;lightgrey&#39;)</span>
+
+
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;gist_ncar&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">cmap</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">,</span>
+               <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="n">lons</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lons</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>
+               <span class="n">vmin</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gist_ncar&#39;</span><span class="p">)</span>
+<span class="n">cb</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
+
+<span class="n">cb</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Reflectivity (dBZ)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span> 
+<span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">ctrl_sys</span><span class="o">.</span><span class="n">change_frame</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> 
+                     <span class="n">frames</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+<span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;storms.gif&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="s1">&#39;Pillow&#39;</span><span class="p">)</span> <span class="c1">#imagemagick&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/mobile/Containers/Data/Application/2C38E445-B03B-4F08-B850-A9AFC5759E32/Library/Application Support/com.rationalmatter.junoapp/python-home/lib/python3.10/site-packages/scipy/io/_netcdf.py:305: RuntimeWarning: Cannot close a netcdf_file opened with mmap=True, when netcdf_variables or arrays referring to its data still exist. All data arrays obtained from such files refer directly to data on disk, and must be copied before the file can be cleanly closed. (See netcdf_file docstring for more information on mmap.)
+  warnings.warn((
+</pre></div>
+</div>
+<img alt="../_images/8b2d430e7bc170380ca10eddfc7d85684fec6b29a9e6dae1836b7214a0027f21.png" src="../_images/8b2d430e7bc170380ca10eddfc7d85684fec6b29a9e6dae1836b7214a0027f21.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MovieWriter Pillow unavailable; using Pillow instead.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">saving</span><span class="nt">(self, fig, outfile, dpi, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">233</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">234</span>             <span class="k">yield</span> <span class="bp">self</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span>         <span class="k">finally</span><span class="p">:</span>
+
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">save</span><span class="nt">(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1075</span>             <span class="k">for</span> <span class="n">anim</span> <span class="ow">in</span> <span class="n">all_anim</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1076</span>                 <span class="n">anim</span><span class="o">.</span><span class="n">_init_draw</span><span class="p">()</span>  <span class="c1"># Clear the initial frame</span>
+<span class="g g-Whitespace">   </span><span class="mi">1077</span>             <span class="n">frame_number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">_init_draw</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1695</span>                 <span class="k">return</span>
+<span class="ne">-&gt; </span><span class="mi">1696</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_draw_frame</span><span class="p">(</span><span class="n">frame_data</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1697</span>         <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">_draw_frame</span><span class="nt">(self, framedata)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1717</span>         <span class="c1"># func needs to return a sequence of any artists that were modified.</span>
+<span class="ne">-&gt; </span><span class="mi">1718</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_drawn_artists</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func</span><span class="p">(</span><span class="n">framedata</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1719</span> 
+
+<span class="nn">&lt;ipython-input-3-94a25e371a12&gt;</span> in <span class="ni">&lt;lambda&gt;</span><span class="nt">(_)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="kn">from</span> <span class="nn">matplotlib.animation</span> <span class="kn">import</span> <span class="n">FuncAnimation</span>
+<span class="ne">---&gt; </span><span class="mi">31</span> <span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">ctrl_sys</span><span class="o">.</span><span class="n">change_frame</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> 
+<span class="g g-Whitespace">     </span><span class="mi">32</span>                      <span class="n">frames</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+
+<span class="ne">NameError</span>: name &#39;ctrl_sys&#39; is not defined
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">94</span><span class="n">a25e371a12</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">anim</span> <span class="o">=</span> <span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="n">ctrl_sys</span><span class="o">.</span><span class="n">change_frame</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> 
+<span class="g g-Whitespace">     </span><span class="mi">32</span>                      <span class="n">frames</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+<span class="ne">---&gt; </span><span class="mi">33</span> <span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;storms.gif&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="s1">&#39;Pillow&#39;</span><span class="p">)</span> <span class="c1">#imagemagick&#39;)</span>
+
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">save</span><span class="nt">(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1069</span>         <span class="c1"># callback a no-op; canvas.manager = None prevents resizing the GUI</span>
+<span class="g g-Whitespace">   </span><span class="mi">1070</span>         <span class="c1"># widget (both are likewise done in savefig()).</span>
+<span class="ne">-&gt; </span><span class="mi">1071</span>         <span class="k">with</span> <span class="n">mpl</span><span class="o">.</span><span class="n">rc_context</span><span class="p">({</span><span class="s1">&#39;savefig.bbox&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}),</span> \
+<span class="g g-Whitespace">   </span><span class="mi">1072</span>              <span class="n">writer</span><span class="o">.</span><span class="n">saving</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">dpi</span><span class="p">),</span> \
+<span class="g g-Whitespace">   </span><span class="mi">1073</span>              <span class="n">cbook</span><span class="o">.</span><span class="n">_setattr_cm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_fig</span><span class="o">.</span><span class="n">canvas</span><span class="p">,</span>
+
+<span class="nn">~/lib/python3.10/contextlib.py</span> in <span class="ni">__exit__</span><span class="nt">(self, typ, value, traceback)</span>
+<span class="g g-Whitespace">    </span><span class="mi">151</span>                 <span class="n">value</span> <span class="o">=</span> <span class="n">typ</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">153</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">throw</span><span class="p">(</span><span class="n">typ</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">traceback</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span>             <span class="k">except</span> <span class="ne">StopIteration</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>                 <span class="c1"># Suppress StopIteration *unless* it&#39;s the same exception that</span>
+
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">saving</span><span class="nt">(self, fig, outfile, dpi, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">234</span>             <span class="k">yield</span> <span class="bp">self</span>
+<span class="g g-Whitespace">    </span><span class="mi">235</span>         <span class="k">finally</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">236</span>             <span class="bp">self</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span> 
+<span class="g g-Whitespace">    </span><span class="mi">238</span> 
+
+<span class="nn">~/lib/python3.10/site-packages/matplotlib/animation.py</span> in <span class="ni">finish</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">510</span> 
+<span class="g g-Whitespace">    </span><span class="mi">511</span>     <span class="k">def</span> <span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">512</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_frames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">513</span>             <span class="bp">self</span><span class="o">.</span><span class="n">outfile</span><span class="p">,</span> <span class="n">save_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append_images</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_frames</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>             <span class="n">duration</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mi">1000</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">fps</span><span class="p">),</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="n">stormcells</span> <span class="o">=</span> <span class="n">storm_loader</span><span class="p">(</span><span class="s1">&#39;polygons.shp&#39;</span><span class="p">)</span> 
+<span class="n">polycolls</span> <span class="o">=</span> <span class="n">Stormcells</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stormcells</span><span class="p">)</span> 
+<span class="n">artists</span> <span class="o">=</span> <span class="p">[[</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">polycolls</span><span class="o">.</span><span class="n">polygons</span><span class="p">]</span> 
+
+<span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Longitude&quot;</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latitude&quot;</span><span class="p">)</span> 
+
+<span class="n">anim</span> <span class="o">=</span> <span class="n">ArtistAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">artists</span><span class="p">)</span> 
+<span class="n">anim</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;storms.gif&#39;</span><span class="p">,</span> <span class="n">writer</span><span class="o">=</span><span class="s1">&#39;Pillow&#39;</span><span class="p">)</span> <span class="c1">#imagemagick&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="n">db3bd8cdca1</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">stormcells</span> <span class="o">=</span> <span class="n">storm_loader</span><span class="p">(</span><span class="s1">&#39;polygons.shp&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">polycolls</span> <span class="o">=</span> <span class="n">Stormcells</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stormcells</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">artists</span> <span class="o">=</span> <span class="p">[[</span><span class="n">p</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">polycolls</span><span class="o">.</span><span class="n">polygons</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">NameError</span>: name &#39;storm_loader&#39; is not defined
+</pre></div>
+</div>
+<img alt="../_images/0590f7813a665fb6ee308181d9126d45f3568ba1938adc93ba0eae7645e405a3.png" src="../_images/0590f7813a665fb6ee308181d9126d45f3568ba1938adc93ba0eae7645e405a3.png" />
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lib"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dennis Ng
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
