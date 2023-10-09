@@ -1,0 +1,1194 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>hanon-c8 &#8212; Hand-on Book3</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'handon-c8';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Handon C9" href="handon-c9.html" />
+    <link rel="prev" title="handon-ch7" href="handon-c7.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="introHandon.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Less.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/Less.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="introHandon.html">
+                    0. Less 2?
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="MacB3-Handon.html">MacB3-Handon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c4.html">handon matplotlib chp 4</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="handon-c5.html">handon-c5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c6.html">handob ch6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c7.html">handon-ch7</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">hanon-c8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c9.html">Handon C9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c10.html">handon-10 colors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c11-pyqt5.html">handon-11-pyqt5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c12.html">handon-c12 qt version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c13.html">handon-c13</a></li>
+<li class="toctree-l1"><a class="reference internal" href="handon-c18-covid.html">handon 18 covid</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://kwccoin.github.io/imginaryno2/imgnobk3/html/MacB3-Handon.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://kwccoin.github.io/imginaryno2/imgnobk3/html/MacB3-Handon.html/issues/new?title=Issue%20on%20page%20%2Fhandon-c8.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/handon-c8.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>hanon-c8</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="hanon-c8">
+<h1>hanon-c8<a class="headerlink" href="#hanon-c8" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># img1 = plt.imread(&quot;D:/Dataset/4.2.03.tiff&quot;)</span>
+<span class="c1"># img1 = plt.imread(&quot;~/Dataset/4.2.03.tiff&quot;)</span>
+<span class="n">img1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;img/handon-c4-test-4-66.tiff&quot;</span><span class="p">)</span> <span class="c1">#test.png&quot;)</span>
+<span class="n">img2h</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;media/hk2.tiff&quot;</span><span class="p">)</span>
+<span class="n">img2t</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;media/Tk2.tiff&quot;</span><span class="p">)</span>
+
+
+
+<span class="k">def</span> <span class="nf">showimg</span><span class="p">(</span><span class="n">img1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">&quot;Please open the URL for reading and pass the &quot;</span>
+<span class="sd">   1522         &quot;result to Pillow, e.g. with &quot;</span>
+<span class="sd">   1523         &quot;``np.array(PIL.Image.open(urllib.request.urlopen(url)))``.&quot;</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">img1</span><span class="p">)</span> <span class="c1"># no dtype= as in tiff</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">img1</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span>
+
+<span class="n">showimg</span><span class="p">(</span><span class="n">img2h</span><span class="p">)</span>
+<span class="n">showimg</span><span class="p">(</span><span class="n">img2t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[  0   0   0   0]
+  [228 228 228  48]
+  [226 226 226 134]
+  ...
+  [226 226 226 136]
+  [228 228 228  49]
+  [  0   0   0   0]]
+
+ [[228 228 228  49]
+  [222 222 222 191]
+  [215 215 215 255]
+  ...
+  [215 215 215 255]
+  [223 223 223 192]
+  [228 228 228  49]]
+
+ [[222 222 222 134]
+  [210 210 210 255]
+  [207 207 207 255]
+  ...
+  [207 207 207 255]
+  [210 210 210 255]
+  [221 221 221 135]]
+
+ ...
+
+ [[168 168 168 255]
+  [168 168 168 255]
+  [168 168 168 255]
+  ...
+  [143 143 143 255]
+  [ 99  99  99 255]
+  [168 168 168 255]]
+
+ [[168 168 168 255]
+  [168 168 168 255]
+  [168 168 168 255]
+  ...
+  [ 99  99  99 255]
+  [196 196 196 255]
+  [168 168 168 255]]
+
+ [[167 167 167 255]
+  [167 167 167 255]
+  [167 167 167 255]
+  ...
+  [167 167 167 255]
+  [167 167 167 255]
+  [167 167 167 255]]]
+&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/7d2cc61c3c6a93c0e86b7089b49547fe567c669328255aba87f278ff0b9b5db7.png" src="_images/7d2cc61c3c6a93c0e86b7089b49547fe567c669328255aba87f278ff0b9b5db7.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  ...
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]]
+
+ [[0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  ...
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]]
+
+ [[0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  ...
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]]
+
+ ...
+
+ [[0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  ...
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]]
+
+ [[0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  ...
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]]
+
+ [[0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  ...
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 0 0 0]]]
+&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/7a20c7cc9428718a9bd74bf8003a6db7b0481edeefa827b4a29e230bcaca53a3.png" src="_images/7a20c7cc9428718a9bd74bf8003a6db7b0481edeefa827b4a29e230bcaca53a3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img2t</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span><span class="p">)</span> <span class="c1"># not work for png, tiff as well</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7a20c7cc9428718a9bd74bf8003a6db7b0481edeefa827b4a29e230bcaca53a3.png" src="_images/7a20c7cc9428718a9bd74bf8003a6db7b0481edeefa827b4a29e230bcaca53a3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img2t</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;cool&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/7a20c7cc9428718a9bd74bf8003a6db7b0481edeefa827b4a29e230bcaca53a3.png" src="_images/7a20c7cc9428718a9bd74bf8003a6db7b0481edeefa827b4a29e230bcaca53a3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">colormaps</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;magma&#39;,
+ &#39;inferno&#39;,
+ &#39;plasma&#39;,
+ &#39;viridis&#39;,
+ &#39;cividis&#39;,
+ &#39;twilight&#39;,
+ &#39;twilight_shifted&#39;,
+ &#39;turbo&#39;,
+ &#39;Blues&#39;,
+ &#39;BrBG&#39;,
+ &#39;BuGn&#39;,
+ &#39;BuPu&#39;,
+ &#39;CMRmap&#39;,
+ &#39;GnBu&#39;,
+ &#39;Greens&#39;,
+ &#39;Greys&#39;,
+ &#39;OrRd&#39;,
+ &#39;Oranges&#39;,
+ &#39;PRGn&#39;,
+ &#39;PiYG&#39;,
+ &#39;PuBu&#39;,
+ &#39;PuBuGn&#39;,
+ &#39;PuOr&#39;,
+ &#39;PuRd&#39;,
+ &#39;Purples&#39;,
+ &#39;RdBu&#39;,
+ &#39;RdGy&#39;,
+ &#39;RdPu&#39;,
+ &#39;RdYlBu&#39;,
+ &#39;RdYlGn&#39;,
+ &#39;Reds&#39;,
+ &#39;Spectral&#39;,
+ &#39;Wistia&#39;,
+ &#39;YlGn&#39;,
+ &#39;YlGnBu&#39;,
+ &#39;YlOrBr&#39;,
+ &#39;YlOrRd&#39;,
+ &#39;afmhot&#39;,
+ &#39;autumn&#39;,
+ &#39;binary&#39;,
+ &#39;bone&#39;,
+ &#39;brg&#39;,
+ &#39;bwr&#39;,
+ &#39;cool&#39;,
+ &#39;coolwarm&#39;,
+ &#39;copper&#39;,
+ &#39;cubehelix&#39;,
+ &#39;flag&#39;,
+ &#39;gist_earth&#39;,
+ &#39;gist_gray&#39;,
+ &#39;gist_heat&#39;,
+ &#39;gist_ncar&#39;,
+ &#39;gist_rainbow&#39;,
+ &#39;gist_stern&#39;,
+ &#39;gist_yarg&#39;,
+ &#39;gnuplot&#39;,
+ &#39;gnuplot2&#39;,
+ &#39;gray&#39;,
+ &#39;hot&#39;,
+ &#39;hsv&#39;,
+ &#39;jet&#39;,
+ &#39;nipy_spectral&#39;,
+ &#39;ocean&#39;,
+ &#39;pink&#39;,
+ &#39;prism&#39;,
+ &#39;rainbow&#39;,
+ &#39;seismic&#39;,
+ &#39;spring&#39;,
+ &#39;summer&#39;,
+ &#39;terrain&#39;,
+ &#39;winter&#39;,
+ &#39;Accent&#39;,
+ &#39;Dark2&#39;,
+ &#39;Paired&#39;,
+ &#39;Pastel1&#39;,
+ &#39;Pastel2&#39;,
+ &#39;Set1&#39;,
+ &#39;Set2&#39;,
+ &#39;Set3&#39;,
+ &#39;tab10&#39;,
+ &#39;tab20&#39;,
+ &#39;tab20b&#39;,
+ &#39;tab20c&#39;,
+ &#39;grey&#39;,
+ &#39;gist_grey&#39;,
+ &#39;gist_yerg&#39;,
+ &#39;Grays&#39;,
+ &#39;magma_r&#39;,
+ &#39;inferno_r&#39;,
+ &#39;plasma_r&#39;,
+ &#39;viridis_r&#39;,
+ &#39;cividis_r&#39;,
+ &#39;twilight_r&#39;,
+ &#39;twilight_shifted_r&#39;,
+ &#39;turbo_r&#39;,
+ &#39;Blues_r&#39;,
+ &#39;BrBG_r&#39;,
+ &#39;BuGn_r&#39;,
+ &#39;BuPu_r&#39;,
+ &#39;CMRmap_r&#39;,
+ &#39;GnBu_r&#39;,
+ &#39;Greens_r&#39;,
+ &#39;Greys_r&#39;,
+ &#39;OrRd_r&#39;,
+ &#39;Oranges_r&#39;,
+ &#39;PRGn_r&#39;,
+ &#39;PiYG_r&#39;,
+ &#39;PuBu_r&#39;,
+ &#39;PuBuGn_r&#39;,
+ &#39;PuOr_r&#39;,
+ &#39;PuRd_r&#39;,
+ &#39;Purples_r&#39;,
+ &#39;RdBu_r&#39;,
+ &#39;RdGy_r&#39;,
+ &#39;RdPu_r&#39;,
+ &#39;RdYlBu_r&#39;,
+ &#39;RdYlGn_r&#39;,
+ &#39;Reds_r&#39;,
+ &#39;Spectral_r&#39;,
+ &#39;Wistia_r&#39;,
+ &#39;YlGn_r&#39;,
+ &#39;YlGnBu_r&#39;,
+ &#39;YlOrBr_r&#39;,
+ &#39;YlOrRd_r&#39;,
+ &#39;afmhot_r&#39;,
+ &#39;autumn_r&#39;,
+ &#39;binary_r&#39;,
+ &#39;bone_r&#39;,
+ &#39;brg_r&#39;,
+ &#39;bwr_r&#39;,
+ &#39;cool_r&#39;,
+ &#39;coolwarm_r&#39;,
+ &#39;copper_r&#39;,
+ &#39;cubehelix_r&#39;,
+ &#39;flag_r&#39;,
+ &#39;gist_earth_r&#39;,
+ &#39;gist_gray_r&#39;,
+ &#39;gist_heat_r&#39;,
+ &#39;gist_ncar_r&#39;,
+ &#39;gist_rainbow_r&#39;,
+ &#39;gist_stern_r&#39;,
+ &#39;gist_yarg_r&#39;,
+ &#39;gnuplot_r&#39;,
+ &#39;gnuplot2_r&#39;,
+ &#39;gray_r&#39;,
+ &#39;hot_r&#39;,
+ &#39;hsv_r&#39;,
+ &#39;jet_r&#39;,
+ &#39;nipy_spectral_r&#39;,
+ &#39;ocean_r&#39;,
+ &#39;pink_r&#39;,
+ &#39;prism_r&#39;,
+ &#39;rainbow_r&#39;,
+ &#39;seismic_r&#39;,
+ &#39;spring_r&#39;,
+ &#39;summer_r&#39;,
+ &#39;terrain_r&#39;,
+ &#39;winter_r&#39;,
+ &#39;Accent_r&#39;,
+ &#39;Dark2_r&#39;,
+ &#39;Paired_r&#39;,
+ &#39;Pastel1_r&#39;,
+ &#39;Pastel2_r&#39;,
+ &#39;Set1_r&#39;,
+ &#39;Set2_r&#39;,
+ &#39;Set3_r&#39;,
+ &#39;tab10_r&#39;,
+ &#39;tab20_r&#39;,
+ &#39;tab20b_r&#39;,
+ &#39;tab20c_r&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">patches</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img2h</span><span class="p">)</span>
+<span class="n">patch</span> <span class="o">=</span> <span class="n">patches</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">245</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+<span class="n">radius</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+                       <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
+<span class="n">im</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="n">patch</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/883372556eaa526a31263502f24f388ba15f3e5d12abd2adf61fa267d36bedd7.png" src="_images/883372556eaa526a31263502f24f388ba15f3e5d12abd2adf61fa267d36bedd7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">img3</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6d341abd7264134418622df8be89a1fa1976f582dc1d6380a02df1878160d0f8.png" src="_images/6d341abd7264134418622df8be89a1fa1976f582dc1d6380a02df1878160d0f8.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="s1">&#39;antialiased&#39;</span><span class="p">,</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="s1">&#39;bilinear&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;bicubic&#39;</span><span class="p">,</span> <span class="s1">&#39;spline16&#39;</span><span class="p">,</span> <span class="s1">&#39;spline36&#39;</span><span class="p">,</span> <span class="s1">&#39;hanning&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;hamming&#39;</span><span class="p">,</span> <span class="s1">&#39;hermite&#39;</span><span class="p">,</span> <span class="s1">&#39;kaiser&#39;</span><span class="p">,</span> <span class="s1">&#39;quadric&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;catrom&#39;</span><span class="p">,</span> <span class="s1">&#39;gaussian&#39;</span><span class="p">,</span> <span class="s1">&#39;bessel&#39;</span><span class="p">,</span> <span class="s1">&#39;mitchell&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;sinc&#39;</span><span class="p">,</span> <span class="s1">&#39;lanczos&#39;</span><span class="p">,</span> <span class="s1">&#39;blackman&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                        <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xticks&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;yticks&#39;</span><span class="p">:</span> <span class="p">[]})</span>
+<span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">interp_method</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">methods</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img3</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">interp_method</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">interp_method</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/10561babdf47050a98c2e23afbd6aed4972da6fc24c438192c8e14c54d86077d.png" src="_images/10561babdf47050a98c2e23afbd6aed4972da6fc24c438192c8e14c54d86077d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                        <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;xticks&#39;</span><span class="p">:</span> <span class="p">[],</span> <span class="s1">&#39;yticks&#39;</span><span class="p">:</span> <span class="p">[]})</span>
+<span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">interp_method</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">methods</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img3</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="n">interp_method</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;hot&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">interp_method</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/21634b7345f6be7ccf7efe200b7a30b6264de4449d44d2d823ea1d4466b309b2.png" src="_images/21634b7345f6be7ccf7efe200b7a30b6264de4449d44d2d823ea1d4466b309b2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="nb">print</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">methods</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;zip object at 0x10836f440&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+<span class="c1">#array([[1, 2, 3],</span>
+<span class="c1">#       [1, 2, 3],</span>
+<span class="c1">#       [1, 2, 3]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],]</span><span class="o">*</span><span class="mi">3</span><span class="p">))</span>
+
+
+
+<span class="c1">#or for repeating columns:</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+<span class="c1">#array([[1, 1, 1],</span>
+<span class="c1">#       [2, 2, 2],</span>
+<span class="c1">#       [3, 3, 3]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],]</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 3]
+ [1 2 3]
+ [1 2 3]]
+[[1 2 3]
+ [1 2 3]
+ [1 2 3]]
+[[1 1 1]
+ [2 2 2]
+ [3 3 3]]
+[[1 1 1]
+ [2 2 2]
+ [3 3 3]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">wavfile</span>
+
+<span class="k">def</span> <span class="nf">printaudio</span><span class="p">(</span><span class="n">sndf</span><span class="p">,</span> <span class="n">plotting</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    File format b&#39;&#39; not understood. Only &#39;RIFF&#39; and &#39;RIFX&#39; supported</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">samplerate</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">wavfile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">sndf</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sndf</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;========================&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">samplerate</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># up to 20 as 1 dim</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2"> and no. of sample is </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">nbytes</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">plotting</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="mi">2000</span><span class="p">])</span> 
+        <span class="c1"># assume stereo shape is (#####,2) but here is (####,)</span>
+        <span class="c1"># just 1 colour it seems</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">samplerate</span>
+
+
+    
+<span class="c1">#printaudio(&quot;media/Rvb2.wav&quot;) #err</span>
+<span class="n">im2data</span><span class="p">,</span> <span class="n">im2samplerate</span><span class="o">=</span><span class="n">printaudio</span><span class="p">(</span><span class="s2">&quot;media/im2.wav&quot;</span><span class="p">)</span>
+<span class="n">we2data</span><span class="p">,</span> <span class="n">we2samplerate</span><span class="o">=</span><span class="n">printaudio</span><span class="p">(</span><span class="s2">&quot;media/welcome2.wav&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sndf=&#39;media/im2.wav&#39;
+========================
+samplerate=11000
+data=array([138, 133, 127, ..., 129, 129, 127], dtype=uint8)
+data[:20]=array([138, 133, 127, 122, 121, 123, 129, 135, 141, 143, 141, 135, 126,
+       118, 112, 110, 113, 120, 127, 132], dtype=uint8)
+type(data)=&lt;class &#39;numpy.ndarray&#39;&gt;
+data.shape=(10556,) and no. of sample is 10556
+data.ndim=1
+data.dtype=dtype(&#39;uint8&#39;)
+data.size=10556
+data.nbytes=10556
+------------------------
+</pre></div>
+</div>
+<img alt="_images/bb3fa80f77380b73929a04988a98ec87c9de900359f6a2f0faa05ac8f43088a7.png" src="_images/bb3fa80f77380b73929a04988a98ec87c9de900359f6a2f0faa05ac8f43088a7.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sndf=&#39;media/welcome2.wav&#39;
+========================
+samplerate=22000
+data=array([119, 117, 115, ..., 125, 125, 125], dtype=uint8)
+data[:20]=array([119, 117, 115, 113, 111, 110, 110, 110, 110, 111, 112, 113, 115,
+       117, 119, 121, 123, 125, 128, 130], dtype=uint8)
+type(data)=&lt;class &#39;numpy.ndarray&#39;&gt;
+data.shape=(13405,) and no. of sample is 13405
+data.ndim=1
+data.dtype=dtype(&#39;uint8&#39;)
+data.size=13405
+data.nbytes=13405
+------------------------
+</pre></div>
+</div>
+<img alt="_images/436c9a0611910815d0fd99bd15c044e132b5868af2bbf7bf9ae2e187e1951065.png" src="_images/436c9a0611910815d0fd99bd15c044e132b5868af2bbf7bf9ae2e187e1951065.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printaudio</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">plotting</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stereo</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+    <span class="c1">#print(f&quot;{inspect.signature(printaudio)=}&quot;)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;========================&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># up to 20 as 1 dim</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2"> and no. of sample is </span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="o">.</span><span class="n">nbytes</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">plotting</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[:</span><span class="mi">2000</span><span class="p">])</span> 
+        <span class="c1"># assume stereo shape is (#####,2) but here is (####,)</span>
+        <span class="c1"># just 1 colour it seems</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">stereo</span><span class="p">:</span>
+            <span class="n">c1</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+            <span class="n">c2</span> <span class="o">=</span> <span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c1</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">c2</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c1</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">c2</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">c1</span><span class="p">[:])</span> <span class="c1">#10*samplerate])</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">c2</span><span class="p">[:],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span> <span class="c1">#10*samplerate], c=&#39;g&#39;)</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="k">return</span> 
+
+<span class="n">im2data2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">im2data</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">printaudio</span><span class="p">(</span><span class="n">im2data2</span><span class="p">)</span>
+<span class="c1"># https://stackoverflow.com/questions/36384760/transforming-a-row-vector-into-a-column-vector-in-numpy</span>
+<span class="c1">#im2data2.reshape(-1,2)</span>
+<span class="n">im2data2reshape</span> <span class="o">=</span> <span class="n">im2data2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">printaudio</span><span class="p">(</span><span class="n">im2data2reshape</span><span class="p">,</span> <span class="n">plotting</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stereo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#im2data2.reshape(-1,2), plotting=True)</span>
+
+
+
+
+
+
+
+
+<span class="k">def</span> <span class="nf">dummy</span><span class="p">():</span>
+    <span class="c1"># not the way # im2data2reshapehalf = im2data2reshape</span>
+    <span class="c1"># not the way # printaudio(im2data2reshapehalf, plotting=True) #im2data2.reshape(-1,2), plotting=True)</span>
+
+    <span class="c1">#im2data3 = np.tile(im2data, (3, 1)) # data.shape=(2, 10556) and no. of sample is 2</span>
+    <span class="c1">#printaudio(im2data2, plotting=True) </span>
+    <span class="c1">#printaudio(im2data3) # , plotting=False) </span>
+
+
+    <span class="c1"># not copy as one more row but </span>
+    <span class="c1"># 2 data cell inside the row</span>
+
+    <span class="c1">#im2data3T = np.tile(im2data.transpose(), (3,2))</span>
+    <span class="c1">#printaudio(im2data3T) # , plotting=False) </span>
+
+    <span class="c1">#im2data3aT = np.tile(im2data3.transpose(), (2,3)) #, (3, 1)) #(1, 3))</span>
+    <span class="c1">#printaudio(im2data3T) # , plotting=False) </span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>data
+========================
+data=array([[138, 133, 127, ..., 129, 129, 127],
+       [138, 133, 127, ..., 129, 129, 127]], dtype=uint8)
+data[:10]=array([[138, 133, 127, ..., 129, 129, 127],
+       [138, 133, 127, ..., 129, 129, 127]], dtype=uint8)
+type(data)=&lt;class &#39;numpy.ndarray&#39;&gt;
+data.shape=(2, 10556) and no. of sample is 2
+data.ndim=2
+data.dtype=dtype(&#39;uint8&#39;)
+data.size=21112
+data.nbytes=21112
+------------------------
+
+data
+========================
+data=array([[138, 133],
+       [127, 122],
+       [121, 123],
+       ...,
+       [128, 128],
+       [128, 129],
+       [129, 127]], dtype=uint8)
+data[:10]=array([[138, 133],
+       [127, 122],
+       [121, 123],
+       [129, 135],
+       [141, 143],
+       [141, 135],
+       [126, 118],
+       [112, 110],
+       [113, 120],
+       [127, 132]], dtype=uint8)
+type(data)=&lt;class &#39;numpy.ndarray&#39;&gt;
+data.shape=(10556, 2) and no. of sample is 10556
+data.ndim=2
+data.dtype=dtype(&#39;uint8&#39;)
+data.size=21112
+data.nbytes=21112
+------------------------
+</pre></div>
+</div>
+<img alt="_images/ed90408e96ac1cc21f79955148cf7cf2b180d8c9d9ce9a11f975f07377388eeb.png" src="_images/ed90408e96ac1cc21f79955148cf7cf2b180d8c9d9ce9a11f975f07377388eeb.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c1=array([138, 127, 121, ..., 128, 128, 129], dtype=uint8), c2=array([133, 122, 123, ..., 128, 129, 127], dtype=uint8)
+c1.shape=(10556,), c2.shape=(10556,)
+</pre></div>
+</div>
+<img alt="_images/d8ed545ed6afac686caf04480e6cd1d399f0a453f0328b807a7dfbbe5d215302.png" src="_images/d8ed545ed6afac686caf04480e6cd1d399f0a453f0328b807a7dfbbe5d215302.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.fftpack</span>
+
+<span class="k">def</span> <span class="nf">fft</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">samplerate</span><span class="p">):</span>
+    <span class="n">samples</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">datafft</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fftpack</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">fftabs</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">datafft</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fftabs</span><span class="p">)</span>
+    <span class="n">freqs</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fftpack</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span> <span class="n">samples</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">samplerate</span> <span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="n">fftabs</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+<span class="n">fft</span><span class="p">(</span><span class="n">im2data2reshape</span><span class="p">,</span> <span class="n">im2samplerate</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[271.   5.]
+ [249.   5.]
+ [244.   2.]
+ ...
+ [256.   0.]
+ [257.   1.]
+ [256.   2.]]
+</pre></div>
+</div>
+<img alt="_images/e65181d02cc4c67d403e313f0aa46338594577bd825da073bd85d0a439871589.png" src="_images/e65181d02cc4c67d403e313f0aa46338594577bd825da073bd85d0a439871589.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://stackoverflow.com/questions/218616/how-to-get-method-parameter-names</span>
+
+<span class="k">def</span> <span class="nf">_get_args_dict</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">args_names</span> <span class="o">=</span> <span class="n">fn</span><span class="o">.</span><span class="vm">__code__</span><span class="o">.</span><span class="n">co_varnames</span><span class="p">[:</span><span class="n">fn</span><span class="o">.</span><span class="vm">__code__</span><span class="o">.</span><span class="n">co_argcount</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">{</span><span class="o">**</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">args_names</span><span class="p">,</span> <span class="n">args</span><span class="p">)),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="handon-c7.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">handon-ch7</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="handon-c9.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Handon C9</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dennis Ng
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
