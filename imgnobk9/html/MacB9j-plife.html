@@ -377,6 +377,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-working">not working</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-perhaps">! work perhaps</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html-work-perhaps">html work perhaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">not working</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">! work perhaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">html work perhaps</a></li>
 </ul>
 </li>
 </ul>
@@ -405,12 +408,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;untitled folder&#39;,
- &#39;plife.md&#39;,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;plife.md&#39;,
  &#39;MacB9j-plife.ipynb&#39;,
  &#39;JB_logo.png&#39;,
  &#39;plife_html_etc&#39;,
  &#39;test-Gif-ok2.gif&#39;,
+ &#39;mand_html_etc&#39;,
  &#39;.DS_Store&#39;,
  &#39;media copy&#39;,
  &#39;requirements.txt&#39;,
@@ -511,6 +514,65 @@ none work so far</p>
 </div>
 </div>
 </div>
+</section>
+<section id="id1">
+<h3>not working<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>`
+2 be updated
+none work so far</p>
+<p>`</p>
+</section>
+<section id="id2">
+<h3>! work perhaps<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p><img alt="subdir-mand" src="mand_html_etc/mandelbrote.html" /></p>
+<p><img alt="subdir-mand dot-slash" src="mand_html_etc/mandelbrote.html" /></p>
+</section>
+<section id="id3">
+<h3>html work perhaps<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p><span class="xref myst">subdir-mand</span></p>
+<p><span class="xref myst">subdir-mand dot-slash</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from https://www.youtube.com/watch?v=mzizK6ms-gY</span>
+<span class="kn">import</span> <span class="nn">mand_html_etc.mandelbrot</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8342f640a379d92bec329c15ec66d604649ba534b058ac45e0ed3bfbc4d8a2cf.png" src="_images/8342f640a379d92bec329c15ec66d604649ba534b058ac45e0ed3bfbc4d8a2cf.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pylab</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">window_size</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">center</span> <span class="o">=</span> <span class="n">window_size</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">atoms</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">mat</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">window_size</span><span class="p">):</span>
+    <span class="n">mat</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">window_size</span><span class="p">):</span>
+        <span class="n">mat</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">center</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="o">-</span><span class="mf">0.12</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">center</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="o">-</span><span class="mf">0.82</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">dx</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">dy</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="n">dx</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">+</span><span class="n">dy</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">d</span>
+            <span class="n">H</span> <span class="o">=</span> <span class="n">d</span> <span class="o">&gt;</span> <span class="mi">200</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">H</span><span class="o">==</span><span class="kc">True</span><span class="p">):</span>
+                <span class="n">mat</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8342f640a379d92bec329c15ec66d604649ba534b058ac45e0ed3bfbc4d8a2cf.png" src="_images/8342f640a379d92bec329c15ec66d604649ba534b058ac45e0ed3bfbc4d8a2cf.png" />
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -525,7 +587,7 @@ none work so far</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>os.getcwd()=&#39;/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk9&#39;
 x=&#39;/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk9&#39;
-os.listdir(x)=[&#39;untitled folder&#39;, &#39;plife.md&#39;, &#39;MacB9j-plife.ipynb&#39;, &#39;JB_logo.png&#39;, &#39;plife_html_etc&#39;, &#39;test-Gif-ok2.gif&#39;, &#39;.DS_Store&#39;, &#39;media copy&#39;, &#39;requirements.txt&#39;, &#39;imgnobk9References.bib&#39;, &#39;MacB9i-matlib-sample-animations.ipynb&#39;, &#39;lines_4.mp4&#39;, &#39;MacB9c-test3.ipynb&#39;, &#39;teset_7_particle_box.mp4&#39;, &#39;MacB9e-test-Gif-ok.ipynb&#39;, &#39;introAnimate.md&#39;, &#39;MacB9-Animate.ipynb&#39;, &#39;nongui_backend.png&#39;, &#39;test-Gif-ok3U2Alex.gif&#39;, &#39;img&#39;, &#39;MacB9d-test-iter.ipynb&#39;, &#39;_toc.yml&#39;, &#39;im_4.mp4&#39;, &#39;Less.png&#39;, &#39;_build&#39;, &#39;_config.yml&#39;, &#39;iter-ok1.gif&#39;, &#39;.ipynb_checkpoints&#39;, &#39;MacB9e-test-Gif-ok-CopyForAlex.ipynb&#39;, &#39;MacB9f-test-Juno-2.ipynb&#39;, &#39;Mlp3-cook1.ipynb&#39;, &#39;main&#39;, &#39;MacB9h-DB7-sync.ipynb&#39;, &#39;myAnimation.gif&#39;, &#39;MacB9b-TestPhyMSUanimate.ipynb&#39;]
+os.listdir(x)=[&#39;plife.md&#39;, &#39;MacB9j-plife.ipynb&#39;, &#39;JB_logo.png&#39;, &#39;plife_html_etc&#39;, &#39;test-Gif-ok2.gif&#39;, &#39;mand_html_etc&#39;, &#39;.DS_Store&#39;, &#39;media copy&#39;, &#39;requirements.txt&#39;, &#39;imgnobk9References.bib&#39;, &#39;MacB9i-matlib-sample-animations.ipynb&#39;, &#39;lines_4.mp4&#39;, &#39;MacB9c-test3.ipynb&#39;, &#39;teset_7_particle_box.mp4&#39;, &#39;MacB9e-test-Gif-ok.ipynb&#39;, &#39;introAnimate.md&#39;, &#39;MacB9-Animate.ipynb&#39;, &#39;nongui_backend.png&#39;, &#39;test-Gif-ok3U2Alex.gif&#39;, &#39;img&#39;, &#39;MacB9d-test-iter.ipynb&#39;, &#39;_toc.yml&#39;, &#39;im_4.mp4&#39;, &#39;Less.png&#39;, &#39;_build&#39;, &#39;_config.yml&#39;, &#39;iter-ok1.gif&#39;, &#39;.ipynb_checkpoints&#39;, &#39;MacB9e-test-Gif-ok-CopyForAlex.ipynb&#39;, &#39;MacB9f-test-Juno-2.ipynb&#39;, &#39;Mlp3-cook1.ipynb&#39;, &#39;main&#39;, &#39;MacB9h-DB7-sync.ipynb&#39;, &#39;myAnimation.gif&#39;, &#39;MacB9b-TestPhyMSUanimate.ipynb&#39;]
 </pre></div>
 </div>
 </div>
@@ -629,6 +691,9 @@ platform.version()=&#39;Darwin Kernel Version 22.6.0: Wed Jul  5 22:22:52 PDT 20
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#not-working">not working</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-perhaps">! work perhaps</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#html-work-perhaps">html work perhaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">not working</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">! work perhaps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">html work perhaps</a></li>
 </ul>
 </li>
 </ul>
