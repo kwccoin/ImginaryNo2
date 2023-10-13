@@ -409,6 +409,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;plife.md&#39;,
+ &#39;mandelbrot_copy.html&#39;,
  &#39;MacB9j-plife.ipynb&#39;,
  &#39;JB_logo.png&#39;,
  &#39;plife_html_etc&#39;,
@@ -419,6 +420,7 @@ document.write(`
  &#39;requirements.txt&#39;,
  &#39;imgnobk9References.bib&#39;,
  &#39;MacB9i-matlib-sample-animations.ipynb&#39;,
+ &#39;particle_life_copy.html&#39;,
  &#39;lines_4.mp4&#39;,
  &#39;MacB9c-test3.ipynb&#39;,
  &#39;teset_7_particle_box.mp4&#39;,
@@ -442,6 +444,7 @@ document.write(`
  &#39;main&#39;,
  &#39;MacB9h-DB7-sync.ipynb&#39;,
  &#39;myAnimation.gif&#39;,
+ &#39;particle_life_3d_copy.html&#39;,
  &#39;MacB9b-TestPhyMSUanimate.ipynb&#39;]
 </pre></div>
 </div>
@@ -494,6 +497,8 @@ none work so far</p>
 <p><img alt="subdir-3D" src="_images/particle_life_3d.html" /></p>
 <p><img alt="subdir-non3D dot-slash" src="_images/particle_life.html" /></p>
 <p><img alt="subdir-3D dot-slash" src="_images/particle_life_3d.html" /></p>
+<p><img alt="curdir-non3D dot-slash" src="_images/particle_life_copy.html" /></p>
+<p><img alt="curdir-3D dot-slash" src="_images/particle_life_3d_copy.html" /></p>
 </section>
 <section id="html-work-perhaps">
 <h3>html work perhaps<a class="headerlink" href="#html-work-perhaps" title="Permalink to this heading">#</a></h3>
@@ -501,6 +506,8 @@ none work so far</p>
 <p><a class="reference download internal" download="" href="_downloads/68997436918a1806bcf150d28b72145d/particle_life_3d.html"><span class="xref download myst">subdir-3D dot-slash</span></a></p>
 <p><a class="reference download internal" download="" href="_downloads/49b034613acd45adf498f20687126a78/particle_life.html"><span class="xref download myst">subdir-non3D dot-slash</span></a></p>
 <p><a class="reference download internal" download="" href="_downloads/68997436918a1806bcf150d28b72145d/particle_life_3d.html"><span class="xref download myst">subdir-3D dot-slash</span></a></p>
+<p><a class="reference download internal" download="" href="_downloads/d73d39cae4688e52bf1d9b8c326e84fd/particle_life_copy.html"><span class="xref download myst">curdir-non3D dot-slash</span></a></p>
+<p><a class="reference download internal" download="" href="_downloads/6091a92104f6c92c7f83269c2b2b58ce/particle_life_3d_copy.html"><span class="xref download myst">curdir-3D dot-slash</span></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plife_html_etc.particle_life</span>
@@ -526,11 +533,15 @@ none work so far</p>
 <h3>! work perhaps<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p><img alt="subdir-mand" src="mand_html_etc/mandelbrote.html" /></p>
 <p><img alt="subdir-mand dot-slash" src="mand_html_etc/mandelbrote.html" /></p>
+<p><img alt="curdir-mand dot-slash" src="mandelbrote_copy.html" /></p>
+<p><img alt="curdir-mand dot-slash" src="mandelbrote_copy.html" /></p>
 </section>
 <section id="id3">
 <h3>html work perhaps<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p><span class="xref myst">subdir-mand</span></p>
 <p><span class="xref myst">subdir-mand dot-slash</span></p>
+<p><span class="xref myst">curdir-mand dot-slash</span></p>
+<p><span class="xref myst">curdir-mand dot-slash</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from https://www.youtube.com/watch?v=mzizK6ms-gY</span>
@@ -566,6 +577,31 @@ none work so far</p>
                 <span class="n">mat</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">### another version with numpy (still not fast!)</span>
+<span class="c1"># import numpy as np</span>
+<span class="c1"># import matplotlib.pylab as plt</span>
+
+<span class="c1"># atoms=[]</span>
+<span class="c1"># window_size = 300</span>
+<span class="c1"># center = window_size/2</span>
+
+<span class="c1"># mat = np.zeros((window_size, window_size))</span>
+<span class="c1"># for y in range(window_size):</span>
+<span class="c1">#     for x in range(window_size):</span>
+<span class="c1">#         dx = (x-center)/1000-0.12</span>
+<span class="c1">#         dy = (y-center)/1000-0.82</span>
+<span class="c1">#         a = dx</span>
+<span class="c1">#         b = dy</span>
+<span class="c1">#         for t in range(50):</span>
+<span class="c1">#             d = (a*a)-(b*b)+dx</span>
+<span class="c1">#             b = 2*(a*b)+dy</span>
+<span class="c1">#             a = d</span>
+<span class="c1">#             H = d &gt; 200</span>
+<span class="c1">#             if(H==True):</span>
+<span class="c1">#                 mat[y, x] = t</span>
+
+<span class="c1"># plt.imshow(mat)</span>
 </pre></div>
 </div>
 </div>
@@ -587,7 +623,7 @@ none work so far</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>os.getcwd()=&#39;/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk9&#39;
 x=&#39;/Users/ngcchk/Documents/Github/gpd2-win-unity1/ipadred-rain/imgno_book1/imgnobk9&#39;
-os.listdir(x)=[&#39;plife.md&#39;, &#39;MacB9j-plife.ipynb&#39;, &#39;JB_logo.png&#39;, &#39;plife_html_etc&#39;, &#39;test-Gif-ok2.gif&#39;, &#39;mand_html_etc&#39;, &#39;.DS_Store&#39;, &#39;media copy&#39;, &#39;requirements.txt&#39;, &#39;imgnobk9References.bib&#39;, &#39;MacB9i-matlib-sample-animations.ipynb&#39;, &#39;lines_4.mp4&#39;, &#39;MacB9c-test3.ipynb&#39;, &#39;teset_7_particle_box.mp4&#39;, &#39;MacB9e-test-Gif-ok.ipynb&#39;, &#39;introAnimate.md&#39;, &#39;MacB9-Animate.ipynb&#39;, &#39;nongui_backend.png&#39;, &#39;test-Gif-ok3U2Alex.gif&#39;, &#39;img&#39;, &#39;MacB9d-test-iter.ipynb&#39;, &#39;_toc.yml&#39;, &#39;im_4.mp4&#39;, &#39;Less.png&#39;, &#39;_build&#39;, &#39;_config.yml&#39;, &#39;iter-ok1.gif&#39;, &#39;.ipynb_checkpoints&#39;, &#39;MacB9e-test-Gif-ok-CopyForAlex.ipynb&#39;, &#39;MacB9f-test-Juno-2.ipynb&#39;, &#39;Mlp3-cook1.ipynb&#39;, &#39;main&#39;, &#39;MacB9h-DB7-sync.ipynb&#39;, &#39;myAnimation.gif&#39;, &#39;MacB9b-TestPhyMSUanimate.ipynb&#39;]
+os.listdir(x)=[&#39;plife.md&#39;, &#39;mandelbrot_copy.html&#39;, &#39;MacB9j-plife.ipynb&#39;, &#39;JB_logo.png&#39;, &#39;plife_html_etc&#39;, &#39;test-Gif-ok2.gif&#39;, &#39;mand_html_etc&#39;, &#39;.DS_Store&#39;, &#39;media copy&#39;, &#39;requirements.txt&#39;, &#39;imgnobk9References.bib&#39;, &#39;MacB9i-matlib-sample-animations.ipynb&#39;, &#39;particle_life_copy.html&#39;, &#39;lines_4.mp4&#39;, &#39;MacB9c-test3.ipynb&#39;, &#39;teset_7_particle_box.mp4&#39;, &#39;MacB9e-test-Gif-ok.ipynb&#39;, &#39;introAnimate.md&#39;, &#39;MacB9-Animate.ipynb&#39;, &#39;nongui_backend.png&#39;, &#39;test-Gif-ok3U2Alex.gif&#39;, &#39;img&#39;, &#39;MacB9d-test-iter.ipynb&#39;, &#39;_toc.yml&#39;, &#39;im_4.mp4&#39;, &#39;Less.png&#39;, &#39;_build&#39;, &#39;_config.yml&#39;, &#39;iter-ok1.gif&#39;, &#39;.ipynb_checkpoints&#39;, &#39;MacB9e-test-Gif-ok-CopyForAlex.ipynb&#39;, &#39;MacB9f-test-Juno-2.ipynb&#39;, &#39;Mlp3-cook1.ipynb&#39;, &#39;main&#39;, &#39;MacB9h-DB7-sync.ipynb&#39;, &#39;myAnimation.gif&#39;, &#39;particle_life_3d_copy.html&#39;, &#39;MacB9b-TestPhyMSUanimate.ipynb&#39;]
 </pre></div>
 </div>
 </div>
