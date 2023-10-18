@@ -510,7 +510,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ngcchk/miniconda3/lib/python3.11/site-packages/matplotlib/mpl-data/matplotlibrc
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ngcchk/miniconda3/envs/d2ljb/lib/python3.9/site-packages/matplotlib/mpl-data/matplotlibrc
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\nfilename = matplotlib.matplotlib_fname() # &quot;file.py&quot;\n\n#print(&quot;---- no line end&quot;)\n\n#with open(filename) as f:\n#    content = f.readlines()\n#print(content)\n\nprint(&quot;---- with line end&quot;)\n\nwith open(filename,&quot;r&quot;) as file: #\&#39;Fruit.txt\&#39;,&quot;r&quot;) as file:\n    for line in file:\n        #if InputText in line:\n        print(line, end=\&#39;\&#39;)\n        #print(line) #, end=\&#39;\&#39;)\n        #print(next(file), end=\&#39;\&#39;)\n        #break\n\n# https://matplotlib.org/stable/users/explain/figure/backends.html\n# The first usable backend in the following list is selected: MacOSX, QtAgg, GTK4Agg, Gtk3Agg, TkAgg, WxAgg, Agg. \n# ... QtCairo\n# ... ip...\n&#39;
@@ -625,8 +625,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/33/krstvgns2rncl74r18tkv6_80000gn/T/ipykernel_29620/483570514.py:49: UserWarning: frames=&lt;function data_gen at 0x14429ccc0&gt; which we can infer the length of, did not pass an explicit *save_count* and passed cache_frame_data=True.  To avoid a possibly unbounded cache, frame data caching has been disabled. To suppress this warning either pass `cache_frame_data=False` or `save_count=MAX_FRAMES`.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-5-2addc7387d3b&gt;:49: UserWarning: frames=&lt;function data_gen at 0x122fc15e0&gt; which we can infer the length of, did not pass an explicit *save_count* and passed cache_frame_data=True.  To avoid a possibly unbounded cache, frame data caching has been disabled. To suppress this warning either pass `cache_frame_data=False` or `save_count=MAX_FRAMES`.
   ani = animation.FuncAnimation(fig, run, data_gen, blit=False, interval=MY_INTERVAL, cache_frame_data=True, #False,
+/Users/ngcchk/miniconda3/envs/d2ljb/lib/python3.9/site-packages/matplotlib/animation.py:884: UserWarning: Animation was deleted without rendering anything. This is most likely not intended. To prevent deletion, assign the Animation to a variable, e.g. `anim`, that exists until you output the Animation using `plt.show()` or `anim.save()`.
+  warnings.warn(
 </pre></div>
 </div>
 </div>
@@ -660,12 +662,6 @@ document.write(`
                               <span class="n">interval</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;test_3 on tk&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/ngcchk/miniconda3/lib/python3.11/site-packages/matplotlib/animation.py:892: UserWarning: Animation was deleted without rendering anything. This is most likely not intended. To prevent deletion, assign the Animation to a variable, e.g. `anim`, that exists until you output the Animation using `plt.show()` or `anim.save()`.
-  warnings.warn(
 </pre></div>
 </div>
 </div>
@@ -726,6 +722,25 @@ document.write(`
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;test_4b grid colour map ok on tk&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RuntimeError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">17</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="k">return</span> <span class="n">line</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># Set up formatting for the movie files</span>
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="n">Writer</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">writers</span><span class="p">[</span><span class="s1">&#39;ffmpeg&#39;</span><span class="p">]</span>  <span class="c1"># &lt;-- </span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">Writer</span><span class="p">(</span><span class="n">fps</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">metadata</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">artist</span><span class="o">=</span><span class="s1">&#39;Me&#39;</span><span class="p">),</span> <span class="n">bitrate</span><span class="o">=</span><span class="mi">1800</span><span class="p">)</span>  <span class="c1"># &lt;-- </span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">fig1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/d2ljb/lib/python3.9/site-packages/matplotlib/animation.py:148,</span> in <span class="ni">MovieWriterRegistry.__getitem__</span><span class="nt">(self, name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_available</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">147</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_registered</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+<span class="ne">--&gt; </span><span class="mi">148</span> <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Requested MovieWriter (</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">) not available&quot;</span><span class="p">)</span>
+
+<span class="ne">RuntimeError</span>: Requested MovieWriter (ffmpeg) not available
 </pre></div>
 </div>
 </div>
